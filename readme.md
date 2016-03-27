@@ -8,7 +8,7 @@ Go through all of the following questions and think about how you would respond 
 
 ## General Questions
 
-** What did you learn yesterday/this week?
+* What did you learn yesterday/this week?
 	>For the past 7 months I have taken two seperate courses at General Assembly. My first course, Front-end Web-Development helped strengthen my skills within HTML, CSS, Javascript and jQuery. After finishing this 10 week course, I decided to continue my education in web-development and signed up for a full-time, 12 week, web-development immersive course. This program not only teaches front-end frameworks but back-end framworks as well. Thourghout this course I have strengthened my skills in Node.js along with Express, as well as Ruby, Ruby on Rails, Angular.js, and React.js. This week specifically I focused on Angular.js and building responsive api's. 
 * What excites or interests you about coding?
 * What is a recent technical challenge you experienced and how did you solve it?
