@@ -14,10 +14,10 @@ Float is a css positioning property that will take an element and float it to th
 
 * Describe z-index and how stacking context is formed.
 
-The z-index allows you to overlap or stack elements on one another using css. If an element has a larger element than the element below it that larger element will apear "staked" on top of the element with the lower z-index.
+The z-index allows you to overlap or stack elements on one another using css. If an element has a larger element than the element below it that larger element will appear "stacked" on top of the element with the lower z-index.
 
 * Have you ever used a grid system, and if so, what do you prefer?
-The only grid system I have used is bootstaps built in grid system. I would like to learn other grid systems and how to position everything perfectly using css alone. 
+The only grid system I have used is bootstrap built in grid system. I would like to learn other grid systems and how to position everything perfectly using css alone. 
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 
@@ -28,7 +28,7 @@ Yes, I have used media queries to make sure my applications are following a resp
 
 Advantages: organization, nested elements, mixins, makes your css more DRY as it is less repetitive, is easily integrated into other frameworks like bootstrap.
 
-Disadvanteges: Need to learn and fully understand the framework, could inherit bugs and mistakes
+Disadvantages: Need to learn and fully understand the framework, could inherit bugs and mistakes
 
 * Describe what you like and dislike about the CSS preprocessors you have used.
 
@@ -39,26 +39,40 @@ I love using SASS. I love that you can nest your css and use mixins. I have no d
 Google fonts
 
 * Explain how a browser determines what elements match a CSS selector.
+
+The browser reads them right to left, the program reads the key selector first(the class/id) then where it is being applied. 
+
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+
+box-sizing tells the browser what the sizing properties, height and width, should include. It does not include the margin. This property helps with layout because it takes into account a fixed width and height along with padding. 
+
 * List as many values for the display property that you can remember.
+
+inline, block, inline-block, none, initial, inherit.
 
 * What's the difference between inline and inline-block?
 
-inline: do not respect top and bottom margin, cannont have a set height/width, allow elements to sit to their right and left
+inline: do not respect top and bottom margin, cannot have a set height/width, allow elements to sit to their right and left
 
-inline-block: allow elements to sit to their right and left, repsect top/bottom padding/margin, respect height and width.
+inline-block: allow elements to sit to their right and left, respect top/bottom padding/margin, respect height and width.
 
 * What's the difference between a relative, fixed, absolute and statically positioned element?
-Relative: 
 
-Fixed: 
+Relative: positioned relative to it's normal position, it will be adjusted away from it's static position
 
-Absolute:
+Fixed: positioned relative to the viewport, it will remain in the same spot even if the page is scrolled
 
-Starically:
+Absolute: positioned relative to the nearest ancestor
+
+Static: elements are not affected by the top, bottom, left, or right properties, it is the default property and is positioned based on the flow of the page.
 
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+
+Beacuse the program reads from top to bottom if you overwrite I style you wrote previosly the last change will be the change that appears on the screen. p {color: blue, font-size: 30em} p{color:pink,} The text color of p will be pink.
+
+You can use this system to your advantage by nesting elements if you are using SASS or making your code more organized.
 
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 
