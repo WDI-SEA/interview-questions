@@ -125,33 +125,51 @@ The bind() method creates a new function that, when called, has its this keyword
 * What's the difference between feature detection, feature inference, and using the User Agent string?<br/>
 When you check to see if a certain feature exists, that is feature detection. It’s important to write code that checks if features exist in JS since different browsers have different implementations. Feature inference is when you make an assumption that one feature is present another one also should be present. Since your not checking for the feature you’re using you’re more likely to have inconsistences.<br/>
 * Explain AJAX in as much detail as possible.<br/>
-AJAX stands for Asynchronous JSON and Xml. It is when you send a requests for information or a JSON object from another site. Since AJAX is done Asynchronously there is going to be a little delay before that JSON object comes back
+AJAX stands for Asynchronous JSON and Xml. It is when you send a requests for information or a JSON object from another site. Since AJAX is done Asynchronously there is going to be a little delay before that JSON object comes back. <br/>
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
-* Explain "hoisting".
-* Describe event bubbling.
-* What's the difference between an "attribute" and a "property"?
-* Why is extending built-in JavaScript objects not a good idea?
-* What is the difference between `==` and `===`?
-* Explain the same-origin policy with regards to JavaScript.
-* What is the extent of your experience with Promises and/or their polyfills?
-* What are the pros and cons of using Promises instead of callbacks?
-* What tools and techniques do you use debugging Javascript code?
-* What language constructions do you use for iterating over object properties and array items?
+  Yes, I have used templating engines. Some of the libraries I have used for templating engines are Angular.js, embeded javascript with node.js and embeded ruby. The mustaches({{}}) with Angular allows you to access values through data-binding. Emebeded javascript (<%= %>), allows you to access data values from the database just like Angular.js. Lastly, I ahve used emeded ruby('#()'), which just like embeded javascript and anuglar's mustaches, allows to access data from database.<br/>
+* Explain "hoisting".<br/>
+Hoisting is JavaScript's default behavior of moving all decalrations to the top of current scope. JavaScript only hoists declarations, not intializations.<br/>
+* Describe event bubbling.<br/>
+Event bubbling is event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the element recieve the even. With bubbling, the event is first captured and handled by the innermost element and propagated to the inner elements.<br/>
+* What's the difference between an "attribute" and a "property"?<br/>
+JS DOM objects have properties. These properties are instance variables for the particular element(boolean, string, etc). Properties can be accessed through jQuery's prop method. Attributes are in the HTML itself, rather than in the DOM. An attribute is only ever a string<br/>
+* Why is extending built-in JavaScript objects not a good idea?<br/>
+Extending built-in JavaScript objects is a bad idea because it will change it behavior. Chaning the behavior of an object that is also used by other code there is risk you will break other code<br/>
+* What is the difference between `==` and `===`?<br/>
+'==' checks to see if the value is equal, where '===' checks to see if the value and the type are both equal.<br/>
+* Explain the same-origin policy with regards to JavaScript.<br/>
+Same-origin policy is used to prevent cross-site request forgery(CSRF). Same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin.<br/>
+* What is the extent of your experience with Promises and/or their polyfills?<br/>
+Promises are a software abstraction that makes working with aynchronous operations much more pleasent. I have experience with promises when doing AJAX requests by passing res and error as perameters in my function. The return value of that function is called a promise and if there is an error, istead of breaking my code it will skip to the catch clause and handle it. Polyfill is a piece of code that provides technology that you expect the browser to provide natively<br/>
+* What are the pros and cons of using Promises instead of callbacks?<br/>
+Promises make moer than one function to be called easier. It allows functions to be added anywhere in the code, subject only to the promise being within scope. Promises are perfect when you deal with mulptiple asyn calls in parellel. With promises it allows to use the .then method instead of using callbacks which in return makes your code shorter and easier to read.<br/>
+* What tools and techniques do you use debugging Javascript code?<br/>
+One of the tools that I use for debugging JavaScript is the debugger tool which can be found in most modern browsers. This debugger allows you to set break points within your code which forces erros to be reported back. Otherwise there is the console.log() method, which just means you console.log() everything whithin you JavaScript to see if you are getting back the results you expect.<br/>
+* What language constructions do you use for iterating over object properties and array items?<br/>
+Some language constructions that I use for iterating over object properties and array items are for loops and the .forEach() method.<br/>
 
 ## Database Questions
 
 * Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
 
 ## Ruby/Rails
-* What are ruby gems?
-* What is the difference between a symbol and a string?
-* What is the difference between a class method and an instance method?
-* What is the difference between local variables, instance variables, and class variables?
-* What is a range?
-* In ruby, what does attr_accessor do?  
-* What is the purpose of environment files under the config folder in Rails? (development, test, production)
-* What is the purpose of the application.rb file in Rails?
+* What are ruby gems?<br/>
+Ruby gems are plugins that you can use for ruby as middleware. It is a package manager for Ruby that provides a standard format for distributing Ruby programs and libraries.<br/>
+* What is the difference between a symbol and a string?<br/>
+The difference between a symbol and a string, is that a multiple symbols represent a single value are identical, where this is not true in string. Using symbols can potentially save a good bit of memory depending on the application. It is also faster to compare symbols for equality sine ther are the same object. Comparing identical string is much slower since the string values need to be compared.<br/>
+* What is the difference between a class method and an instance method?<br/>
+A class method is a function within in a class that can be called at some point or another. An instance method is called every time a new class is created.<br/>
+* What is the difference between local variables, instance variables, and class variables?Local variables are variables that can only be used locally within that class and no where else. Instance variables are independent value that pertains to the instance of a class(ex: for a car class you may have @make, @model, @year). Class variables are variables like that are created when a new instance of the class is created and is often used to configure the class.<br/>
+* What is a range?<br/>
+Ranges in Ruby support ranges and allow us to ranges in a variety of ways, whether it is a range from 0...10, 50..60(59), or a range of months from January to December.<br/>
+* In ruby, what does attr_accessor do? <br/>
+Attribute accesor allow you to read and write diferent variables pertaining to an instance of the class<br/> 
+* What is the purpose of environment files under the config folder in Rails? (development, test, production)<br/>
+The purpose of environment variables under the config folder are things within you code that that you want to keep secret within your environment, such as API keys.<br/>
+* What is the purpose of the application.rb file in Rails?<br/>
+The purpose of the application file is to configure things for the whole application<br/>
 * How can you define a constant?
 * What is the purpose of `yield`?
 * How do you store API keys when creating an app?
