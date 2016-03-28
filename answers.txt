@@ -1,0 +1,246 @@
+General Questions
+
+What did you learn yesterday/this week?
+  -how to add angular to front end, how to use mongodb for backend
+
+What excites or interests you about coding?
+  - I enjoy breaking problems down into smaller pieces and putting the parts together to make a functioning program.  I also enjoy the opportunity for constant growth and learning:there are always new languages, technologies to learn.
+
+What is a recent technical challenge you experienced and how did you solve it?
+
+
+What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+  -UI: easy to use, give instructions
+  -Security: validate data before passing it into database
+  -Performance: minimize api calls
+  -SEO:
+  -Maintainability: comment code, make code as readable as possible
+  -Technology: use right technology for the job, don’t make it more complicated than necessary.
+
+Talk about your preferred development environment.
+  -sublime text, terminal, chrome as I primarily work on javascript and angular.
+
+Which version control systems are you familiar with?
+  -git/github
+
+Can you describe your workflow when you create a web page?
+  -I wireframe the basic layout and features and then create the database tables and backend  and then style with css.
+
+If you have 5 different stylesheets, how would you best integrate them into the site?
+
+Can you describe the difference between progressive enhancement and graceful degradation?
+  progressive enhancement - start with basic functionality that will work across all browsers and then build additional functionality that is available if it works with the browser.
+  graceful degradation- have advanced functionality that then degrades to lesser user experience if not supported by the browser.
+
+Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+  -place photos in div, fade in and out on interval using query.
+
+If you could master one technology this year, what would it be?
+  -angular: it’s a powerful tool for creating dynamic content on the fronted
+Explain the importance of standards and standards bodies.
+  -it’s important to have international standards so that websites work anywhere, not just in a specific country.  The technologies need to utilize standard protocols to communicate.
+
+HTML Questions
+
+
+What does a doctype do?
+  - it signals what version of html the site is written in
+
+What’s the difference between HTML and XHTML?
+  -xhtml: extensible hypertext markup language
+  it is more strict than html, defined as XML application and is supported by all browsers.
+
+What are data- attributes good for?
+  -data attributes store data internally in the application
+
+Describe the difference between a cookie, sessionStorage and localStorage.
+  -cookies: store data in the web browser and send info back when user visits page again
+  -sessionStorage: data is stored until session is cleared.
+  -localStorage: stores data on local computer until the cache is cleared.
+
+Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+  -css links at the top so they apply to all elements on the page.
+  -javascript at the end so that they don’t prevent the page from loading in a timely fashion
+
+CSS Questions
+
+What is the difference between classes and IDs in CSS?
+  -IDs can only be applied to one element, classes can be applied to multiple elements
+
+What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+  -Normalize.css preserves useful defaults rather than "unstyling" everything. For example, elements like sup or sub "just work" after including normalize.css (and are actually made more robust) whereas they are visually indistinguishable from normal text after including reset.css. So, normalize.css does not impose a visual starting point (homogeny) upon you. This may not be to everyone's taste. The best thing to do is experiment with both and see which gels with your preferences.
+
+Normalize.css corrects some common bugs that are out of scope for reset.css. It has a wider scope than reset.css, and also provides bug fixes for common problems like: display settings for HTML5 elements, the lack of font inheritance by form elements, correcting font-size rendering for pre, SVG overflow in IE9, and the button styling bug in iOS.
+
+Normalize.css doesn't clutter your dev tools. A common irritation when using reset.css is the large inheritance chain that is displayed in browser CSS debugging tools. This is not such an issue with normalize.css because of the targeted stylings.
+
+Normalize.css is more modular. The project is broken down into relatively independent sections, making it easy for you to potentially remove sections (like the form normalizations) if you know they will never be needed by your website.
+
+Normalize.css has better documentation. The normalize.css code is documented inline as well as more comprehensively in the GitHub Wiki. This means you can find out what each line of code is doing, why it was included, what the differences are between browsers, and more easily run your own tests. The project aims to help educate people on how browsers render elements by default, and make it easier for them to be involved in submitting improvements.
+
+Describe Floats and how they work.
+  -floats are css positioning properties, they remain a part of the flow of the website rather than being fixed
+
+Describe z-index and how stacking context is formed.
+  -this property specifies the z-order of an element and is used to determine which element overlaps the other
+  -Stacking context is the three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes.
+
+Have you ever used a grid system, and if so, what do you prefer?
+  -bootstrap, materialize
+  I prefer a grid system, it facilitates a more complex layout and helps make setting up the page easier.
+
+Have you used or implemented media queries or mobile specific layouts/CSS?
+  -yes, using media queries can set the minimum screen width to optimize the site for mobile, tablet, desktop or larger screens
+
+How do you optimize your webpages for print?
+  -give elements you don’t want to print a class of no-print
+  -add page break elements in divs
+  -set content width so words don’t bleed over the print area
+
+What are the advantages/disadvantages of using CSS preprocessors?
+   -Pre-processors extend CSS with variables, operators, interpolations, functions, mixins and many more other usable assets. SASS, LESS and Stylus are the well known ones
+  -disadvantage: One thing you can find with preprocessors is that you end up with vast outputs of css due to the nesting.
+  -advantage: more structured, code, no include
+
+Describe what you like and dislike about the CSS preprocessors you have used.
+
+How would you implement a web design comp that uses non-standard fonts?
+1 - Full browser compatibility
+
+This is the method with the deepest support possible right now:
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff') format('woff'), /* Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+Explain how a browser determines what elements match a CSS selector.
+  -browser starts from rightmost element in order to determine which elements don’t match as quickly as possible. match children and then parents
+
+Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+  -The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+
+What does * { box-sizing: border-box; } do? What are its advantages?
+  -The box-sizing property is used to alter the default CSS box model used to calculate width and height of the elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+
+List as many values for the display property that you can remember.
+
+What's the difference between inline and inline-block?
+  -An inline element does not start on a new line and only takes up as much width as necessary. inline-block elements are like inline elements but they can have a width and a height.
+
+What's the difference between a relative, fixed, absolute and statically positioned element?
+The 'C' in CSS stands for Cascading. How is priority determined in assigning styles (a few examples)? How can you use this system to your advantage?
+What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+Have you played around with the new CSS Flexbox or Grid specs?
+Have you ever worked with retina graphics? If so, when and what techniques did you use?
+Explain some of the pros and cons for CSS animations versus JavaScript animations.
+JS Questions
+
+Explain event delegation
+Explain how this works in JavaScript
+Explain how prototypal inheritance works
+Why is it called a Ternary expression, what does the word "Ternary" indicate?
+What's the difference between a variable that is: null, undefined or undeclared?
+How would you go about checking for any of these states?
+What is a closure, and how/why would you use one?
+What's a typical use case for anonymous functions?
+Difference between: function Person(){}, var person = Person(), and var person = new Person()?
+What's the difference between .call and .apply?
+Explain Function.prototype.bind.
+What's the difference between feature detection, feature inference, and using the User Agent string?
+Explain AJAX in as much detail as possible.
+Have you ever used JavaScript templating?
+If so, what libraries have you used?
+Explain "hoisting".
+Describe event bubbling.
+What's the difference between an "attribute" and a "property"?
+Why is extending built-in JavaScript objects not a good idea?
+What is the difference between == and ===?
+Explain the same-origin policy with regards to JavaScript.
+What is the extent of your experience with Promises and/or their polyfills?
+What are the pros and cons of using Promises instead of callbacks?
+What tools and techniques do you use debugging Javascript code?
+What language constructions do you use for iterating over object properties and array items?
+Database Questions
+
+Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
+Ruby/Rails
+
+What are ruby gems?
+What is the difference between a symbol and a string?
+What is the difference between a class method and an instance method?
+What is the difference between local variables, instance variables, and class variables?
+What is a range?
+In ruby, what does attr_accessor do?
+What is the purpose of environment files under the config folder in Rails? (development, test, production)
+What is the purpose of the application.rb file in Rails?
+How can you define a constant?
+What is the purpose of yield?
+How do you store API keys when creating an app?
+How do I send parameters through a url?
+Explain MVC
+What is a before_action? When would you use it?
+What do controllers do in rails?
+What is RESTful routing?
+What is a polymorphic association?
+What are params?
+How do I make a migration to add a column in Rails?
+What is CSRF? How does Rails protect an app against this?
+What's the difference between User.find_by_id(1) and User.find(1)?
+What's are classes in Ruby? What are modules? And what's the difference?
+Testing Questions
+
+What are some advantages/disadvantages to testing your code?
+What tools would you use to test your code's functionality?
+What is the difference between a unit test and a functional/integration test?
+What is the purpose of a code style linting tool?
+What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
+Coding Questions:
+
+Question: What is the value of foo?
+
+var foo = 10 + '20';
+Question: How would you make this work?
+
+add(2, 5); // 7
+add(2)(5); // 7
+Question: What value is returned from the following statement?
+
+"i'm a lasagna hog".split("").reverse().join("");
+Question: What is the outcome of the two alerts below?
+
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+Question: What is the value of foo.length?
+
+var foo = [];
+foo.push(1);
+foo.push(2);
+Question: What is the value of foo.x?
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+Question: What does the following code print?
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
+Fun Questions:
+
+What's a cool project that you've recently worked on?
+What are some things you like about the developer tools you use?
+Do you have any pet projects? What kind?
+How do you like your coffee?
