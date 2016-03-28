@@ -442,6 +442,8 @@ error, bar undefined
 var foo = [];
 foo.push(1);
 foo.push(2);
+
+length of 2
 ```
 
 *Question: What is the value of `foo.x`?*
