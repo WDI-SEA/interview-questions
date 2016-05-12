@@ -9,6 +9,7 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+
 Lately I have been working within the Rails framework, and most recently I tried to turn one of my old Rails-based apps into a Single Page Application.  It was really cool trying to figure out how to send responses just in JSON data and dynamically render the page with that data on the client side.  It was made a little more interesting because I was doing all the client-side work with jQuery, so there was some fun manual DOM manipulation involved.
 
 * What excites or interests you about coding?
