@@ -9,30 +9,65 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+Yesterday we learned oAuth (authorization through a third party like Facebook). This week we covered M to M relationships between tables in Rails.
+
 * What excites or interests you about coding?
+I love being able to create any type of website and knowing how certain websites work. I spend all my time on the internet, so it's fun to make the switch from being a passive consumer, to actively create stuff for the internet.
+
 * What is a recent technical challenge you experienced and how did you solve it?
+For my last project, I was using webRTC to set up video chats online. webRTC required an https connection to operate, while the process of obtaining a caller id from PeerJS was through a http connection. In order to get the video up and running, I had to find a way to set up by own PeerJS server that served keys through https. 
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+My approach to building with a web application is to first make sure that everything works. I would do this by first deciding what the application is and what I want it to do. Then I would add the bare miminum to the site just to make sure it has a basic, working functionality. For performance, I would do my best to make sure that nothing in my code is redundant. Setting up easily understood variables and commenting every line of code to explain my thought process would also help with maintainability. Depending on the time and resources available for the project, I would be able to decide which technologies to incorporate. Node.js would take longer to set up than Ruby, but Node.js is much more efficient for large scale applications.
+
 * Talk about your preferred development environment.
+My preferred development environment is where I am sitting next to other devs that I would be able to talk to and bounce ideas off of while I'm working. Having someone immediately available to offer a second opinion or a new perspective is extremely valuable to my growth as a programmer.
+
 * Which version control systems are you familiar with?
+Git/github.
+
 * Can you describe your workflow when you create a web page?
+First decide what the web page is supposed to do, be it collect information or display images. Then I would set up the basic divs and important elements in the html. Then I would add the javascript functions that are necessary to get the page running. Then I would work on the styling and any other small features for the page.
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+I would add a different folder labeled either static for a node.js app, or create more scss style pages under the assets folder for a ruby on rails app. I would call the appropriate stylesheets within the appropriate pages for the site.
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
+
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+Assuming that all of the images are url links, I could simply put them in an object and label each element with a key. Then I would create a function in the Javascript that would change the html depending on a button that would be clicked. The button would call a function that would change the url of the html element every few seconds or so, giving the effect of a slideshow.
+
 * If you could master one technology this year, what would it be?
+I would love to be able to master webRTC or anything to do with videos/streaming.
+
 * Explain the importance of standards and standards bodies.
+Standards are important as it ensures that code will looks the same and have similar formats no matter where you are. It allows people to expect the same set of standards when working in a new environment and subsequently allows programs and applications to scale.
 
 ## HTML Questions
 
 * What does a `doctype` do?
+Doctype determines the type of document used.
+
 * What's the difference between HTML and XHTML?
+XHTML is much more standardized and allows pages to be viewed the same across different browsers, while HTML pages often looked different depending on the user's browser.
+
 * What are `data-` attributes good for?
+They allow you to store data on html documents.
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+A cookie is something that stores data. A session storage is the memory stored in a session, while local storage is where that memory is stored.
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+This to ensure that the page is styled before anything else is processed on the page. If ther JS takes too long to process and the style tage is after it, then the page would appear plain until the JS is finished computing.
+
 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+A class can cover many different elements, while ID's only have one element.
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
 * Have you ever used a grid system, and if so, what do you prefer?
