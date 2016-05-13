@@ -84,6 +84,8 @@ Progressive Enhancement starts at a broad minimum user experience and increases 
 
 The doctype declaration should be the very first thing in an HTML document, before the tag. The doctype declaration is not an HTML tag; it is an instruction to the web browser about what version of the markup language the page is written in. The doctype declaration refers to a Document Type Definition (DTD)
 
+  Tells the browser what kind of document the page is. Browsers view lots od types of documents. Thus tag let's them know how to treat it. 
+
 
 * What's the difference between HTML and XHTML?
 XHTML is stricter than HTML and XHTML is supported by all major browsers.
@@ -101,32 +103,41 @@ Unique elements of XHTML:
   Attribute values must be quoted
   Attribute minimization is forbidden
 
+  It's an HTML element attribute that doesn't display visually and allows data to be stored in the DOM on elements. Bootstrap uses it. 
 
 * What are `data-` attributes good for?
 
 
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 
-LocalStorage and sessionStorage are relatively new APIs (meaning not all legacy browsers will support them) and are near identical (both in APIs and capabilities) with the sole exception of persistence. sessionStorage (as the name persists) is only available for the duration of the browser session (and is deleted when the window is closed) - it does however survive page reloads. 
+  LocalStorage and sessionStorage are relatively new APIs (meaning not all legacy browsers will support them) and are near identical (both in APIs and capabilities) with the sole exception of persistence. sessionStorage (as the name persists) is only available for the duration of the browser session (and is deleted when the window is closed) - it does however survive page reloads. 
 
-Cookies, these can be trivially tampered with by the user, and data can also be read from them in plain text - so if you are wanting to store sensitive data then session is really your only option. If you are not using SSL, cookie information can also be intercepted in transit, especially on an open wifi.
+  Cookies, these can be trivially tampered with by the user, and data can also be read from them in plain text - so if you are wanting to store sensitive data then session is really your only option. If you are not using SSL, cookie information can also be intercepted in transit, especially on an open wifi.
 
+  LocalStorage persists when the browser is closed. Session Storage is reset when the browser is closed. Cookies are old, they can't store as much information and they can only store strings. 
+
+  Unlike local storage and session sotrage cookies are actuaklly sent to the server. 
 
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+  
 
-Generally speaking, it is a good idea to have the CSS link / stylesheet to be in the head of the HTML document before the body tag so that the page styling first and before any of the other content on the page. 
+  This has to do with the order things load in. Css styles are loaded before elements appear and are displayed on the page. We put javascript files at the end of the page so everything on the page is loaded before thigs like click handlers are set up. We can also use document.onload to detect when the page loads and execute our javascript once everything is on the page. 
 
-The only exception to the rule of thumb that CSS stylesheets are placed in the head of the page is:
+  Generally speaking, it is a good idea to have the CSS link / stylesheet to be in the head of the HTML document before the body tag so that the page styling first and before any of the other content on the page. 
 
-Besides the validation point, one caveat that might interest you when using style on the body is the flash of unstyled content. The browser would get elements that would be styled after they are displayed, making them shift on size/shape/font and/or flicker. It is generally a sign of bad craftsmanship. Generally you can get away with putting style anywhere you want, but try to avoid it whenever it is possible.
+  The only exception to the rule of thumb that CSS stylesheets are placed in the head of the page is:
 
-HTML5 however introduces a scoped attribute, which allows style tags to be included everywhere in the body. The impact of those styles is restricted to the style's parent-element and all it's child-elements.
+  Besides the validation point, one caveat that might interest you when using style on the body is the flash of unstyled content. The browser would get elements that would be styled after they are displayed, making them shift on size/shape/font and/or flicker. It is generally a sign of bad craftsmanship. Generally you can get away with putting style anywhere you want, but try to avoid it whenever it is possible.
+
+  HTML5 however introduces a scoped attribute, which allows style tags to be included everywhere in the body. The impact of those styles is restricted to the style's parent-element and all it's child-elements.
 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
 
   Unlike the id selector defined by # in the CSS, the class selector is most often used on several elements. This allows you to set a particular style for many HTML elements with the same class. The class selector uses the HTML class attribute, and is defined with a "." A simple way to look at it is that an id is unique to only one element.
+
+  Classes re for multiple elements. IDs are for single elements. IDs must be unique. 
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
@@ -153,34 +164,48 @@ Here are the notable differences between Reset and Normalize CSS:
 
   Elements after a floating element will flow around it. To avoid this, use the clear property.
 
+  Float is a CSS property that allows us to pull items left and right. When they float, they don't really have a height anymore. 
+
 * Describe z-index and how stacking context is formed.
 
-The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. z-index only effects elements that have a position value other than static (the default).
+  The z-index property in CSS controls the vertical stacking order of elements that overlap. As in, which one appears as if it is physically closer to you. z-index only effects elements that have a position value other than static (the default).
+
+  Z-index efines how elements are "stacked " on the page. An element with a higher z-index will appear on top of an element with a lower Z-index. 
 
 
 * Have you ever used a grid system, and if so, what do you prefer?
 
-Yes, I have used a Grid system with Bootstrap. This is a great shortcut if you have a complex page with many elements to be styled relationally on the page (several images / buttons, headers, etc).
+  Yes, I have used a Grid system with Bootstrap. This is a great shortcut if you have a complex page with many elements to be styled relationally on the page (several images / buttons, headers, etc).
 
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
 
-I have implemented several media queries, specifically with images / thumbnails or links with a AJAX call. This allows whatever query is entered into a search box, ran and pulling any objects meeting that criteria. 
+  I have implemented several media queries, specifically with images / thumbnails or links with a AJAX call. This allows whatever query is entered into a search box, ran and pulling any objects meeting that criteria. 
 
-I implemented a mobile specific layout in my second project because my primary user stories were people on the go, likely to access the app on their mobile device. Thus, the page and UX was oriented to the much smaller screen size. 
+  I implemented a mobile specific layout in my second project because my primary user stories were people on the go, likely to access the app on their mobile device. Thus, the page and UX was oriented to the much smaller screen size. 
+
+  Yes. We've used @media min-width and max-width queries to set breakpoints to have our page appear differently on different screens. 
 
 
 
 * How do you optimize your webpages for print?
 
+  Create a separate CSS file specifically designed for printing. There's a media atrribute. Media: ="print"
+
+  User high resolution pictures, at least 300 DPI
 
 * What are the advantages/disadvantages of using CSS preprocessors?
+  Preprocessors allow us to write fancier syntax and add logic to our CSS. Things we gain:
+    -variablers
+    -nested query syntax allows us to write less code
+    -it adds a learning overhead to the project everyone on the team may not know the framework
+    when things go wrong its harder to debug
 
-  Disadvantages:
+    Disadvantages:
 
-  1. One thing you can find with preprocessors is that you end up with vast outputs of css due to the nesting. On a small project it is easy to keep under control, on a large project with multiple developers it takes discipline to keep the amount of css generated under control.
+    1. One thing you can find with preprocessors is that you end up with vast outputs of css due to the nesting. On a small project it is easy to keep under control, on a large project with multiple developers it takes discipline to keep the amount of css generated under control.
 
-  2. Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.
+    2. Due to having a compilation step, the browser is not interpreting the source files, meaning the CSS line numbers are now irrelevant when trying to debug. This makes debugging a lot harder.
 
 
   * Describe what you like and dislike about the CSS preprocessors you have used.
@@ -188,19 +213,35 @@ I implemented a mobile specific layout in my second project because my primary u
 
     I would make sure to provide a detailed font family so that if a user accesses the website on a browser that doesnt have the font, there is at least one similar option to avoide defalting to the stand font. 
 
+    -SASS (great!)
+    -Less(it's fine)
+
 * Explain how a browser determines what elements match a CSS selector.
+
+  Selectors refer to IDs, classes and tags. We can combine them to refer to elements on the page. We can select elements inside of elements. 
 
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+  
+
 
   All HTML elements can be considered boxes. Even if you see a circle, it's living within a box.
   The CSS box model describes this principal - a box wraps around all HTML elements, and it consists of: margins, borders, padding, and the actual content. This model allows us to place a border around elements and space elements in relation to other elements.
   With CSS properties and values, it is possible to apply specific styles to each of these elements, and change the way they behave and/or display on the page.
 
-* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+  The box model refers to margin, border, padding and content. The display property allows us to set elements to be block elements, inline-block elements or inline. This defines how elements sit next to each other on a page. 
 
+* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+  Browsers can measure the width and height of elements in different ways. Each browser interprets box sizing differently. Specifying Content-box
 
 * List as many values for the display property that you can remember.
+  -Block: elements take up the full width
+  -inline: elements like <span> can go next to each other they have the width of the cohtebt and the height of the line. Inline elements cannot have a specified height. 
+  -flex:
+  -inline-block:
+  -inherit:
+  -none: hides things from the page
+  -grid
 
 
 * What's the difference between inline and inline-block?
@@ -221,6 +262,12 @@ I implemented a mobile specific layout in my second project because my primary u
   
   Again, the default positioning for all elements is static. This means that no positioning has been applied and the elements occurs where they normally would in the document.
 
+      Fixed: things stay put, no matter if scrolling occurs. Good for footers that are always on the bottom of the window. No matter if you scroll or not. 
+
+      absolute: things stay put relative to the entire document good for foots that dont appear until you scroll to the bottom of the pages. 
+
+      Relative: 
+
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 
 
@@ -239,11 +286,16 @@ I implemented a mobile specific layout in my second project because my primary u
 
   No I have not worked with Retina Graphcis. 
 
+  Retina refers to displays with an extremely high pixel density. The problem with high density displays  is that images built for low resolution screens will show up super tiny. One set is used for low -density displays, and another is used for high density displays. 
+
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
   There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on the other dependencies of your project, and what kinds of effects you're trying to achieve
 
   Use CSS animations for simpler “one-shot” transitions, like toggling UI element states.
   Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind or slow-down.
+
+
+
 
 ## JS Questions
 
