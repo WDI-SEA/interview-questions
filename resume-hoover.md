@@ -32,7 +32,7 @@ officer in the U.S. Army.
 -   Developed full stack web app for submitting bids on construction
     projects and developed educational math web app as part of 12-week
     immersive course in web development.
--   Won 2^nd^ place in AngelHack-Seattle Hackathon, resulting in
+-   Won 2nd place in AngelHack-Seattle Hackathon, resulting in
     nomination to HackAccelerator startup program in San Francisco.
 
 **WEB DEVELOPER – Spees Construction, LLC      Jan 2016 – Present**
@@ -44,7 +44,7 @@ officer in the U.S. Army.
 
 -   Developed pricing tool for deriving notional values of binary option
     equities trades as part of Marquee web project; work resulted in new
-    analysis of \$242B in trades.
+    analysis of $242B in trades.
 -   Designed publishing system for delivering real-time pricing data to
     clients using web sockets; work contributed to gaining Reuters as an
     additional client.
@@ -61,7 +61,7 @@ officer in the U.S. Army.
 **HEALTHCARE ADMINISTRATOR – United States Army      May 2010 – May 2015**
 
 -   Led 18 personnel to conduct NATO joint-organization contingency
-    missions in Afghanistan; managed largest balance sheet (\$89M) of
+    missions in Afghanistan; managed largest balance sheet ($89M) of
     all NATO units in Eastern Afghanistan; received Bronze Star for
     actions in theater.
 -   Managed a 100+ employee Outpatient Health Clinic in Germany, led
