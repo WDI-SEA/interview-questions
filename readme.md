@@ -253,29 +253,127 @@ I implemented a mobile specific layout in my second project because my primary u
 
 * Explain how `this` works in JavaScript
 
+  The object that this refers to is redetermined every time control enters a new execution context and remains fixed until control shifts to a different context. The value of this is dependent upon two things: The type of code being executed (i.e., global, function, or eval) and the caller of that code.
+
+  If we call a function as a property of an object using either dot (i.e., obj.foo()) or bracket (i.e., obj["foo"]()) notation, this will refer to the parent object in the body of the function:
+
+  This refers to the parent object inside function code if the function is called as a property of the parent.
 
 * Explain how prototypal inheritance works
+
+  Prototype-based programming is a style of object-oriented programming in which behaviour reuse (known as inheritance) is performed via a process of cloning existing objects that serve as prototypes. This model can also be known as prototypal, prototype-oriented, classless, or instance-based programming.
+
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+  As you likely have guessed by looking at the word 'Ternary' meaning three, a Ternary expression takes three arguments. The arguments and result can be of different types. The conditional (ternary) operator is the only JavaScript operator that takes three operands. This operator is frequently used as a shortcut for the if statement.
+
+
+  The syntax is as follows:
+  condition ? expr1 : expr2 
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
+
+  A variable is undeclared when it does not use the var keyword. It gets created on the global object (that is, the window), thus it operates in a different space as the declared variables.
+
+  Something is undefined when it hasn’t been defined yet. If you call a variable or function without having actually created it yet the parser will give you an not defined error.
+
+  null is a variable that is defined to have a null value.('', 0)
+
 * What is a closure, and how/why would you use one?
+
 * What's a typical use case for anonymous functions?
+  An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle . Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can contain only a single executable statement.
+
+  They can be used in the same way as any other object. They can be stored in variables, passed to other functions as parameters or returned from a function using the return statement. Functions are always objects, no matter how they are created.
+
+  Once the function has been saved to the variable, the variable can be used to invoke it:
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
+
+  The limitations of call quickly become apparent when you want to write code that doesn't (or shouldn't) know the number of arguments that the functions need… like a dispatcher.
+
+  Both can be called on functions, which they run in the context of the first argument. In call the subsequent arguments are passed in to the function as they are, while apply expects the second argument to be an array that it unpacks as arguments for the called function.
+
 * Explain `Function.prototype.bind`.
+
+  The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+  Syntax:
+  fun.bind(thisArg[, arg1[, arg2[, ...]]])
+
 * What's the difference between feature detection, feature inference, and using the User Agent string?
+  
+  When you make an assumption that because one feature is present (or not) another one will also be present (or not)
+
+  Feature inference checks for a feature just like feature detection, but uses another function because it assumes it will also exist, e.g.:
+
+  if (document.getElementsByTagName) {
+    element = document.getElementById(id);
+  }
+
+  User agent string is just reading the stupid little string that each browser sends along and then you can compare that string with some known browsers you're targeting. Generally this is a super old way of doing things and is easily spoofed
+
 * Explain AJAX in as much detail as possible.
+
+  AJAX stands for Asynchronous JavaScript and XML. In a nutshell, it is the use of the XMLHttpRequest object to communicate with server-side scripts. It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files.
+
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
+
 * Explain "hoisting".
+  Hoisting is JavaScript's default behavior of moving declarations to the top. JavaScript only hoists declarations, not initializations. To avoid bugs, always declare all variables at the beginning of every scope.
+
 * Describe event bubbling.
+
+  Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.
+
 * What's the difference between an "attribute" and a "property"?
+
+  These properties are kind of like instance variables for the particular element. As such, a property can be different types (boolean, string, etc.). Properties can be accessed using jQuery’s prop method (as seen below) and also by interacting with the object in vanilla JS.
+
+  Attributes are in the HTML itself, rather than in the DOM. They are very similar to properties, but not quite as good. When a property is available it’s recommended that you work with properties rather than attributes.
+
+  An attribute is only ever a string, no other type.
+
+  If an element has a default value, the attribute shows the default value even if the value has changed.
+
+
 * Why is extending built-in JavaScript objects not a good idea?
+
 * What is the difference between `==` and `===`?
+
+  == only compares values
+  === compares values + type
+
 * Explain the same-origin policy with regards to JavaScript.
+  The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. It is a critical security mechanism for isolating potentially malicious documents.
+
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
+
+  Promises make more than one function to be called easier.
+  Particular features are that 
+         (a) functions can be added anywhere in the code, subject only to the promise being within scope, and
+          (b) functions added after a Deferred/promise has been resolved/rejected will fire immediately.
+
+  In short promises are perfect when you deal with multiple async calls in parallel.
+
 * What tools and techniques do you use debugging Javascript code?
+
+ There are many tools and techniques to debug my Javascript code:
+
+  The console.log() statement printing the response allows us to use our mouse to click on properties of the object and investigate them. Pausing the debugger at the point when the response arrives allows us to interact with the console when the response variable is in scope. We can write commands on the console to see if they work and copy and paste valid code back into our program.
+
+  Remember, we have two ways to set breakpoints. We can write the debugger keyword in our program when we want the program to stop. Or, we can look at the source in Chrome's Developer Tools and click on a line to tell the browser to stop there.
+
+  Adding a console.log() will print the response every time, and gives us a line number to click on. We can follow the link to the line number and click on that line to set a temporary breakpoint manually.
+
+  Using the debugger keyword will stop our program every time. It won't output anything to the console so we won't be able to see data once we're past that point of execution.
+
+  I primarily use the debugger tool in Google Chrome's console with set breakpoints to walk through the function until the bug is found and I can fix it.
+
 * What language constructions do you use for iterating over object properties and array items?
 
 ## Database Questions
@@ -284,28 +382,81 @@ I implemented a mobile specific layout in my second project because my primary u
 
 ## Ruby/Rails
 * What are ruby gems?
+
+  RubyGems is a package manager for the Ruby programming language that provides a standard format for distributing Ruby programs and libraries (in a self-contained format called a "gem"), a tool designed to easily manage the installation of gems, and a server for distributing them.
+
 * What is the difference between a symbol and a string?
+  This means that using symbols can potentially save a good bit of memory depending on the application. It is also faster to compare symbols for equality since they are the same object, comparing identical strings is much slower since the string values need to be compared instead of just the object ids.
+
+  As far as when to use which, I usually use strings for almost everything except things like hash keys where I really want a unique identifier, not a string.
+
 * What is the difference between a class method and an instance method?
+
+  Class methods are for anything that does not deal with an individual instance of a class. 
+
 * What is the difference between local variables, instance variables, and class variables?
+  instance variables that are defined for each particular object and are available throughout other methods in the object. These variables are prefixed by an @ symbol
+
+
 * What is a range?
+  A set of values with a beginning and an end
+
 * In ruby, what does attr_accessor do?  
+  Ir ia a shorthand for telling our class to create both a getter and a setter method called attr_accessor.
+
 * What is the purpose of environment files under the config folder in Rails? (development, test, production)
+  The ENV object contains a list of all the current environment variables set. It is useful for API integration in Ruby. 
+
+
 * What is the purpose of the application.rb file in Rails?
+
+  In general, the work of configuring Rails means configuring the components of Rails, as well as configuring Rails itself. The configuration file config/application.rb and environment-specific configuration files (such as config/environments/production.rb) allow you to specify the various settings that you want to pass down to all of the components.
+
+  This is a setting for Rails itself. If you want to pass settings to individual Rails components, you can do so via the same config object in config/application.rb:
+
 * How can you define a constant?
+
+  A Ruby constant is like a variable, except that its value is supposed to remain constant for the duration of the program. The Ruby interpreter does not actually enforce the constancy of constants, but it does issue a warning if a program changes the value of a constant
+
+  Lexically, the names of constants look like the names of local variables, except that they begin with a capital letter. By convention, most constants are written in all uppercase with underscores to separate words, LIKE_THIS.
+
 * What is the purpose of `yield`?
+  Yield makes executing the block feel like a method invocation within the method invocation rather than a block that's being explicitly called using Proc#call. You have no handle to the block object anymore - yield "magically" invokes it without any object references being involved.
+
 * How do you store API keys when creating an app?
 * How do I send parameters through a url?
 * Explain MVC
 * What is a `before_action`? When would you use it?
 * What do controllers do in rails?
+  Controllers and the actions contained within are the starting point for the backend code that will be executed when a user visits a particular page/URL.
+
 * What is RESTful routing?
+  RESTful routes take advantage of the built-in REST orientation of Rails to wrap up a lot of routing information in a single declaration. A RESTful route looks like this:
+
+
+  Routes are contained in the config/routes.rb file.
+  GET /geocoder/new geocoders#new return an HTML form for creating the geocoder
+  POST  /geocoder geocoders#create  create the new geocoder
+  GET /geocoder geocoders#show  display the one and only geocoder resource
+  GET /geocoder/edit  geocoders#edit  return an HTML form for editing the geocoder
+  PATCH/PUT /geocoder geocoders#update  update the one and only geocoder resource
+  DELETE  /geocoder geocoders#destroy delete the geocoder resource
+
 * What is a polymorphic association?
 * What are params?
+
+  The params come from the user's browser when they request the page.
+  In HTTP/HTML, the params are really just a series of key-value pairs where the key and the value are strings, but Ruby on Rails has a special syntax for making the params be a hash with hashes inside.
+
 * How do I make a migration to add a column in Rails?
 * What is CSRF? How does Rails protect an app against this?
 * What's the difference between `User.find_by_id(1)` and `User.find(1)`?
 * What's are classes in Ruby? What are modules? And what's the difference?
 
+  Modules are about providing methods that you can use across multiple classes - think about them as "libraries" (as you would see in a Rails app). Classes are about objects; modules are about functions.
+  the module cannot be instantiated. When a class includes a module, a proxy superclass is generated that provides access to all the module methods as well as the class methods.
+
+  A module can be included by multiple classes. Modules cannot be inherited, but this "mixin" model provides a useful type of "multiple inheritrance". OO purists will disagree with that statement, but don't let purity get in the way of getting the job
 ## Testing Questions
 
 * What are some advantages/disadvantages to testing your code?
@@ -368,6 +519,14 @@ console.log('three');
 ## Fun Questions:
 
 * What's a cool project that you've recently worked on?
+
+  My second project is my first full stack application that verify's the user's age (21 or older) and uses the Google Places api to determine the user's location and helps find 10 places serving beer within a mile radius. 
 * What are some things you like about the developer tools you use?
+
 * Do you have any pet projects? What kind?
+  Two projects, one completely front end (HTML/CSS/Javascript) that generated various sudoku puzzles of varying difficulty and checked the answers. 
+
+  My second project is my first full stack application that verify's the user's age (21 or older) and uses the Google Places api to determine the user's location and helps find 10 results within a mile radius. 
+
 * How do you like your coffee?
+  Cappuccino all the WAY!
