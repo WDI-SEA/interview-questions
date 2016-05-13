@@ -1,0 +1,47 @@
+## General Questions
+
+* What did you learn yesterday/this week?
+Did some Bootstrap review yesterday. I also learned about Video.JS as well as rails auth.
+
+* What excites or interests you about coding?
+The fact that I can build things that interest me and that it will provide me with a better career trajectory
+
+* What is a recent technical challenge you experienced and how did you solve it?
+I had many syntax issues with a ruby app that was preventing it from showing up on the page. I went through and trouble-shooted each of these issues, one at a time.
+
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+I start with the user and work my way backwards. I try to take the users needs into account when designing the layout and flow of the site.  
+
+* Talk about your preferred development environment.
+Quiet with minimal distractions.
+
+* Which version control systems are you familiar with?
+Github
+
+* Can you describe your workflow when you create a web page?
+I start with the users needs first, then build out the framework of the site, then do a good majority of the styling, then write the functionality and then tie it all together.
+
+* If you have 5 different stylesheets, how would you best integrate them into the site?
+Inline stylesheets?
+
+* Can you describe the difference between progressive enhancement and graceful degradation?
+Graceful degradation Providing an alternative version of your functionality or making the user aware of shortcomings of a product as a safety measure to ensure that the product is usable. Progressive enhancement Starting with a baseline of usable functionality, then increasing the richness of the user experience step by step by testing for support for enhancements before applying them. 
+
+* Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+Set the images in divs and then write javascript functions to change the images on a timer
+
+* If you could master one technology this year, what would it be?
+To the alpha and the omega of front-end tech (HTML, CSS & JS)
+
+* Explain the importance of standards and standards bodies.
+It establishes international standards for software development. This allows code written in one country to run in another.
+
+==============================
+
+## HTML Questions
+
+* What does a `doctype` do?
+* What's the difference between HTML and XHTML?
+* What are `data-` attributes good for?
+* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
