@@ -250,6 +250,8 @@ var person = new Person() is a new instance of a person using an constructor.
 var foo = 10 + '20';
 ```
 
+foo = 30
+
 *Question: How would you make this work?*
 ```javascript
 add(2, 5); // 7
@@ -260,6 +262,7 @@ add(2)(5); // 7
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
+"goh angasal a m'i"
 
 *Question: What is the outcome of the two alerts below?*
 ```javascript
@@ -270,12 +273,15 @@ var foo = "Hello";
 })();
 alert(foo + bar);
 ```
+"Hello World"
+Undeclared variable
+
 
 *Question: What is the value of `foo.length`?*
 ```javascript
-var foo = [];
-foo.push(1);
-foo.push(2);
+var foo = []; => null
+foo.push(1); => 1
+foo.push(2); => 2
 ```
 
 *Question: What is the value of `foo.x`?*
@@ -293,10 +299,18 @@ setTimeout(function() {
 }, 0);
 console.log('three');
 ```
+'one' 'three'
 
 ## Fun Questions:
 
 * What's a cool project that you've recently worked on?
+D3 graphs plotting total snow fall in different regions over the last decade.
+
 * What are some things you like about the developer tools you use?
+
 * Do you have any pet projects? What kind?
+Currently developing a site for my friend who is a photographer.
+
 * How do you like your coffee?
+
+Chemex && light half and half && light sugar || nitro cold brew black || machiatto && light sugar
