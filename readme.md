@@ -9,14 +9,56 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+
+This week I have been expanding my understanding of rails. Yesterday I focused specifically on active records. Last weekend I started learning D3.js and Three.js.
+
 * What excites or interests you about coding?
+
+The creative element of building a well designed website.
+
 * What is a recent technical challenge you experienced and how did you solve it?
+
+A recent challenge technical challenge that I had was styling an erb element in rails. I solved it by googling "how to add a class on an erb tag" and found a stack overflow post.
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+
+UI - UX based decisions for user flow. Are my photos high quality or pixelated? Is the page responsive?
+
+Performance - How many files are in my HTML, if they are plugins - are they minified files? Is my JS file located at the bottom of the page? How large are my site images and have I compressed them?
+
+Maintainability -Is my CSS or SASS dry. Is it easy to read and well documented with comments? Is my code reusable?
+
 * Talk about your preferred development environment.
 * Which version control systems are you familiar with?
+
+Git
+
+
 * Can you describe your workflow when you create a web page?
+
+ - Basic HTML structure
+ - Minimal CSS styles
+ - Work on the more technical aspects of the modules functionaility.
+ - Repeat the last three steps for other parts modules on the page.
+ - Complete and fine tune CSS styles.
+
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+- reset
+- base styles - if there is a company style guide, those styles would go here
+- layout - for example, default height of a section or padding between sections
+- module styles specific styles to get the page looking as I want it to look
+- state styles  - what does a link look like what its being hovered over, after its been visited, etc...
+
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
+
+Progressive enhancement is using the newest technologies as they are released.
+
+Graceful degradation is making sure that the technologies that you are using are compatible with older browsers so that the page is more accessible.
+
+Ideally you want to strike a balance between the two and make sure that if you are using a new technology that has limited support -  you want to have a fallback for older browsers.
+
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.
@@ -32,16 +74,41 @@ Go through all of the following questions and think about how you would respond 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+Classes target multiple items, Id's target one. Since Id's are more specific, they override CSS styles.
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
+
+Z index determines the layer of elements. An element with a higher z index is layered over an element with a lower z index.
+
 * Have you ever used a grid system, and if so, what do you prefer?
+
+I have used both Bootstrap's grid and skeleton. I prefer bootstrap.
+
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+
+I have implemented media queries and mobile layouts.
+
 * How do you optimize your webpages for print?
 * What are the advantages/disadvantages of using CSS preprocessors?
+
+ The main advantage is its better for making your code reusable using includes and its also makes nesting possible.
+
   * Describe what you like and dislike about the CSS preprocessors you have used.
+I like using SASS, which is the only preprocessor that I have used.
+
 * How would you implement a web design comp that uses non-standard fonts?
+You would want to import the fonts.
+
 * Explain how a browser determines what elements match a CSS selector.
+A browser determines what elements are a match to a CSS selector by specificity.
+Ordered least to most specific:
+ - element tags
+ - classes
+ - id's
+ - inline styles
+
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
@@ -91,7 +158,7 @@ Go through all of the following questions and think about how you would respond 
 * What is the difference between a class method and an instance method?
 * What is the difference between local variables, instance variables, and class variables?
 * What is a range?
-* In ruby, what does attr_accessor do?  
+* In ruby, what does attr_accessor do?
 * What is the purpose of environment files under the config folder in Rails? (development, test, production)
 * What is the purpose of the application.rb file in Rails?
 * How can you define a constant?
