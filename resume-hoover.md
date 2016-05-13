@@ -1,15 +1,15 @@
-**MONTE B. HOOVER**
+##MONTE B. HOOVER
 
 <monte.b.hoover@gmail.com> | 810-964-1305 |
 <https://github.com/montehoover>
-
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Software engineer dedicated to tackling complex problems through
 algorithms and programming language implementation. Mission focused and
 thrives in team settings. Recipient of multiple awards for leading teams
 in emergency medicine operations in Germany and Afghanistan as an
 officer in the U.S. Army.
 
-**SKILLS**
+####SKILLS
 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------
   -   **Languages:** Python, JavaScript, Java, Ruby, Ada       -   **Programming:** Memoization, Dynamic programming, Floating point math, Prime number generation
