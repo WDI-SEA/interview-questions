@@ -11,20 +11,20 @@ officer in the U.S. Army.
 
 ####SKILLS
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  -   **Languages:** Python, JavaScript, Java, Ruby, Ada       -   **Programming:** Memoization, Dynamic programming, Floating point math, Prime number generation
+  -   **Languages:** Python, JavaScript, Java, Ruby, Ada       
                                                                
-  -   **Frameworks:** Node.js/Express, Rails, Django           -   **Project Management:** Agile: Scrum, Kanban; Waterfall, Lean, Six Sigma
+  -   **Frameworks:** Node.js/Express, Rails, Django           
                                                                
   -   **Databases:** PostgreSQL, MongoDB, SecDB                
                                                                
   -   **Testing:** TDD using Mocha, Chai, and Slang AutoTest   
                                                                
+  -   **Project Management:** Agile: Scrum, Kanban; Waterfall, Lean, Six Sigma
                                                                
-  ------------------------------------------------------------ -----------------------------------------------------------------------------------------------------
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -   **Programming:** Memoization, Dynamic programming, Floating point math, Prime number generation
 
-**EXPERIENCE**
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+####EXPERIENCE
 
 **SOFTWARE ENGINEER – General Assembly Mar 2016 – Present**
 
