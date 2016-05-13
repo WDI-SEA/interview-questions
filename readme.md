@@ -67,17 +67,34 @@ This to ensure that the page is styled before anything else is processed on the 
 A class can cover many different elements, while ID's only have one element.
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+Reset removes default styling, while normalizing just makes the styling the same. Normalizing CSS would be my choice.
 
 * Describe Floats and how they work.
+Floats allow elements to be organized and separate with relative positioning.
+
 * Describe z-index and how stacking context is formed.
+Z-index determines the order of overlap for different elements.
+
 * Have you ever used a grid system, and if so, what do you prefer?
+Grid systems are useful for organizing content.
+
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+I have implemented media queries before when using webRTC.
+
 * How do you optimize your webpages for print?
+Determining the most important content for the website and stlying the print pages as such.
+
 * What are the advantages/disadvantages of using CSS preprocessors?
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
+You might have to import the fonts first before using it.
+
 * Explain how a browser determines what elements match a CSS selector.
+It would depend on the the linked stylesheet and the html tags. If the tags also have classes or ids that are present in the stylesheet, they would be modified as such.
+
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+The box model gives each element margins, padding, content, and borders. They determine how the element is spaced out and separated on the page.
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
 * What's the difference between inline and inline-block?
