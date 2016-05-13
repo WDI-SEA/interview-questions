@@ -249,9 +249,11 @@ Event bubbling is firing an event to a nested element and the having it fire to 
 * What is the extent of your experience with Promises and/or their polyfills?
 
 * What are the pros and cons of using Promises instead of callbacks?
+
 Promises prevent callbacks being nested in other callbacks, and can make the code more readable.
 
 * What tools and techniques do you use debugging Javascript code?
+
 I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it.
 
 * What language constructions do you use for iterating over object properties and array items?
@@ -262,11 +264,16 @@ I console.log my console.log's with more console.log's. Also setting breakpoints
 
 ## Ruby/Rails
 * What are ruby gems?
+A ruby file designed to easily manage the installation.
 * What is the difference between a symbol and a string?
+A symbol cannot be changed vs strings which can be changed at any time.
 * What is the difference between a class method and an instance method?
+A class is a description of a thing. An instance is an actual thing.
 * What is the difference between local variables, instance variables, and class variables?
 * What is a range?
+Range is the all of the numbers between two numbers. You can also use these for letters.
 * In ruby, what does attr_accessor do?
+
 * What is the purpose of environment files under the config folder in Rails? (development, test, production)
 * What is the purpose of the application.rb file in Rails?
 * How can you define a constant?
@@ -277,15 +284,19 @@ In an .env file to hide it from view
 * Explain MVC
 Model View Controller
 * What is a `before_action`? When would you use it?
-
+before_action is a hook that you can use to run some code before you do another block of code.
 * What do controllers do in rails?
 In rails, controllers store your methods.
 * What is RESTful routing?
+Using GET,PUT, POST, DELETE to serve pages.
 * What is a polymorphic association?
+An association that can change between being a 1 to 1 and many to one association.
 * What are params?
+params are parameters that can be passed in from the front end from the user to be stored in the backend.
 * How do I make a migration to add a column in Rails?
 * What is CSRF? How does Rails protect an app against this?
 * What's the difference between `User.find_by_id(1)` and `User.find(1)`?
+User.find_by_id grabs a specific user and User.find grabs the first of a description.
 * What's are classes in Ruby? What are modules? And what's the difference?
 
 ## Testing Questions
