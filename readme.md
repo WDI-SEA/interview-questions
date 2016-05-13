@@ -26,7 +26,7 @@ UI - UX based decisions for user flow. Are my photos high quality or pixelated? 
 
 Performance - How many files are in my HTML, if they are plugins - are they minified files? Is my JS file located at the bottom of the page? How large are my site images and have I compressed them?
 
-Maintainability -Is my CSS or SASS dry. Is it easy to read and well documented with comments? Is my code reusable?
+Maintainability -Is my CSS or SASS as dry as possible? Is it easy to read and well documented with comments? Is my code reusable?
 
 * Talk about your preferred development environment.
 
@@ -63,17 +63,29 @@ Graceful degradation is making sure that the technologies that you are using are
 Ideally you want to strike a balance between the two and make sure that if you are using a new technology that has limited support -  you want to have a fallback for older browsers.
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+
+
 * If you could master one technology this year, what would it be?
+
+React.js
+
 * Explain the importance of standards and standards bodies.
 
 ## HTML Questions
 
 * What does a `doctype` do?
 DOCTYPE tells the browser which version of HTML you are using.
+
 * What's the difference between HTML and XHTML?
+
 * What are `data-` attributes good for?
+
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+
+It is good to put your JS file at the bottom of your body so that your page is not waiting to for the JS file to load to show the page. Its also good to store the CSS files at the top of the page so that the user sees colors load on the page quicker rather than having a longer wait to see anything load.
 
 ## CSS Questions
 
@@ -82,6 +94,9 @@ DOCTYPE tells the browser which version of HTML you are using.
 Classes target multiple items, Id's target one. Since Id's are more specific, they override CSS styles.
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
+Normalize preserves user defaults rather than unstyling them.
+Normalize corrects some bugs that are out of scope for css reset.
 
 * Describe Floats and how they work.
 Floats are ways to style different elements to different positions on your webpage.
@@ -170,8 +185,14 @@ JS annimations is also more widely supported.
 ## JS Questions
 
 * Explain event delegation
+Event delegation is assigning a parent element a event handler rather than assigning event handlers to each child element.
+
 * Explain how `this` works in JavaScript
+
+
 * Explain how prototypal inheritance works
+Prototypal inheritance is a way of creating objects that contain abstractions of what they are building. For example, if you make a human object - it can have a name, age, location, and family members as properties.
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
 
@@ -179,6 +200,7 @@ A null varible is a variable without a value.
 An undefined variable is a variable that has not been created. An undeclared variable is a variable that has not been declared with the keyword var.
 
 * How would you go about checking for any of these states?
+
 * What is a closure, and how/why would you use one?
 
 * What's a typical use case for anonymous functions?
@@ -191,20 +213,46 @@ var person = Person() is a function inside a variable named person.
 var person = new Person() is a new instance of a person using an constructor.
 
 * What's the difference between `.call` and `.apply`?
+
 * Explain `Function.prototype.bind`.
+
 * What's the difference between feature detection, feature inference, and using the User Agent string?
+
 * Explain AJAX in as much detail as possible.
+
+Ajax is a method of exchanging data with a server, and updating the web page without having to reloading the page.
+
 * Have you ever used JavaScript templating?
-  * If so, what libraries have you used?
+No.
+
+* If so, what libraries have you used?
+
 * Explain "hoisting".
+
+Hoisting is the act of declaring a variable and then assigning it a value later on in your code. This is useful in creating variables with values that change such as a scoreboard.
+
 * Describe event bubbling.
+
+Event bubbling is firing an event to a nested element and the having it fire to the parent elements which it is nested.
+
 * What's the difference between an "attribute" and a "property"?
+
+
 * Why is extending built-in JavaScript objects not a good idea?
+
 * What is the difference between `==` and `===`?
+  == is less strict than ===, === compares what type of value it is.
+
 * Explain the same-origin policy with regards to JavaScript.
+
 * What is the extent of your experience with Promises and/or their polyfills?
+
 * What are the pros and cons of using Promises instead of callbacks?
+Promises prevent callbacks being nested in other callbacks, and can make the code more readable.
+
 * What tools and techniques do you use debugging Javascript code?
+I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it.
+
 * What language constructions do you use for iterating over object properties and array items?
 
 ## Database Questions
@@ -223,10 +271,14 @@ var person = new Person() is a new instance of a person using an constructor.
 * How can you define a constant?
 * What is the purpose of `yield`?
 * How do you store API keys when creating an app?
+In an .env file to hide it from view
 * How do I send parameters through a url?
 * Explain MVC
+Model View Controller
 * What is a `before_action`? When would you use it?
+
 * What do controllers do in rails?
+In rails, controllers store your methods.
 * What is RESTful routing?
 * What is a polymorphic association?
 * What are params?
@@ -238,6 +290,9 @@ var person = new Person() is a new instance of a person using an constructor.
 ## Testing Questions
 
 * What are some advantages/disadvantages to testing your code?
+Advantage - catching bugs right away before they become an issue.
+Disadvantage - The tests are only as good as the programmer writing them.
+
 * What tools would you use to test your code's functionality?
 * What is the difference between a unit test and a functional/integration test?
 * What is the purpose of a code style linting tool?
@@ -304,11 +359,13 @@ console.log('three');
 ## Fun Questions:
 
 * What's a cool project that you've recently worked on?
+
 D3 graphs plotting total snow fall in different regions over the last decade.
 
 * What are some things you like about the developer tools you use?
 
 * Do you have any pet projects? What kind?
+
 Currently developing a site for my friend who is a photographer.
 
 * How do you like your coffee?
