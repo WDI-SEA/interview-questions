@@ -8,25 +8,47 @@ Go through all of the following questions and think about how you would respond 
 
 ## General Questions
 
-* What did you learn yesterday/this week?
-
+**What did you learn yesterday/this week?**
 Lately I have been working within the Rails framework, and most recently I tried to turn one of my old Rails-based apps into a Single Page Application.  It was really cool trying to figure out how to send responses just in JSON data and dynamically render the page with that data on the client side.  It was made a little more interesting because I was doing all the client-side work with jQuery, so there was some fun manual DOM manipulation involved.
 
-* What excites or interests you about coding?
-* What is a recent technical challenge you experienced and how did you solve it?
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
-* Talk about your preferred development environment.
-* Which version control systems are you familiar with?
-* Can you describe your workflow when you create a web page?
-* If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?
-* Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
-* If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
+**What excites or interests you about coding?**
+Coding to me feels like a paintbrush, a simple tool that you can dip into lots of different colors and use to create anything you want, whether it be useful or simply fun.  In particular I love to look at things at a low level and try to grasp the inner workings of them - sometimes I just put tiny dots of paint next to each other to see how their colors mix.
+
+**What is a recent technical challenge you experienced and how did you solve it?**
+I've been working on this web tool for construction general contractors and subcontractors to post and submit bids back and forth on projects, and one part of it involved a form where I wanted to dynamically add new fields to the form.  I went through a few different approaches trying to use ajax, but in the end I discovered that if I used the same name attribute for each element the post request would send the data as an array that I could manipulate.  The solution in the end turned out to be pretty simple.
+
+**What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?**
+I first start thinking about a project by looking at the requirements that I'm given or that I want to achieve, and then I start to organize my thoughts into how I can best implement this in a given amount of time, and how those choices are going to affect the user experience.  For example, I was asked about making an app for a local business group that involved storing some simple data about small businesses.  I thought about whether to use a SQL or noSQL database, and this case was simple enough that a noSQL database would probably be more efficient, but in the end I thought the efficiency gains wouldn't be significant on a small scale and it might be more maintainable in the long run to use a SQL database.
+
+**Talk about your preferred development environment.**
+As far as IDE's go, I used to use eclipse in college and I appreciated the debugging tools for larger java and python projects, but lately I have been using Sublime for web projects and I love how lightweight it is.
+
+**Which version control systems are you familiar with?**
+Git.
+
+**Can you describe your workflow when you create a web page?**
+If it is a bigger project, I'll start by sketching out a basic wireframe of it and try to think through potential workflows.  From there, I'll start to build the basic structure of the page.  If the page is going to need some persistent data, then I'll build out the basics of the back end and test out the models and tables before putting skin on it with the pages and routes.   For the client-side I'll add in basic css and javascript directories and dependencies like bootstrap and jquery, and then build structure from the basic elements on up.  Finally I'll add required features one at a time until I get to some minimum viable product.
+
+**If you have 5 different stylesheets, how would you best integrate them into the site?**
+If for example I had multiple templates that I wanted to use color schemes or elements from, I would stack them in my page so that they only over-rode each other the way I wanted them to.  So for example I would most likely have bootstrap as the first style sheet and a style sheet with any of my own tweeks as the very last one, and I would have to decide how I wanted to order any other third party sheets I wanted in between.
+
+**Can you describe the difference between progressive enhancement and graceful degradation?**
+I'm just going to take a shot and say that these terms sound like they describe best practices for dealing with older browsers or maybe various screen sizes.  They sound almost like approaching the issue from either the top down or the bottom up.
+
+**Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).**
+I think my first approach would be to use a bootstrap carousel, and maybe set a timeout event to switch the picture automatically on a timer.  I would try to look and see if anyone else has done it in a way that I like too and see if there is anything I can learn from that.
+
+**If you could master one technology this year, what would it be?**
+Either neural networks, or sockets.
+
+**Explain the importance of standards and standards bodies.**
+Honestly my thoughts on this subject aren't that deep, but I do find standards to be helpful because they give us predictability and consistency in how code will be run.
 
 ## HTML Questions
 
-* What does a `doctype` do?
+**What does a `doctype` do?**
+I
+
 * What's the difference between HTML and XHTML?
 * What are `data-` attributes good for?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
