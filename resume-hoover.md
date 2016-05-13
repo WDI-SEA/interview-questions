@@ -27,7 +27,7 @@ officer in the U.S. Army.
 
 ####EXPERIENCE
 
-**SOFTWARE ENGINEER – General Assembly      Mar 2016 – Present**
+**SOFTWARE ENGINEER – General Assembly**      Mar 2016 – Present
 
 -   Developed full stack web app for submitting bids on construction
     projects and developed educational math web app as part of 12-week
@@ -35,12 +35,12 @@ officer in the U.S. Army.
 -   Won 2nd place in AngelHack-Seattle Hackathon, resulting in
     nomination to HackAccelerator startup program in San Francisco.
 
-**WEB DEVELOPER – Spees Construction, LLC      Jan 2016 – Present**
+**WEB DEVELOPER – Spees Construction, LLC**      Jan 2016 – Present
 
 -   Developed web site and contract management web application for
     General Contractor in building construction.
 
-**SOFTWARE ENGINEER INTERN – Goldman Sachs Group, Inc.      Apr 2015 – Jun 2015**
+**SOFTWARE ENGINEER INTERN – Goldman Sachs Group, Inc.**      Apr 2015 – Jun 2015
 
 -   Developed pricing tool for deriving notional values of binary option
     equities trades as part of Marquee web project; work resulted in new
@@ -49,7 +49,7 @@ officer in the U.S. Army.
     clients using web sockets; work contributed to gaining Reuters as an
     additional client.
 
-**SOFTWARE DEVELOPMENT CONTRIBUTOR – Hackers For Charity      Jun 2010 – Present**
+**SOFTWARE DEVELOPMENT CONTRIBUTOR – Hackers For Charity**      Jun 2010 – Present
 
 -   Designed and implemented system for delivering internet service to
     school in rural Uganda using line of sight radio antennas and
@@ -58,7 +58,7 @@ officer in the U.S. Army.
     (Witnessed room of 60 people seeing the internet for the
     first time!)
 
-**HEALTHCARE ADMINISTRATOR – United States Army      May 2010 – May 2015**
+**HEALTHCARE ADMINISTRATOR – United States Army**      May 2010 – May 2015
 
 -   Led 18 personnel to conduct NATO joint-organization contingency
     missions in Afghanistan; managed largest balance sheet ($89M) of
@@ -68,22 +68,22 @@ officer in the U.S. Army.
     multi-year transition project resulting in 14% year-over-year cost
     savings and 20% increased beneficiary capacity.
 
-**SOFTWARE DEVELOPMENT CONTRIBUTOR – One Laptop Per Child      Aug 2009 – Jul 2010**
+**SOFTWARE DEVELOPMENT CONTRIBUTOR – One Laptop Per Child**      Aug 2009 – Jul 2010
 
 -   Created educational application for OLPC’s Linux distribution; field
     tested application in Jinja, Uganda.
 
-**INFORMATION SYSTEMS MANAGER – United States Military Academy      Aug 2009 – May 2010**
+**INFORMATION SYSTEMS MANAGER – United States Military Academy**      Aug 2009 – May 2010
 
 -   Led team of 70 administrators managing 4500 user systems; conducted
     OS update (XP to Win7) for all 4500 systems.
 
-**SOFTWARE ENGINEER INTERN – National Security Agency       Jun 2009 – Jul 2009**
+**SOFTWARE ENGINEER INTERN – National Security Agency**       Jun 2009 – Jul 2009
 
 -   Contributed to data parsing tool with Perl scripts; used forensics
     tools to examine hardware.
 
-**RESEARCHER – Office of Naval Research & National Conference on Undergraduate Research      Jan 2009 – Jun 2009**
+**RESEARCHER – Office of Naval Research & National Conference on Undergraduate Research**      Jan 2009 – Jun 2009
 
 -   Published paper on the potential of distributed computing as a
     disruptive technology.
