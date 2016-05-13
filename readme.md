@@ -311,6 +311,8 @@ Here are the notable differences between Reset and Normalize CSS:
 
   This refers to the parent object inside function code if the function is called as a property of the parent.
 
+
+
 * Explain how prototypal inheritance works
 
   Prototype-based programming is a style of object-oriented programming in which behaviour reuse (known as inheritance) is performed via a process of cloning existing objects that serve as prototypes. This model can also be known as prototypal, prototype-oriented, classless, or instance-based programming.
@@ -334,12 +336,20 @@ Here are the notable differences between Reset and Normalize CSS:
 
 * What is a closure, and how/why would you use one?
 
+  var x;
+
+  if we just write 'var x;' then the value of it is undefined. The 'null' value is something that is explciitly set.
+
+
+
 * What's a typical use case for anonymous functions?
   An anonymous function is a function that is not stored in a program file, but is associated with a variable whose data type is function_handle . Anonymous functions can accept inputs and return outputs, just as standard functions do. However, they can contain only a single executable statement.
 
   They can be used in the same way as any other object. They can be stored in variables, passed to other functions as parameters or returned from a function using the return statement. Functions are always objects, no matter how they are created.
 
   Once the function has been saved to the variable, the variable can be used to invoke it:
+
+  useful when cereating closures for creating click handlers and writing code that won't be invoked from many places. 
 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
