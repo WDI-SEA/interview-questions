@@ -69,6 +69,7 @@ Ideally you want to strike a balance between the two and make sure that if you a
 ## HTML Questions
 
 * What does a `doctype` do?
+DOCTYPE tells the browser which version of HTML you are using.
 * What's the difference between HTML and XHTML?
 * What are `data-` attributes good for?
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
@@ -77,10 +78,15 @@ Ideally you want to strike a balance between the two and make sure that if you a
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+
 Classes target multiple items, Id's target one. Since Id's are more specific, they override CSS styles.
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+
 * Describe Floats and how they work.
+Floats are ways to style different elements to different positions on your webpage.
+For example, if you have two paragraphs and you want them next to each other, you would float on left, and the other one right.
+
 * Describe z-index and how stacking context is formed.
 
 Z index determines the layer of elements. An element with a higher z index is layered over an element with a lower z index.
@@ -94,15 +100,19 @@ I have used both Bootstrap's grid and skeleton. I prefer bootstrap.
 I have implemented media queries and mobile layouts.
 
 * How do you optimize your webpages for print?
+
 * What are the advantages/disadvantages of using CSS preprocessors?
 
  The main advantage is its better for making your code reusable using includes and its also makes nesting possible.
 
-  * Describe what you like and dislike about the CSS preprocessors you have used.
+ One downside is that CSS that the preprocessor outputs is not dry.
 
-I like using SASS, which is the only preprocessor that I have used.
+* Describe what you like and dislike about the CSS preprocessors you have used.
+
+I like using SASS, which is the only preprocessor that I have used, I wish that the browser could compile the CSS so that it would not be less dry.
 
 * How would you implement a web design comp that uses non-standard fonts?
+
 You would want to import the fonts.
 
 * Explain how a browser determines what elements match a CSS selector.
@@ -116,13 +126,13 @@ Ordered least to most specific:
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 
-
 The box model refers to everything on a page being blocks. Each element is a block that has margin and padding to dictate position.
 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 
 
 * List as many values for the display property that you can remember.
+
 block, inline-block, inline
 
 * What's the difference between inline and inline-block?
@@ -134,18 +144,28 @@ inline is still a block because it stretches from one side of the page to the ot
 
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 
+The most recent styles override your previously written styles. This allows us to load in resets or declare layouts that will be generally true on our sites, and modifying them in the instances when they need to be modified.
 
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 
+I have used bootstrap and skeleton.
 
 
 * Have you played around with the new CSS Flexbox or Grid specs?
 
+Not yet.
 
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 
+No
 
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
+
+CSS loads before JavaScipt, so your animations are not dependent on your JS loading.
+CSS is also easier to implement.
+JS can be quicker than CSS IF you aren't using jQuery.
+Some animations that you are able to make in JS are impossible in CSS.
+JS annimations is also more widely supported.
 
 ## JS Questions
 
@@ -154,10 +174,22 @@ inline is still a block because it stretches from one side of the page to the ot
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
-  * How would you go about checking for any of these states?
+
+A null varible is a variable without a value.
+An undefined variable is a variable that has not been created. An undeclared variable is a variable that has not been declared with the keyword var.
+
+* How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
+
 * What's a typical use case for anonymous functions?
+A typical use for an anonymous function is to keep your variables out of the gloabal scope.
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+
+function Person(){} is a function named Person
+var person = Person() is a function inside a variable named person.
+var person = new Person() is a new instance of a person using an constructor.
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * What's the difference between feature detection, feature inference, and using the User Agent string?
