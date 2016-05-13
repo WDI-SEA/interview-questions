@@ -200,23 +200,50 @@ JS annimations is also more widely supported.
 Event delegation is assigning a parent element a event handler rather than assigning event handlers to each child element.
 
 * Explain how `this` works in JavaScript
-
+'This' is used in classes and functions. Each instance of an object or class will have a this property where its own data and properties are stored.
+When we create a point object, we can refer to this.x, this.y and different instances can have their own values. In this case 'this' refers to the instance of the point.
 
 * Explain how prototypal inheritance works
 Prototypal inheritance is a way of creating objects that contain abstractions of what they are building. For example, if you make a human object - it can have a name, age, location, and family members as properties.
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+Ternary implies "three."
+
+var meal = isPhilly ? 'cheesesteak' : 'burger';
+
+is the same as:
+
+var meal:
+if(isPhilly) {
+  meal = 'cheesesteak';
+} else {
+  meal = 'burger';
+}
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
 
-A null varible is a variable without a value.
-An undefined variable is a variable that has not been created. An undeclared variable is a variable that has not been declared with the keyword var.
+Null is an empty value that we can set.
+Undefined is something that the language sets.
+
+var x;
+x = undefined
+
+If we just write 'var x,' the value is undefined.
 
 * How would you go about checking for any of these states?
 
 * What is a closure, and how/why would you use one?
+Annonymousfunction that is called right away to keep variables out of the global scope.
+
+A closure is a function that has scope that regers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
+
+Closures can be used to encapsulate a module of code. They wrap up the scope and make it unavailable to code that exists outside the closure.
+
 
 * What's a typical use case for anonymous functions?
-A typical use for an anonymous function is to keep your variables out of the gloabal scope.
+- for creating click handlers
+- for creating closures
+- keep your variables out of the gloabal scope.
 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
@@ -243,6 +270,9 @@ No.
 
 Hoisting is the act of declaring a variable and then assigning it a value later on in your code. This is useful in creating variables with values that change such as a scoreboard.
 
+
+Javascript hoists variables declared with var to the top of the function. Variables will be undefined until their value is actually set. Variables with the same name of a var outside a function as inside can interfere with each other surprisingly.
+
 * Describe event bubbling.
 
 Event bubbling is firing an event to a nested element and the having it fire to the parent elements which it is nested.
@@ -255,7 +285,12 @@ Event bubbling is firing an event to a nested element and the having it fire to 
 * What is the difference between `==` and `===`?
   == is less strict than ===, === compares what type of value it is.
 
+  0 === '0' returns false
+  0 == '0' returns true
+
 * Explain the same-origin policy with regards to JavaScript.
+
+This is a security policy that  prevents JS from accessing sites outside the current domain.
 
 * What is the extent of your experience with Promises and/or their polyfills?
 
@@ -265,9 +300,22 @@ Promises prevent callbacks being nested in other callbacks, and can make the cod
 
 * What tools and techniques do you use debugging Javascript code?
 
-I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it.
+I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it via Chrome dev tools.
+
+Debugger keyword.
 
 * What language constructions do you use for iterating over object properties and array items?
+
+loops!
+- for
+- for each
+- while
+- do while
+- .map, .filter, .reduce, .forEach
+
+For in loops are good for iterating over the properties in an object and accessing their key.
+
+for loops are good for arrays. For in loops with arrays include the length property and cause problems.
 
 ## Database Questions
 
