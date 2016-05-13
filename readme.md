@@ -247,9 +247,9 @@ Closures can be used to encapsulate a module of code. They wrap up the scope and
 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
-function Person(){} is a function named Person
-var person = Person() is a function inside a variable named person.
-var person = new Person() is a new instance of a person using an constructor.
+function Person(){} is a function named Person. it is not executed yet.
+var person = Person() This is declaring a variable called person, it will be equal to the return value of the 'Person' function.
+var person = new Person() is a new instance of a person using a constructor.
 
 * What's the difference between `.call` and `.apply`?
 
