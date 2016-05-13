@@ -29,6 +29,8 @@ Performance - How many files are in my HTML, if they are plugins - are they mini
 Maintainability -Is my CSS or SASS dry. Is it easy to read and well documented with comments? Is my code reusable?
 
 * Talk about your preferred development environment.
+
+
 * Which version control systems are you familiar with?
 
 Git
@@ -44,6 +46,7 @@ Git
 
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+
 - reset
 - base styles - if there is a company style guide, those styles would go here
 - layout - for example, default height of a section or padding between sections
@@ -96,12 +99,14 @@ I have implemented media queries and mobile layouts.
  The main advantage is its better for making your code reusable using includes and its also makes nesting possible.
 
   * Describe what you like and dislike about the CSS preprocessors you have used.
+
 I like using SASS, which is the only preprocessor that I have used.
 
 * How would you implement a web design comp that uses non-standard fonts?
 You would want to import the fonts.
 
 * Explain how a browser determines what elements match a CSS selector.
+
 A browser determines what elements are a match to a CSS selector by specificity.
 Ordered least to most specific:
  - element tags
@@ -110,14 +115,36 @@ Ordered least to most specific:
  - inline styles
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
+
+The box model refers to everything on a page being blocks. Each element is a block that has margin and padding to dictate position.
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+
+
 * List as many values for the display property that you can remember.
+block, inline-block, inline
+
 * What's the difference between inline and inline-block?
+
+inline is still a block because it stretches from one side of the page to the other. An inline element only occupys the length of the content.
+
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+
+
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+
+
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+
+
+
 * Have you played around with the new CSS Flexbox or Grid specs?
+
+
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+
+
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
 ## JS Questions
