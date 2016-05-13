@@ -33,6 +33,7 @@ First decide what the web page is supposed to do, be it collect information or d
 I would add a different folder labeled either static for a node.js app, or create more scss style pages under the assets folder for a ruby on rails app. I would call the appropriate stylesheets within the appropriate pages for the site.
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
+Progressive enchancement means starting with designing for a basic user experience for the most basic web browsers, then adding advanced functionality that will be available automatically to browsers that can hande it. Graceful degradation is the opposite where the application is designed for the most common advanced browsers, then scales the site down for the most basic browsers.
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
 Assuming that all of the images are url links, I could simply put them in an object and label each element with a key. Then I would create a function in the Javascript that would change the html depending on a button that would be clicked. The button would call a function that would change the url of the html element every few seconds or so, giving the effect of a slideshow.
@@ -55,7 +56,7 @@ XHTML is much more standardized and allows pages to be viewed the same across di
 They allow you to store data on html documents.
 
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-A cookie is something that stores data. A session storage is the memory stored in a session, while local storage is where that memory is stored.
+A cookie is sent to the server, while sessionStorage and localStorage are client side. A session storage is the memory stored in a session, while local storage is where that memory is stored.
 
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 This to ensure that the page is styled before anything else is processed on the page. If ther JS takes too long to process and the style tage is after it, then the page would appear plain until the JS is finished computing.
@@ -70,10 +71,10 @@ A class can cover many different elements, while ID's only have one element.
 Reset removes default styling, while normalizing just makes the styling the same. Normalizing CSS would be my choice.
 
 * Describe Floats and how they work.
-Floats allow elements to be organized and separate with relative positioning.
+Floats allow elements to be pulled left and right. Floating elements don't have a height. Use the CSS 'clear: both' property to get things to appear below floated elements properly.
 
 * Describe z-index and how stacking context is formed.
-Z-index determines the order of overlap for different elements.
+Z-index determines the order of overlap for different elements. Elements with higher z-indices will appear on top of elements with lower z-indices.
 
 * Have you ever used a grid system, and if so, what do you prefer?
 Grid systems are useful for organizing content.
@@ -82,9 +83,18 @@ Grid systems are useful for organizing content.
 I have implemented media queries before when using webRTC.
 
 * How do you optimize your webpages for print?
-Determining the most important content for the website and stlying the print pages as such.
+Determining the most important content for the website and stlying the print pages as such. Use high resolution pictures, at least 300 dpi.
 
 * What are the advantages/disadvantages of using CSS preprocessors?
+Preprocessors allow us to write fancier syntax and add logi to our CSS.
+Things we gain: 
+-variables
+-nested query syntax allows us to write less code
+
+Things we hate:
+-harder to debug, the compiled code can be hard to read
+-the complied code isn't the code we wrote
+
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
 You might have to import the fonts first before using it.
@@ -99,6 +109,11 @@ The box model gives each element margins, padding, content, and borders. They de
 * List as many values for the display property that you can remember.
 inline, inline-text
 * What's the difference between inline and inline-block?
+"An inline element has no line break before or after it, and it tolerates HTML elements next to it.
+A block element has some whitespace above and below it and does not tolerate any HTML elements next to it.
+An inline-block element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element.
+" - W3Schools
+
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 Relative changes depending on the positions of the other elements, fixed keeps the element from moving regardless of the browser size.
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
