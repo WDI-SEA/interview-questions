@@ -47,42 +47,98 @@ Honestly my thoughts on this subject aren't that deep, but I do find standards t
 ## HTML Questions
 
 **What does a `doctype` do?**
-I
+It gets added in to the top of my sublime snippets for the basic head/body html structure, and I've always assumed it tells browsers that the following content is an html document.
 
-* What's the difference between HTML and XHTML?
-* What are `data-` attributes good for?
-* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+**What's the difference between HTML and XHTML?**
+Honestly I'm not familiary with XHTML.  Maybe it was some sort of dynamically capable HTML before HTML5?
+
+**What are `data-` attributes good for?**
+I'm not sure on that one either.
+
+**Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.**
+I've not actually used cookies or sessionStorage manually, and I have used localStorage but that was just to mess around with it.  It seems to me that localStorage is best used for data larger than what you would put in a cookie, and maybe something you wanted to access only on the client side so you wouldn't persist it in a database.  I have used helper libraries in both Node and Rails apps that allowed me to store user session states on the server, and I wonder if these were using either sessionStorage or cookies in order to make that happen.
+
+**Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?**
+You want your CSS to load before your content so that your page loads cleanly (i.e. so your text doesn't load before you set styles to it.  The JS is running actions on the content of the page, so it's both faster and avoids some errors if you load it at the bottom of the body.  I don't know of any specific exceptions, but I could potentially see some cases where I might want to load content before styling for a slow connection, or maybe there's some case where you are dynamically generating content with JS and want to load it in the head.
 
 ## CSS Questions
 
-* What is the difference between classes and IDs in CSS?
-* What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-* Describe Floats and how they work.
-* Describe z-index and how stacking context is formed.
-* Have you ever used a grid system, and if so, what do you prefer?
-* Have you used or implemented media queries or mobile specific layouts/CSS?
-* How do you optimize your webpages for print?
-* What are the advantages/disadvantages of using CSS preprocessors?
-  * Describe what you like and dislike about the CSS preprocessors you have used.
-* How would you implement a web design comp that uses non-standard fonts?
-* Explain how a browser determines what elements match a CSS selector.
-* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
-* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
-* List as many values for the display property that you can remember.
-* What's the difference between inline and inline-block?
-* What's the difference between a relative, fixed, absolute and statically positioned element?
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
-* What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-* Have you played around with the new CSS Flexbox or Grid specs?
-* Have you ever worked with retina graphics? If so, when and what techniques did you use?
-* Explain some of the pros and cons for CSS animations versus JavaScript animations.
+**What is the difference between classes and IDs in CSS?**
+IDs are used only once, and classes are used multiple times.
+
+**What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?**
+Using a reset stylesheet removes all default browser styling, and a normalize stylesheet ensures a uniform default styling across all browsers.  I would always use normalize unless there is something in the default styling that I specifically want to avoid.  And of course it is built into bootstrap already.
+
+**Describe Floats and how they work.**
+Floats slide an element in a given direction until they reach a boundary (such as a sister block element or a containing element.
+
+**Describe z-index and how stacking context is formed.**
+Z-index lets you manually configure the order of layering elements, with the lowest indexes appearing on top.
+
+**Have you ever used a grid system, and if so, what do you prefer?**
+The only grid system I've used is bootstrap, and I use it pretty standardly.
+
+**Have you used or implemented media queries or mobile specific layouts/CSS?**
+Yes, mainly I use bootstrap classes to manage mobile layouts, but I do have some practice writing media queries and moving from a mobile first perspective with mobile as default and progressively larger min-width media queries.
+
+**How do you optimize your webpages for print?**
+Ohhhh, to be printed out?  I haven't taken that into account with any projects yet.  That is something I'll start adding to my requirements list.
+
+**What are the advantages/disadvantages of using CSS preprocessors?**
+I don't have a lot of experience with SASS or LESS, but by precompiling your CSS they speed up page load, but they add another small layer of complexity to the development prcess.
+
+**Describe what you like and dislike about the CSS preprocessors you have used.**
+The only experience I have is a little experimenting with SASS I did a while ago and it seemed fine.
+
+**How would you implement a web design comp that uses non-standard fonts?**
+Include a link to the stylesheet containing the font, either through google fonts or a propietary one.
+
+**Explain how a browser determines what elements match a CSS selector.**
+It does a depth-first search of the markup tree, filtering elements that match progressively more specific parameters in the query.  For example, if you query '.content', it will return all elements in the document with class 'content'.  If you query 'div .content', it will return all elements with class 'content' that are within a div.  And finally, if you query 'div.content' it will only return divs that are of class 'content'.  This last type of selector is good practice to speed up your queries, so if you're searching for a specific ID, you can skip all elements that aren't of the type you're searching for.
+
+**Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.**
+So every element in an html doc is a box, from the body on down, and all are nested within other boxes and potentially siblings of other boxes.  So starting with the body box, we nest boxes inside, and position them based on their css position attribute.  They can be positioned absolutely in the window, as if they were not nested at all, or relative to other parent and sibling boxes.  By default they all float to the top and then the right, but we can controll that behavior.
+
+**What does ```* { box-sizing: border-box; }``` do? What are its advantages?**
+I don't remember...
+
+**List as many values for the display property that you can remember.**
+Block, inline-block, inline, and none.
+
+**What's the difference between inline and inline-block?**
+To be honest, I just know that inline-block is better for making divs inline.  I generally only use inline for elements like list items.
+
+**What's the difference between a relative, fixed, absolute and statically positioned element?**
+Relative: moves in block or inline position within a containing element and relative to siblings.
+Fixed: positioned absoultely and will not move on scroll.
+Absolute: positioned by coordinates in window.
+
+**The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?**
+The style assigned to an element deeper in the markup tree will override the style of those above it.  For example, if you set color for text in the body to blue, all text will be blue, except for text in an element within the body that set the color for.
+
+**What existing CSS frameworks have you used locally, or in production? How would you change/improve them?**
+Bootstrap.  I woud love an easy way plug and play with color schemes.
+
+**Have you played around with the new CSS Flexbox or Grid specs?**
+Not yet.
+
+**Have you ever worked with retina graphics? If so, when and what techniques did you use?**
+No I haven't.
+
+**Explain some of the pros and cons for CSS animations versus JavaScript animations.**
+Hmm, just offhand I would go to CSS animations for things I want to happen on load, and JS for things I want to be event-controlled.  There might be some good reasons to use a JS event listener to activate a CSS animation though.
 
 ## JS Questions
 
-* Explain event delegation
-* Explain how `this` works in JavaScript
-* Explain how prototypal inheritance works
+**Explain event delegation**
+Is this part of its asynchronous functionality?  As in, you set up an event listener, it delegates listening for that to an event loop, and then executes a callback funtion upon the event...?
+
+**Explain how `this` works in JavaScript**
+'This' refers to the object that is calling a function.  It is most commonly used in OOP for getting and setting attributes and methods.
+
+**Explain how prototypal inheritance works**
+Every class has a prototype object
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
