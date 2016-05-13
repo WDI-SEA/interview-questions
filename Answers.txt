@@ -60,23 +60,97 @@ Because of sequential loading
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+There can be multiple classes but only 1 ID
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+Normalize.css preserves useful defaults rather than "unstyling" everything.
+
 * Describe Floats and how they work.
+The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
+
 * Describe z-index and how stacking context is formed.
+The z-index is a depth axis that determines which elements are in the forefront of the screen
+
 * Have you ever used a grid system, and if so, what do you prefer?
+No
+
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+No
+
 * How do you optimize your webpages for print?
+Create a separate style sheet for print
+
 * What are the advantages/disadvantages of using CSS preprocessors?
-  * Describe what you like and dislike about the CSS preprocessors you have used.
+Pros: less redundancy, reusable code Cons: entire team has to use the same language, requires additional steps to make updates/changes
+
+* Describe what you like and dislike about the CSS preprocessors you have used.
+I haven't used any preprocessors
+
 * How would you implement a web design comp that uses non-standard fonts?
+By using "font-face" and including the link
+
 * Explain how a browser determines what elements match a CSS selector.
-* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+By class or ID
+
+* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box 
+models.
+It's a box that wraps around every element on a page
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+The box-sizing CSS property is used to alter the default CSS box model used to calculate widths and heights of elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+
 * List as many values for the display property that you can remember.
+Inline, block, inline-block, flex, inherit, absolute, fixed
+
 * What's the difference between inline and inline-block?
+Elements with display:inline-block elements are like display:inline elements, but they can have a width and height. So you can use an inline-block element as a block while flowing it within text.
+
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+Static elements are not affected by other properties, relative is relative to its normal position, fixed stays in the same place despite scrolling, absolute is positioned relative to the closest positioned element
+
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+It's sequential, so write the most important code first because it will be executed first
+
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+Bootstrap
+
 * Have you played around with the new CSS Flexbox or Grid specs?
+No
+
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+No
+
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
+CSS is better for smaller animations, JS is gives more control over animations
+
+==============================
+
+## JS Questions
+
+* Explain event delegation
+
+
+* Explain how `this` works in JavaScript
+* Explain how prototypal inheritance works
+* Why is it called a Ternary expression, what does the word "Ternary" indicate?
+* What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+  * How would you go about checking for any of these states?
+* What is a closure, and how/why would you use one?
+* What's a typical use case for anonymous functions?
+* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* What's the difference between `.call` and `.apply`?
+* Explain `Function.prototype.bind`.
+* What's the difference between feature detection, feature inference, and using the User Agent string?
+* Explain AJAX in as much detail as possible.
+* Have you ever used JavaScript templating?
+  * If so, what libraries have you used?
+* Explain "hoisting".
+* Describe event bubbling.
+* What's the difference between an "attribute" and a "property"?
+* Why is extending built-in JavaScript objects not a good idea?
+* What is the difference between `==` and `===`?
+* Explain the same-origin policy with regards to JavaScript.
+* What is the extent of your experience with Promises and/or their polyfills?
+* What are the pros and cons of using Promises instead of callbacks?
+* What tools and techniques do you use debugging Javascript code?
+* What language constructions do you use for iterating over object properties and array items?
