@@ -160,9 +160,13 @@ block, inline-block, inline
 
 * What's the difference between inline and inline-block?
 
-inline-block is still a block because it stretches from one side of the page to the other. An inline element only occupys the length of the content.
+Inline-block can have a height. An inline element only occupys the length of the content.
 
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+
+Fixed: things stay put no matter if scrolling occurs
+relative: things stay put relative to the entire doc. Good for footers thats dont appear until you scroll to the bottom of the page.
+absolute:
 
 
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
@@ -180,7 +184,7 @@ Not yet.
 
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
 
-No
+Retina refers to displays with a higher pixel density. The problem with high res displays is the images built for low res images will show up very small. One way to deal with this is to have multiple two sets of images, one for low res display and some for high res.
 
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
