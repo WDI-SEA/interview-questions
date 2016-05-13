@@ -94,7 +94,8 @@ Things we gain:
 Things we hate:
 -harder to debug, the compiled code can be hard to read
 -the complied code isn't the code we wrote
-
+-preprocessors add an extra step in our workflow
+-adds a learning overhead to the project
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
 You might have to import the fonts first before using it.
@@ -107,7 +108,7 @@ The box model gives each element margins, padding, content, and borders. They de
 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
-inline, inline-text
+inline, inline-block
 * What's the difference between inline and inline-block?
 "An inline element has no line break before or after it, and it tolerates HTML elements next to it.
 A block element has some whitespace above and below it and does not tolerate any HTML elements next to it.
@@ -119,8 +120,10 @@ Relative changes depending on the positions of the other elements, fixed keeps t
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 specificity. an id would be more important than a class.
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+bootstrap
 * Have you played around with the new CSS Flexbox or Grid specs?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+Retina refers to displays with an extremely high pixel density. THe problem with high density displays is that images built for low resolution screens will show up super tiny. One way to deal with this is to have two sets of images. One set is used for low-desnity displays, and another is used for high density displays.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
 ## JS Questions
@@ -131,8 +134,12 @@ references the most immediately called element
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+null is when a variable has an empty value
+undefined is when a variable has no value
+undeclated is when a variable does not exist
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
+A function that has scope that refers to variables. We can use closures to save the scope of variables and values at a certain point in time. Saves the global namespace.
 * What's a typical use case for anonymous functions?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
