@@ -77,12 +77,11 @@ React.js
 DOCTYPE tells the browser which version of HTML you are using.
 
 * What's the difference between HTML and XHTML?
-
+XHTML follows conventions of XML and is more strict.
 * What are `data-` attributes good for?
-
-
+Stores data that doesn't have any visual representation.
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-
+Cookie is older tech can only store strings, session storage ends when you close your browser, local storage persists.
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 
 It is good to put your JS file at the bottom of your body so that your page is not waiting to for the JS file to load to show the page. Its also good to store the CSS files at the top of the page so that the user sees colors load on the page quicker rather than having a longer wait to see anything load.
@@ -103,6 +102,8 @@ For these reasons, I would choose normalize.
 Floats are ways to style different elements to different positions on your webpage.
 For example, if you have two paragraphs and you want them next to each other, you would float on left, and the other one right.
 
+Floating elements don't have a height.Use clear to get things below the floats.
+
 * Describe z-index and how stacking context is formed.
 
 Z index determines the layer of elements. An element with a higher z index is layered over an element with a lower z index.
@@ -116,16 +117,20 @@ I have used both Bootstrap's grid and skeleton. I prefer bootstrap.
 I have implemented media queries and mobile layouts.
 
 * How do you optimize your webpages for print?
+Create a separate CSS file specifically designed for printing. Use high resolution pictures, at least 300 dpi.
 
 * What are the advantages/disadvantages of using CSS preprocessors?
 
- The main advantage is its better for making your code reusable using includes and its also makes nesting possible.
+ The main advantage is its better for making your code reusable using includes and its also makes nesting possible. You can also add logic for your CSS.
 
- One downside is that CSS that the preprocessor outputs is not dry.
+ - One downside is that CSS that the preprocessor output is not dry.
+ - Harder to debug.
+ - Adds some steps in the workflow.
 
 * Describe what you like and dislike about the CSS preprocessors you have used.
 
 I like using SASS, which is the only preprocessor that I have used, I wish that the browser could compile the CSS so that it would not be less dry.
+
 
 * How would you implement a web design comp that uses non-standard fonts?
 
@@ -142,10 +147,12 @@ Ordered least to most specific:
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
 
-The box model refers to everything on a page being blocks. Each element is a block that has margin and padding to dictate position.
+The box model refers to everything on a page being blocks. Each element is a block that has margin, border, padding, and content to dictate position.
 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+Browsers can measure the width and height of elems in different ways. Each browser interprets box sizing differently. Specifying a specific border box allows us to know how things are measured.
 
+The border box will measure elements including their borders. The content box value will measure only the conent, not the margin or border.
 
 * List as many values for the display property that you can remember.
 
@@ -153,7 +160,7 @@ block, inline-block, inline
 
 * What's the difference between inline and inline-block?
 
-inline is still a block because it stretches from one side of the page to the other. An inline element only occupys the length of the content.
+inline-block is still a block because it stretches from one side of the page to the other. An inline element only occupys the length of the content.
 
 * What's the difference between a relative, fixed, absolute and statically positioned element?
 
