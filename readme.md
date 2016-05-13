@@ -137,9 +137,11 @@ Is this part of its asynchronous functionality?  As in, you set up an event list
 'This' refers to the object that is calling a function.  It is most commonly used in OOP for getting and setting attributes and methods.
 
 **Explain how prototypal inheritance works**
-Every class has a prototype object
+Every class has a prototype class that it inherits it's methods from.  You can add new methods to this prototype within a scope.
 
-* Why is it called a Ternary expression, what does the word "Ternary" indicate?
+**Why is it called a Ternary expression, what does the word "Ternary" indicate?**
+Ternery means 'of three', so a ternary expression has three parts: <the condition> ? <return value if true> : <return value if false>
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
