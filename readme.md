@@ -56,10 +56,11 @@ What are `data-` attributes good for?
 Storing information that’s needed in a web pages when there’s no visual representation on the page.
 
 Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-Local storage stores until a user deletes them. Session lasts for logins or authentications. Cookies store less information and are good for older browsers.
+Local storage stores until a user deletes them. Session lasts for logins or authentications/ends when you close your browser. Cookies store less information and are good for older browsers, can only store strings, and are sent to the server.
 
 Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
-CSS is loaded at the beginning of the page before content. Scripts pause the loading of content.
+Load order: CSS is loaded at the beginning of the page before content. Scripts pause the loading of content, and can't apply click handlers when elements haven't been loaded. Document onload. 
+https://developers.google.com/speed/docs/best-practices/rtt#PutStylesBeforeScripts
 
 ## CSS Questions
 
@@ -68,24 +69,28 @@ Ids are unique and only one element can have one on each page. Classes can be us
 
 What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 Resetting removes browser styling whereas normalizing creates consistency across all browsers. It depends on the project. 
+http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
 
 Describe Floats and how they work.
-Floats pull elements left, center, or to the side and are also clearable. It pulls elements in that particular direction and lets other elements warp around it.
+Floats pull elements left, center, or to the side and are also clearable. It pulls elements in that particular direction and lets other elements warp around it. //FLOATS don't have a height.
 
 Describe z-index and how stacking context is formed.
-z-index is used to stack elements on the page along a z axis that’s related to the user standpoint. 
+z-index is used to stack elements on the page along a z axis that’s related to the user standpoint, so it lets us specify if images lay over divs for example. Higher z-index appears on top of lower z-index.
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 
 Have you ever used a grid system, and if so, what do you prefer?
 I’m familiar with bootstrap and have worked with Formation, which I enjoyed a lot. I’ve looked into Skeleton too.
 
 Have you used or implemented media queries or mobile specific layouts/CSS?
-I have, with my Project The Artr and another project Flowered Significance, where I still need to troubleshoot a particular library’s display on mobile.
+I have, with my Project The Artr and another project Flowered Significance, where I still need to troubleshoot a particular library’s display on mobile. min-width and max-width.
 
 How do you optimize your webpages for print?
-Make a print option on the page and only print the text on it. :+)
+Separate CSS file designate the media type. High resolution files. 
 
 What are the advantages/disadvantages of using CSS preprocessors?
-It’s good for big and complex webpages. 
+It’s good for big and complex webpages. //SEE STEVE'S A 
++: Allow fancier syntax. Exceptional amoutn of files. Add variables. Nested query syntax.
+-: Harder to debug, compiled code isn't ours, extra step to workflow, whole team has to know it
 
 Describe what you like and dislike about the CSS preprocessors you have used.
 I like Sass for it’s ability to make my stylesheets more modular.
@@ -95,19 +100,27 @@ The most common non-standard fonts I’ve used are Google fonts, and I pull them
 
 Explain how a browser determines what elements match a CSS selector.
 They read through the HTML from left to right for matches.
+Selectors are ids, classes, and tags.
+https://programmerinnervoice.wordpress.com/2013/12/18/how-does-browser-read-css-selector/
+
 Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+The box model is the padding, margin, border that surround each element. The display property allows us to set elements to be block, inline-block, inline, flex. 
 
-The box model is the padding, margin, border that surround each element. 
 What does ```* { box-sizing: border-box; }``` do? What are its advantages?
-
 It includes borders in an element’s size. It allows you to add borders and styling without worrying if those things will upset the layout of your page.
-List as many values for the display property that you can remember inline, inline-block, flex, inline-table, inline-flex, run-in, list-item, table, etc
 
+List as many values for the display property that you can remember 
+inline (inline together, no heigth by line height), inline-block (includes a height and a break between elements, still side by side), flex, inline-table, inline-flex, run-in, list-item, table, inherit, intial, none, grid etc
+ 
 What's the difference between inline and inline-block?
 Inline: display element the way a span would aka without moving to a new line. Inline block moves things to the next line.
 
 What's the difference between a relative, fixed, absolute and statically positioned element?
-Relative moves in position to other elements. Fixed is glued in place. Absolute and statically positioned.
+Defines how elements are positioned on the page.
+Relative allows elements to be positioned relative to where they'd appear normally.
+Fixed keeps things in place even when scrolling. 
+Absolute: stay put relative to entire document.
+and statically positioned.
 
 The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
 Type selector (i e p), class selector, ID selector. You can assign by specificity, only using IDs for edge cases.
@@ -119,10 +132,13 @@ Have you played around with the new CSS Flexbox or Grid specs?
 I have! Froggy Flex.
 
 Have you ever worked with retina graphics? If so, when and what techniques did you use?
-I have not, but I’d be interested in learning more.
+I have not, but I’d be interested in learning more. Extremely high pixel density. You can have two sets of images, one for low and one for high density displays.
+http://www.sitepoint.com/css-techniques-for-retina-displays/
 
 Explain some of the pros and cons for CSS animations versus JavaScript animations.
-I enjoy CSS animations - they’re more controllable on the front end side of things. //RETURN
+I enjoy CSS animations - they’re more controllable on the front end side of things. CSS is dealt with by the GPU. Simple = CSS. Intricate/specific = Javascript.
+https://css-tricks.com/myth-busting-css-animations-vs-javascript/
+
 
 ## JS Questions
 
@@ -130,27 +146,52 @@ Explain event delegation
 Takes advantage of event bubbling and targeting elements to allow events to bubble to the top of the DOM. Allows you to determine where an Event came from.
 
 Explain how `this` works in JavaScript
-‘this’ is useful for when manipulating a particular element with the dom, and can be used much in the way “me” or “my” is used.
+The ‘this’ keyword is useful for when manipulating a particular element with the dom, and can be used much in the way “me” or “my” is used. It's self referential. Binds itself to the current scope your content exists in. Each instance of object or class will have a 'this' property where its own data and properties are stored. Has different contexts.
+
+When we create a Point object we can refer to
+this.x
+this.y
+and different instance of the point can have their own values. In this case, 'this' refers to the instance of the Point.
 
 Explain how prototypal inheritance works
 A prototype object is created that allows newly created objects to inherit a set of methods or properties from that original prototype.
 
 Why is it called a Ternary expression, what does the word "Ternary" indicate?
-It takes three properties and tests them, returning either the first or second (separated by :) depending on whether that test is true or false.
+It takes three properties and tests them, returning either the first or second (separated by : ) depending on whether that test is true or false.
 
 What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
-Undeclared: doesn’t use var. Undefined: has been created. null: a variable with no set value.
+Undeclared: doesn’t use var. 
+Undefined: has been created but has no set value.
+Null: a variable with no set value, comes from programmers.
+
 How would you go about checking for any of these states?
 //RETURN
 
 What is a closure, and how/why would you use one?
-Closures are used to restrict some data accessibility when working in different functions. They’re useful in keeping a particular variable isolated from the rest of the document. I’d use them to make sure that I could return only the data I wanted to.
+//STEVE'S A: A function that has scope that refers to variables.
+
+An anonymous function you call right away which helps keep your namespaces clean. Closures are used to restrict some data accessibility when working in different functions. They’re useful in keeping a particular variable isolated from the rest of the document. I’d use them to make sure that I could return only the data I wanted to.
+
+Closures can be used to encapsulate a module of code.
+They wrap up the scope and make it unavailable to code that exists outside the closure.
 
 What's a typical use case for anonymous functions?
-They’re commonly used for callback functions. 
+They’re commonly used for callback functions, closures, click handlers, setting time outs, and writing code that won't be invoked from many places.
 
 Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-The way the function is substantiated and allow for being called differently thanks to hoisting. The last is more of a class/prototype.
+The way the function is substantiated and allow for being called differently thanks to hoisting. 
+
+function(){} defines a function called Person. It's not executed yet.
+
+var person = Person() is an instance of a person with a capital. Equal to the return of the 'Person' function.
+
+The last is a constructor. Makes an object rather than a string.
+
+What's the difference between var foo = function(){} and function foo(){}?
+These are both function definitions. function foo() is callable from anywhere. Even if it is defined below where you're claling it.
+
+var foo = function isn't callable until after the line where it's created.
+
 
 What's the difference between `.call` and `.apply`?
 They allow different types of arguments. Call is good for constructors, and allows you to inherit to another object. Apply can use an array, or //RETURN
@@ -182,11 +223,21 @@ Why is extending built-in JavaScript objects not a good idea?
 Browsers may override your specific method.
 
 What is the difference between `==` and `===`?
-Two equal signs are less strict than three.
+Triple equals is a more strict definition of equality.
+Double equals is the evil cousin which will return technically true results.
+
+Triple equals will check the type of the two operands.
+Double equals will performs type coersion.
+
+0 === '0' returns false.
+0 == '0' returns true.
+
+http://stackoverflow.com/questions/359494/does-it-matter-which-equals-operator-vs-i-use-in-javascript-comparisons
 
 Explain the same-origin policy with regards to JavaScript.
-Allows multiple scripts to access data across other page six both have the same origin. Important for security.
-
+A security policy that prevents javascript from accessing sites outside the current domain.
+Allows multiple scripts to access data across other page six both have the same origin. 
+  
 What is the extent of your experience with Promises and/or their polyfills?
 Created many promises for Async actions with AJAX. Allows to write code for a value that will exist sometime in the future.
 
@@ -194,10 +245,12 @@ What are the pros and cons of using Promises instead of callbacks?
 Promises allow fewer nested anonymous functions and is easier to read. But don’t allow for specific values.
 
 What tools and techniques do you use debugging Javascript code?
-I use the chrome console and the debug() feature. 
+I use the chrome developer tools, 'debugger' keyword in Javascript, and console.logs.
 
 What language constructions do you use for iterating over object properties and array items?
-For, for…in, forEach, .map, .filter
+Loops: For, for…in, .forEach, 
+Functions: .map, .filter, .reduce 
+
 
 ## Database Questions
 
@@ -224,6 +277,7 @@ user_id
 profile_id
 content
 timestamp
+
 
 ## Ruby/Rails
 
