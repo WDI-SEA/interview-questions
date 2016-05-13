@@ -97,9 +97,12 @@ The box model gives each element margins, padding, content, and borders. They de
 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
+inline, inline-text
 * What's the difference between inline and inline-block?
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+Relative changes depending on the positions of the other elements, fixed keeps the element from moving regardless of the browser size.
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+specificity. an id would be more important than a class.
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
 * Have you played around with the new CSS Flexbox or Grid specs?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
@@ -109,6 +112,7 @@ The box model gives each element margins, padding, content, and borders. They de
 
 * Explain event delegation
 * Explain how `this` works in JavaScript
+references the most immediately called element
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
