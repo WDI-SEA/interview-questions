@@ -91,12 +91,13 @@ It is good to put your JS file at the bottom of your body so that your page is n
 
 * What is the difference between classes and IDs in CSS?
 
-Classes target multiple items, Id's target one. Since Id's are more specific, they override CSS styles.
+Classes target multiple items, Id's target one. Since Id's are more specific, they override class styles.
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 
 Normalize preserves user defaults rather than unstyling them.
 Normalize corrects some bugs that are out of scope for css reset.
+For these reasons, I would choose normalize.
 
 * Describe Floats and how they work.
 Floats are ways to style different elements to different positions on your webpage.
@@ -370,4 +371,4 @@ Currently developing a site for my friend who is a photographer.
 
 * How do you like your coffee?
 
-Chemex && light half and half && light sugar || nitro cold brew black || machiatto && light sugar
+Chemex && light half and half && light sugar || nitro cold brew black || machiatto && light sugar. Hold the script please.
