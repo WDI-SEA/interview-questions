@@ -1,0 +1,294 @@
+## General Questions
+
+* What did you learn yesterday/this week?
+* What excites or interests you about coding?
+
+		Coding is exciting to me for a couple reasons. It's exciting because at this point in the game for me, the things I could learn about coding and different programming languages seems boundless, and I'm excited about the prospect of always being in a position to learn something new. Coding is also interesting to me because in this digital age, websites and applications can convey really powerful stories and through UX and design, and that's the most exciting part for me is finding the story to be told and rendering it visually through code.
+
+* What is a recent technical challenge you experienced and how did you solve it?
+* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+* Talk about your preferred development environment.
+* Which version control systems are you familiar with?
+		
+		Git/GitHub
+
+* Can you describe your workflow when you create a web page?
+		
+		I usually start out by wireframing the page just to get an idea of what the flow will be like on the page and between pages, and then I do a basic html set up. From there, I usually alternate between building up the html elements and implementing css, returning to one when I'm tired of, or have hit a snag with, the other. Once I have the page maybe halfway to the point I want it to look visually, I start implementing javascript and testing it and debugging to make sure it's functioning the way it's supposed to, and then I just keep doing that until everything works and everything looks good.
+
+* If you have 5 different stylesheets, how would you best integrate them into the site?
+* Can you describe the difference between progressive enhancement and graceful degradation?
+* Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+* If you could master one technology this year, what would it be?
+
+		I would love to master Angular, simply because it's very popular and widely appreciated by almost every developer I've talked to about it, and because I hear it takes care of all the work with AJAX calls when you're creating a single page application, which sounds great!
+
+* Explain the importance of standards and standards bodies.
+
+## HTML Questions
+
+* What does a `doctype` do?
+		
+		A doctype tells the web browser what kind of mark-up language the page is written in.
+
+* What's the difference between HTML and XHTML?
+* What are `data-` attributes good for?
+* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+	
+		Cookies are small files that hold a small amount of information specific to a particular client and website, are stored on the user's computer, and are accessible by either the web server and the client computer.
+		sessionStorage is only available for the duration of a browser session and is deleted when the window is closed. localStorage stores data with no expiration date.
+
+* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+
+## CSS Questions
+
+* What is the difference between classes and IDs in CSS?
+
+		Classes are a more broad tag that can be reused on multiple elements and id tags are for more for single use.
+
+* What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+* Describe Floats and how they work.
+
+		A float makes it so an element is taken out of the normal flow of the page and either aligned to the left side or the right side of its container, and then all surrounding text and elements wrap around it. So if an image were assigned a float left, the image would be moved to the left side of the page or container and all of the text or other elements surrounding it would wrap around it on its right side. 
+
+* Describe z-index and how stacking context is formed.
+	
+		The z-index property specifies the stacking order of an element. The element with the greater stack order is displayed in front of elements with a lower stack order, so if you wanted to make an element move behind another element, you can assign the z-index to -1.
+
+* Have you ever used a grid system, and if so, what do you prefer?
+
+		I've used a grid system through both Bootstrap and Materialize, and I do appreciate it because it takes a lot of the guesswork out of aligning things how you want them on the page. 
+
+* Have you used or implemented media queries or mobile specific layouts/CSS?
+* How do you optimize your webpages for print?
+* What are the advantages/disadvantages of using CSS preprocessors?
+  * Describe what you like and dislike about the CSS preprocessors you have used.
+* How would you implement a web design comp that uses non-standard fonts?
+* Explain how a browser determines what elements match a CSS selector.
+* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+* List as many values for the display property that you can remember.
+	
+		display: none, display: block, display: inline, display: inline-block
+
+* What's the difference between inline and inline-block?
+	
+		Inline elements can sit next to each other on the same line and only take up as much space as needed, and inline-block elements are the same except they can have a height and width. 
+
+* What's the difference between a relative, fixed, absolute and statically positioned element?
+		
+		Static positioning is the default, and it just follows the normal flow of the page. An element with a relative position is positioned relative to its normal static position. An element with a fixed position is positioned relative to the viewport and always stays fixed in the same spot, even if the page is scrolled.
+		An element with an absolute position is positioned relative to the nearest positioned ancestor.
+
+* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+
+		Priority is determined in order from top to bottom. So if you assign all of the h1 tags with a color property of blue, you can further down the page assign an h1 class (if you have one) a color property of pink and the browser will honor that. This comes in handy when you want to be able to define properties on a broad scale but also be able to define properties differently for smaller elements within that broad range.
+
+* What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+* Have you played around with the new CSS Flexbox or Grid specs?
+
+		I haven't, but I definitely want to give it a try because I've heard it makes positioning elements on the page a lot easier.
+
+* Have you ever worked with retina graphics? If so, when and what techniques did you use?
+* Explain some of the pros and cons for CSS animations versus JavaScript animations.
+
+## JS Questions
+
+* Explain event delegation
+
+		In event delegation, you assign an event handler to a parent element so that you don't have to do it for multiple child elements of that parent.
+
+* Explain how `this` works in JavaScript
+* Explain how prototypal inheritance works
+* Why is it called a Ternary expression, what does the word "Ternary" indicate?
+* What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+  * How would you go about checking for any of these states?
+* What is a closure, and how/why would you use one?
+
+		A closure is a function within a function that has access to its own variables, the variables within the enclosing function, and global variables. You might use it when you want to be able to use the action of one function inside of another function to be able to perform more complex and/or chained actions within that function.
+
+* What's a typical use case for anonymous functions?
+* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* What's the difference between `.call` and `.apply`?
+* Explain `Function.prototype.bind`.
+* What's the difference between feature detection, feature inference, and using the User Agent string?
+* Explain AJAX in as much detail as possible.
+* Have you ever used JavaScript templating?
+  * If so, what libraries have you used?
+* Explain "hoisting".
+
+		Hoisting refers to the way Javascript processes defined variables before any other code, so that, by virtue of declaring a variable anywhere within your code, it's like you're declaring it at the top. 
+
+* Describe event bubbling.
+
+		Event bubbling directs an event to its intended target by either triggering the event if there is an event handler, or bubbling up to the parent object if there is no event handler.
+
+* What's the difference between an "attribute" and a "property"?
+* Why is extending built-in JavaScript objects not a good idea?
+* What is the difference between `==` and `===`?
+
+		3 equal signs are more strict and require the two things being compared to be identical in form and type. 2 equal signs is less strict. 5 === '5' would return false because the first five is a number and the second is a string, so they're not the same type, but 5 == '5' would return true.
+
+* Explain the same-origin policy with regards to JavaScript.
+* What is the extent of your experience with Promises and/or their polyfills?
+* What are the pros and cons of using Promises instead of callbacks?
+* What tools and techniques do you use debugging Javascript code?
+* What language constructions do you use for iterating over object properties and array items?
+
+		For loops and for in loops
+
+## Database Questions
+
+* Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
+
+## Ruby/Rails
+* What are ruby gems?
+
+		Ruby gems are packages that can be incorporated into your project through a bundle install. A lot of gems are included when you first create a project, but you can add others.
+
+* What is the difference between a symbol and a string?
+* What is the difference between a class method and an instance method?
+
+		A class is an object and an instance method is a variable defined within a particular method that can be used in other methods within the class.
+
+* What is the difference between local variables, instance variables, and class variables?
+
+		Local variables can only be accessed within the function they're defined in. Instance variables are defined within a method within a class, but are accessible to all of the methods within that class. Class values are defined above all of the methods and have the same value across the entire class.
+
+* What is a range?
+
+		A range specifies a grouping of values between two specified endpoints. A range of (1..10) refers to all numbers from 1 to 10, including 10, and a range of (1...10) would refer to all numbers from 1 up to, but excluding, 10. It works on letters, too.
+
+* In ruby, what does attr_accessor do?  
+
+		attr_accessor allows a variable to be both readable and writable.
+
+* What is the purpose of environment files under the config folder in Rails? (development, test, production)
+* What is the purpose of the application.rb file in Rails?
+* How can you define a constant?
+		
+		ALL_CAPS = "yelling"
+
+* What is the purpose of `yield`?
+* How do you store API keys when creating an app?
+	
+		In an .env file
+
+* How do I send parameters through a url?
+* Explain MVC
+
+		MVC stands for model, views, controller. The model is the data object, the view is what the user interacts with on the front end (html, css, javascript), and the controller determines how the model and views interact with each other.
+
+* What is a `before_action`? When would you use it?
+* What do controllers do in rails?
+
+		Controllers dictate how the data from the back end will be implemented on the front end.
+
+* What is RESTful routing?
+* What is a polymorphic association?
+
+		A polymorphic association allows one model to be linked to many different models through an association. 
+
+* What are params?
+	
+* How do I make a migration to add a column in Rails?
+* What is CSRF? How does Rails protect an app against this?
+* What's the difference between `User.find_by_id(1)` and `User.find(1)`?
+	
+		User.find_by_id(1) will return the user whose id is 1, and User.find(1) will return the first user in the table.
+
+* What's are classes in Ruby? What are modules? And what's the difference?
+
+## Testing Questions
+
+* What are some advantages/disadvantages to testing your code?
+	
+		Advantage: Making sure everything works the way it's supposed to before it's too late. Disadvantage: It's pretty easy to write tests that will pass the code you've already written, thus kind of defeating the purpose. 
+
+* What tools would you use to test your code's functionality?
+	
+		Rspec, Mocha
+
+* What is the difference between a unit test and a functional/integration test?
+* What is the purpose of a code style linting tool?
+* What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
+
+## Coding Questions:
+
+*Question: What is the value of `foo`?*
+
+	var foo = 10 + '20';
+	
+		foo = 1020
+
+*Question: How would you make this work?*
+
+add(2, 5); // 7
+		function add(num1, num2) {
+			return num1 + num2
+		}
+
+add(2)(5); // 7
+
+		function add(num1) {
+			return function(num2) {
+				return num1 + num2
+			}
+		}
+
+*Question: What value is returned from the following statement?*
+
+"i'm a lasagna hog".split("").reverse().join("");
+
+		"goh angasal a m'i"
+
+*Question: What is the outcome of the two alerts below?*
+
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+
+		The first alert reads "Hello World", and the second alert is undefined because the alert is happening outside the function and has no access to the local variable bar.
+
+
+*Question: What is the value of `foo.length`?*
+
+var foo = [];
+foo.push(1);
+foo.push(2);
+
+		foo.length = 2
+
+*Question: What is the value of `foo.x`?*
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+
+
+
+*Question: What does the following code print?*
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
+
+		one, three, two
+
+
+## Fun Questions:
+
+* What's a cool project that you've recently worked on?
+
+		I recently worked on a project where we had to implement an outside library into a project just to try to learn something new. I used Lettering.js, which was not only insanely easy to use, but gave me the ability to have a lot of control over the styling of text elements, from a line all the way down to a letter. I had a lot of fun playing around with and figuring out all of the different ways I could use it to make text more visually interesting on the page. I also started trying to pair it with animations using Animate.css, and although I didn't have enough time to fully explore that as much as I wanted to, I'm definitely interested in playing around with it more.
+
+* What are some things you like about the developer tools you use?
+* Do you have any pet projects? What kind?
+* How do you like your coffee?
+
+		All foam cappuccino
