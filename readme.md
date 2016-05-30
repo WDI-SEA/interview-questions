@@ -30,6 +30,7 @@ Maintainability -Is my CSS or SASS as dry as possible? Is it easy to read and we
 
 * Talk about your preferred development environment.
 
+I like to work with node over rails because I don't like the "magic" of rails. I like to know why what I am doing is working.
 
 * Which version control systems are you familiar with?
 
@@ -197,16 +198,20 @@ JS annimations is also more widely supported.
 ## JS Questions
 
 * Explain event delegation
+
 Event delegation is assigning a parent element a event handler rather than assigning event handlers to each child element.
 
 * Explain how `this` works in JavaScript
+
 'This' is used in classes and functions. Each instance of an object or class will have a this property where its own data and properties are stored.
 When we create a point object, we can refer to this.x, this.y and different instances can have their own values. In this case 'this' refers to the instance of the point.
 
 * Explain how prototypal inheritance works
+
 Prototypal inheritance is a way of creating objects that contain abstractions of what they are building. For example, if you make a human object - it can have a name, age, location, and family members as properties.
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+
 Ternary implies "three."
 
 var meal = isPhilly ? 'cheesesteak' : 'burger';
@@ -233,6 +238,7 @@ If we just write 'var x,' the value is undefined.
 * How would you go about checking for any of these states?
 
 * What is a closure, and how/why would you use one?
+
 Annonymousfunction that is called right away to keep variables out of the global scope.
 
 A closure is a function that has scope that regers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
@@ -241,6 +247,7 @@ Closures can be used to encapsulate a module of code. They wrap up the scope and
 
 
 * What's a typical use case for anonymous functions?
+
 - for creating click handlers
 - for creating closures
 - keep your variables out of the gloabal scope.
@@ -253,18 +260,29 @@ var person = new Person() is a new instance of a person using a constructor.
 
 * What's the difference between `.call` and `.apply`?
 
+The difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+
 * Explain `Function.prototype.bind`.
 
+Bind creates a new function that will have this set to the first parameter passed to bind()
+
 * What's the difference between feature detection, feature inference, and using the User Agent string?
+
+Feature Detection is to verify if a feature works in a particular browser or not. The feature can be either a CSS property or a Java Script Method.
+
+Feature Inference is to assume that a CSS property/ JS method is available in all the browsers, by verifying it in a single browser. The fact is it can or it cannot be available. For ex. the text( ) function is implemented in Chrome , but it is not implemented in Firefox which will give out an error eventually when used. So we have to be careful.
+
+The User Agent is a software which identifies your operating system, browser and its version. When you a visit a particular webpage, the browser sends a user-agent string to the host, implying that only the content/data related to that particular browser should be displayed.
 
 * Explain AJAX in as much detail as possible.
 
 Ajax is a method of exchanging data with a server, and updating the web page without having to reloading the page.
 
 * Have you ever used JavaScript templating?
-No.
+Yes
 
 * If so, what libraries have you used?
+EJS and ERB
 
 * Explain "hoisting".
 
@@ -279,8 +297,15 @@ Event bubbling is firing an event to a nested element and the having it fire to 
 
 * What's the difference between an "attribute" and a "property"?
 
+Attributes are in your HTML text document/file, whereas properties are in HTML DOM tree.
+
 
 * Why is extending built-in JavaScript objects not a good idea?
+Lack of specification
+Host objects have no rules
+Chance of collisions
+Performance overhead
+
 
 * What is the difference between `==` and `===`?
   == is less strict than ===, === compares what type of value it is.
@@ -289,17 +314,14 @@ Event bubbling is firing an event to a nested element and the having it fire to 
   0 == '0' returns true
 
 * Explain the same-origin policy with regards to JavaScript.
-
 This is a security policy that  prevents JS from accessing sites outside the current domain.
 
 * What is the extent of your experience with Promises and/or their polyfills?
 
 * What are the pros and cons of using Promises instead of callbacks?
-
 Promises prevent callbacks being nested in other callbacks, and can make the code more readable.
 
 * What tools and techniques do you use debugging Javascript code?
-
 I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it via Chrome dev tools.
 
 Debugger keyword.
@@ -321,41 +343,102 @@ for loops are good for arrays. For in loops with arrays include the length prope
 
 * Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
 
+User
+id
+friends - many to many
+posts - many to one
+wall
+likes - many to one
+
+Wall
+id
+user id
+posts
+
+Apps
+id
+user id
+
+fan pages
+id
+posts
+likes
+posts
+
+
+
+
+
+
+
 ## Ruby/Rails
 * What are ruby gems?
 A ruby file designed to easily manage the installation.
+
 * What is the difference between a symbol and a string?
 A symbol cannot be changed vs strings which can be changed at any time.
+
 * What is the difference between a class method and an instance method?
 A class is a description of a thing. An instance is an actual thing.
+
 * What is the difference between local variables, instance variables, and class variables?
+instance variable: a variable that has an idependant value that pertains to this instance of a class.
+local variable: typically used in a method, and has only local scope.
+class variable: Class variables are shared among all instances of a class.
+
 * What is a range?
 Range is the all of the numbers between two numbers. You can also use these for letters.
+
 * In ruby, what does attr_accessor do?
+attr_accessor is used to define an attribute for object of Model which is not mapped with any column in database.
 
 * What is the purpose of environment files under the config folder in Rails? (development, test, production)
+development is meant for the configuration of rails while it is being creates,
+test is meant for the configuration while it is being tested before being launched,
+production is for the configuration of the code that will go live.
+
 * What is the purpose of the application.rb file in Rails?
+Application.rb configures settings for your whole rails app.
+
 * How can you define a constant?
+in the application module
+
 * What is the purpose of `yield`?
+
 * How do you store API keys when creating an app?
 In an .env file to hide it from view
+
 * How do I send parameters through a url?
+
 * Explain MVC
-Model View Controller
+
+MVC stands for Model View Controller. Model handles the data, View is what is shown to the user, and controller handles the interaction of the data to the view or model.
+
 * What is a `before_action`? When would you use it?
 before_action is a hook that you can use to run some code before you do another block of code.
+
 * What do controllers do in rails?
 In rails, controllers store your methods.
+
 * What is RESTful routing?
-Using GET,PUT, POST, DELETE to serve pages.
+Using GET,PUT, POST, DELETE to serve pages rather than relying only on different URLs.
+
 * What is a polymorphic association?
 An association that can change between being a 1 to 1 and many to one association.
+
 * What are params?
 params are parameters that can be passed in from the front end from the user to be stored in the backend.
+
 * How do I make a migration to add a column in Rails?
+db:migrate
+
 * What is CSRF? How does Rails protect an app against this?
+CSRF stands for Cross-site request forgery. It is a technique hackers use to hack into a web application.
+In order to prevent such things from happening Rails uses authenticity_token.
+
 * What's the difference between `User.find_by_id(1)` and `User.find(1)`?
 User.find_by_id grabs a specific user and User.find grabs the first of a description.
+
 * What's are classes in Ruby? What are modules? And what's the difference?
 
 ## Testing Questions
@@ -365,8 +448,15 @@ Advantage - catching bugs right away before they become an issue.
 Disadvantage - The tests are only as good as the programmer writing them.
 
 * What tools would you use to test your code's functionality?
+
 * What is the difference between a unit test and a functional/integration test?
+Functional Testing - Is carried out without any knowledge of the internal working of the system.The tester will try to use the system by just following requirements, by providing different inputs and testing the generated outputs.
+
+Unit Testing - As the name suggests, this method tests at the object level. Individual software components are tested for any errors. Knowledge of the program is needed for this test and the test codes are created to check if the software behaves as it is intended to.
+
 * What is the purpose of a code style linting tool?
+Linting is the process of running a program that will analyse code for potential errors.
+
 * What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
 
 ## Coding Questions:
@@ -375,7 +465,6 @@ Disadvantage - The tests are only as good as the programmer writing them.
 ```javascript
 var foo = 10 + '20';
 ```
-
 foo = 30
 
 *Question: How would you make this work?*
