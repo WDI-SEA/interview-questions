@@ -9,7 +9,7 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 What did you learn yesterday/this week?
-Today my group focused git workflow and managing conflicts from multiple sources.
+Today my group focused git workflow and managing conflicts from multiple sources. // Angular Authentication, Routing, and many other things Angular!
 
 What excites or interests you about coding?
 I enjoy the problem solving and being able to always learn new languages and technologies, so there’s always something new and exciting to learn.
@@ -282,22 +282,25 @@ timestamp
 ## Ruby/Rails
 
 What are ruby gems?
-Gems are much like libraries - others’ scripted code you can include in your Ruby file to improve functionality.
+Gems are much like libraries in Javascript or Node Modules - others’ scripted code you can include in your Ruby file to improve functionality.
 
 What is the difference between a symbol and a string?
-Symbols refer to the same value, strings are all different.
+Symbols refer to the same value, strings are all different. // The main difference is that multiple symbols representing a single value are identical whereas this is not true with strings.
 
 What is the difference between a class method and an instance method?
-Class methods can be called with the class name where instances are one particular case of a class.
+Class methods can be called with the class name where instances are one particular case of a class. // Instance methods use an instance of a class, whereas a class method can be used with just the class name.
 
 What is the difference between local variables, instance variables, and class variables?
-Local variables reference an object. Instance is a little similar to this in that it refers to a particular value for each different instance. Class variables are instances.
+Local variables reference an object. Instance is a little similar to this in that it refers to a particular value for each different instance. Class variables are instances. // It's a matter of scope. 
+A local variable is only visible/usable in the method in which it is defined (i.e., it goes away when the method returns). 
+An instance variable, on the other hand, is visible anywhere else in the instance of the class in which it has been defined 
+This is different from a class variable, which is shared between all instances of a class.
 
 What is a range?
-Ranges are a series of numbers between a minimum and maximum designated by being inside parentheses.
+Ranges are a series of numbers between a minimum and maximum designated inside parentheses. // Sequences have a start point, an end point, and a way to produce successive values in the sequence. In Ruby, these sequences are created using the ".." and "..." range operators. The two dot form creates an inclusive range, and the three-dot form creates a range that excludes the specified high value.
 
 In ruby, what does attr_accessor do?  
-Allows you to read and write a particular instance variable.
+Allows you to read and write to a particular instance variable.
 
 What is the purpose of environment files under the config folder in Rails? (development, test, production)
 They make it easier to deploy.
@@ -306,25 +309,25 @@ What is the purpose of the application.rb file in Rails?
 Ties together all the requirements and pulls in Active Record along with setting up the Application class.
 
 How can you define a constant?
-All caps at the top of a page.
+All caps at the top of a page. // Constants begin with an uppercase letter.
 
 What is the purpose of `yield`?
-Much like body in node, it allows you to pull content into a layout template.
+When you write a method that takes a block, you can use the yield keyword to execute the block.
 
 How do you store API keys when creating an app?
-.env file {also can store as a constant}
+.env file {also can store as a constant} // Alternative is to create a yaml file, then read it when your app signs in to an api. This is the style used by rails itself with the config/databse.yml file // You can also store as a constant using a hash or nested hash.
 
 How do I send parameters through a url?
-Create a helper function in your controller (typically a user_params would be in a user controller for example) that allows a particular param with particular named parameters attached.
+Create a helper function in your controller (typically a user_params would be in a user controller for example) that allows a particular param with particular named parameters attached. // f you use helper methods for routes (for example company_path), then you can add hash of params, so this two should be similar.
 
 Explain MVC
-Model View Controller - allows you to set up object-database relationships, display pages, and routing in a simple way.
+Model View Controller - allows you to set up object-database relationships, display pages, and routing in a simple way. // http://stackoverflow.com/questions/1931335/what-is-mvc-in-ruby-on-rails
 
 What is a `before_action`? When would you use it?
-It’s useful when checking if a user is authenticated, to limit availability to particular pages.
+It’s useful when checking if a user is authenticated, to limit availability to particular pages. // "Before" actions may halt the request cycle. A common "before" action is one which requires that a user is logged in for an action to be run.
 
 What do controllers do in rails?
-They make for clean routing.
+They make for clean routing. // They create actions based off of different routes that enable CRUD capabilities/different views.
 
 What is RESTful routing?
 Using different methods for different actions, i.e. post for put. Verb + url
@@ -334,18 +337,18 @@ What is a polymorphic association?
 Allows models to belong to more than one model, as in votes or comments. Lets you call on a given "belongs to" with multiple classes.
 
 What are params?
-Used for post data, or from the URL. //RETURN
+Used for post data, or from the URL. // You will probably want to access data sent in by the user or other parameters in your controller actions. There are two kinds of parameters possible in a web application. The first are parameters that are sent as part of the URL, called query string parameters. The query string is everything after "?" in the URL. The second type of parameter is usually referred to as POST data. This information usually comes from an HTML form which has been filled in by the user. It's called POST data because it can only be sent as part of an HTTP POST reques
 
-How do I make a migration to add a column in Rails? change_column :products, :part_number, :text //RETURN
+How do I make a migration to add a column in Rails? change_column :products, :part_number, :text // If you have already run your original migration (before editing it), then you need to generate a new migration (rails generate migration add_email_to_users email:string will do the trick). Then do a rake db:migrate and it'll run the new migration.
 
 What is CSRF? How does Rails protect an app against this?
-There are built in security measures that require a valid token and protect from forgeries. Rails is smarter than I am. //RETURN
+There are built in security measures that require a valid token and protect from forgeries. Rails is smarter than I am. // Sessions that never expire extend the time-frame for attacks such as cross-site request forgery (CSRF), session hijacking and session fixation. An attacker maintaining a session every five minutes can keep the session alive forever, although you are expiring sessions. A simple solution for this would be to add a created_at column to the sessions table. Now you can delete sessions that were created a long time ago. 
 
 What's the difference between `User.find_by_id(1)` and `User.find(1)`?
 They return different things if there’s a nonexistent record. .find is the exception or 404 response vs nil for find_by_id.
 
 What's are classes in Ruby? What are modules? And what's the difference?
-Classes makes it easy to collect a series of functions or variables and make them easily accessible.  Modules are similar but a little closer to hashes. Classes are more easy to multiply.
+Classes makes it easy to collect a series of functions or variables and make them easily accessible.  Modules are similar but a little closer to hashes. Classes are more easy to multiply. // Modules are about providing methods that you can use across multiple classes - think about them as "libraries" (as you would see in a Rails app). Classes are about objects; modules are about functions.
 
 
 ## Testing Questions
@@ -361,7 +364,7 @@ What is the difference between a unit test and a functional/integration test?
 Testing one isolated part versus the whole code.
 
 What is the purpose of a code style linting tool?
-Lints analyze code for errors like misspellings - useful for Javascript
+Lints analyze code for errors like misspellings - useful for Javascript to make sure your code looks as good as possible.
 
 What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
 Checking if every part of the code works from the user end as expected from beginning to final part of the page. Can vary between seeded data and using a real server.
