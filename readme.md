@@ -44,17 +44,19 @@ no!
 ## HTML Questions
 
 * What does a `doctype` do?
-The doctype is at the top of the HTML page and it declares the page as HTML.
+The doctype is at the top of the HTML page and it declares the page as HTML so the browser knows how to treat it. 
 
 * What's the difference between HTML and XHTML?
-
-
+XHTML follows the conventions of XML and is more strict.
 
 
 * What are `data-` attributes good for?
 Data attributes are good for storing information that does not have a visual representation.
+Bootstrap uses it.
 
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+Session ends when you close the browser and LocalStorage persists. 
+Cookies are old, cannot store as much info, and can only store strings and are actually sent to the server.
 
 
 
@@ -63,21 +65,26 @@ When you put CSS links in the head so the page loads the CSS before the rest is 
 
 You put the JS at the end of the body so that the scripts are the last thing loaded on the page. This way the scripts can properly interact with elements on the page. 
 
+If JavaScript is executed before the DOM is loaded, then certain things like attaching clickhandlers will not work properly.
+
+The async and defer attributes can also be applied to a script tag to prevent the page blocking while it loads the scripts. The script will defer execution until the page is loaded.
+
 
 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
-Id's only apply to one particular element. Classes can be applied to many elements. #ID .Class
+Id's only apply to one particular element and are unique. Classes can be applied to many elements. #ID .Class
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-Normalize sets defaults like font. Resetting CSS literally resets all styling. 
+Normalize sets defaults like font. Resetting CSS resets all styling. 
 
 
 * Describe Floats and how they work.
-Floats affect the layers of elements on a page.
+Floats affect the layers of elements on a page. It allows us to pull left and right.
 
 * Describe z-index and how stacking context is formed.
+Z-index defines how elements are "stacked" on the page. An elements with a higher z-index will appear on top of an element with a lower z-index;
 
 
 * Have you ever used a grid system, and if so, what do you prefer?
@@ -85,34 +92,67 @@ Yes I have and Bootstrap 3.
 
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+Yes. @media min-width and max-width
 
 * How do you optimize your webpages for print?
+Create a separate CSS file specifically designed for printing. Theres a media attribute. Use high res pictures that have a minimum of 300 DPI.
+
 
 * What are the advantages/disadvantages of using CSS preprocessors?
+Preprocessors allow us to write "fancier" syntax and add logic to our CSS.
+Gains:
+-variables
+-nested query syntax
+-less repitition
+
+Things we hate:
+- harder to debug. 
+- compiled code can be hard to read. 
+- pre processors add an extra step. 
+- adds a learning overheard to the project for additional team members.
 
   * Describe what you like and dislike about the CSS preprocessors you have used.
+  -Sass (meh)
+  -Less (double meh)
+
 
 * How would you implement a web design comp that uses non-standard fonts?
+Font services like google fonts.
+font familys.
+
 
 * Explain how a browser determines what elements match a CSS selector.
+Selectors refer to IDs, classes and tags. We can combine them to refer to elements on the page. We can select elements inside of elements.
 
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+Content, padding, border, margin. In that order, inside to outside..
+
+
 
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
+Browsers can measure the wifth and height of erlements in different ways. each browser interprets box sizing differently. Specifying a specific box-sizing allows us to know how things are measured. 
+
+The content-box value will measure only the content, not the margin or border.
+The border-box value will measure elements including their borders.
+
 
 * List as many values for the display property that you can remember.
-inline, inline-block, flex, block, inline-flex, table, initial, inherit.
+inline, inline-block, flex, block, inline-flex, table, initial, inherit, 
+none: hide things from pages
+
 
 * What's the difference between inline and inline-block?
-Inline block allows you to set a width and height for each block.
+Inline: elements can go next to eachother they have the wifth of the content and the height of the line. Inline elemnts cannot have a specified height. 
+inline-block: A break appears between the elements. can have a height
 
 * What's the difference between a relative, fixed, absolute and statically positioned element?
-
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
-* What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-* Have you played around with the new CSS Flexbox or Grid specs?
+Defines how elements are positioned on the page.
+Fixed: things stay put, no matter if scrolling occurs. 
+absolute: things stay put no matter if scrolling occurs. good for footers that are alwats on the bottrom of the window, scroll or not. 
+Static:
 
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+the problem with high DPI images, they will show large on screens with lower DPI.
 
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
@@ -120,24 +160,56 @@ Inline block allows you to set a width and height for each block.
 
 * Explain event delegation
 * Explain how `this` works in JavaScript
+The 'this' keyword is used in classes and functions.
+Each instance of a object or class will have a 'this' property where its own data and properties are stored. 
+
+When we create a Point object we can refer to:
+this.x
+this.y
+and different instacnces of the point can have their own calues. in this case 'this' refers to the instance of the Point.
 
 * Explain how prototypal inheritance works
 When an object inherits from another object. IE matt.__proto__=human
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
-Ternary is a conditional operator. It is the only operator that takes in 3 operands. If the condition is true then the operator returns the value of the 1st expression, if false, operator returns the value of the 2nd expression. 
 
+Ternary is a conditional operator. It is the only operator that takes in 3 operands. If the condition is true then the operator returns the value of the 1st expression, if false, operator returns the value of the 2nd expression. 
+var meal = isChicago? 'deep-dish' : 'pizza';
+is the same thing as:
+var meal;
+if (isPhilly) {
+  meal = 'cheesesteak'
+} else {
+  meal = 'burger'
+}
+
+Ternary code is harder to debug.
 
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
-null-
-undefined-
-undeclared- Undeclared variables 
-
-
+null-empty value.. can be treated as a value. is explicitly set.
+undefined- a var that has not been set to anything.
+undeclared- variable that doesnt have a 'var' in front of it. not in memory.
 
   * How would you go about checking for any of these states?
+
+
 * What is a closure, and how/why would you use one?
+A closure is a function that has scope that refers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
+
+Closures can be used to encapsulate a module of code.
+They wrap up the scope and make it unavailable to code that exists outside the closure.
+
+for (var i = 0; i < 10; i++) {
+  setTimeout(function() {
+  1000 * i
+  })
+}
+
+
 * What's a typical use case for anonymous functions?
+
+Anonymouse functios are useful when creating closures, for creating click handlers and writing code that wont be invoked from many places.
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
@@ -146,15 +218,35 @@ undeclared- Undeclared variables
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used?
 * Explain "hoisting".
+Javascript hoists variables declared with Var to the top of a function. Cariables will be undefined until their value is actually set. Variables with the same name of a variable outside a function as inside a function can interfere with each other surprisingly. 
+
+
+(function() {
+  console.log(x);
+  console.log(y);
+  var x;
+})
+returns undefined, null, undefined.
+
+
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built-in JavaScript objects not a good idea?
 * What is the difference between `==` and `===`?
+Triple equals is a more strict definition of equality.
+double equals performs typed coersion.
+0 === '0' returns false
+0 == '0' returns true
+this could cause chaos n stuff.
+
+
 * Explain the same-origin policy with regards to JavaScript.
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * What tools and techniques do you use debugging Javascript code?
+JSLint, chrome.
 * What language constructions do you use for iterating over object properties and array items?
+
 
 ## Database Questions
 
