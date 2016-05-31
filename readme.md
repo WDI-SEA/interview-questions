@@ -285,14 +285,14 @@ What are ruby gems?
 Gems are much like libraries in Javascript or Node Modules - others’ scripted code you can include in your Ruby file to improve functionality.
 
 What is the difference between a symbol and a string?
-Symbols refer to the same value, strings are all different. // The main difference is that multiple symbols representing a single value are identical whereas this is not true with strings.
+Symbols refer to the same value, strings are all different. // The main difference is that multiple symbols representing a single value are identical whereas this is not true with strings. // reference the value but aren’t the value itself
 
 What is the difference between a class method and an instance method?
-Class methods can be called with the class name where instances are one particular case of a class. // Instance methods use an instance of a class, whereas a class method can be used with just the class name.
+Class methods can be called with the class name where instances are one particular case of a class. // Instance methods use an instance of a class, whereas a class method can be used with just the class name. // class method exists for all instances/ instances are for that one alone.
 
 What is the difference between local variables, instance variables, and class variables?
 Local variables reference an object. Instance is a little similar to this in that it refers to a particular value for each different instance. Class variables are instances. // It's a matter of scope. 
-A local variable is only visible/usable in the method in which it is defined (i.e., it goes away when the method returns). 
+A local variable is only visible/usable in the method in which it is defined (i.e., it goes away when the method returns). Not associated with classes, only with their own scope of what function they’re in.
 An instance variable, on the other hand, is visible anywhere else in the instance of the class in which it has been defined 
 This is different from a class variable, which is shared between all instances of a class.
 
@@ -330,11 +330,13 @@ What do controllers do in rails?
 They make for clean routing. // They create actions based off of different routes that enable CRUD capabilities/different views.
 
 What is RESTful routing?
+Representational State Transfer. 
+
 Using different methods for different actions, i.e. post for put. Verb + url
 http://stackoverflow.com/questions/2441962/what-is-restful-routing
 
 What is a polymorphic association?
-Allows models to belong to more than one model, as in votes or comments. Lets you call on a given "belongs to" with multiple classes.
+Allows models to belong to more than one model, as in votes or comments. Lets you call on a given "belongs to" with multiple classes. // One table for many things
 
 What are params?
 Used for post data, or from the URL. // You will probably want to access data sent in by the user or other parameters in your controller actions. There are two kinds of parameters possible in a web application. The first are parameters that are sent as part of the URL, called query string parameters. The query string is everything after "?" in the URL. The second type of parameter is usually referred to as POST data. This information usually comes from an HTML form which has been filled in by the user. It's called POST data because it can only be sent as part of an HTTP POST reques
@@ -345,7 +347,7 @@ What is CSRF? How does Rails protect an app against this?
 There are built in security measures that require a valid token and protect from forgeries. Rails is smarter than I am. // Sessions that never expire extend the time-frame for attacks such as cross-site request forgery (CSRF), session hijacking and session fixation. An attacker maintaining a session every five minutes can keep the session alive forever, although you are expiring sessions. A simple solution for this would be to add a created_at column to the sessions table. Now you can delete sessions that were created a long time ago. 
 
 What's the difference between `User.find_by_id(1)` and `User.find(1)`?
-They return different things if there’s a nonexistent record. .find is the exception or 404 response vs nil for find_by_id.
+They return different things if there’s a nonexistent record. .find is the exception or 404 response vs nil for find_by_id. // Find is less specific and returns just one user.
 
 What's are classes in Ruby? What are modules? And what's the difference?
 Classes makes it easy to collect a series of functions or variables and make them easily accessible.  Modules are similar but a little closer to hashes. Classes are more easy to multiply. // Modules are about providing methods that you can use across multiple classes - think about them as "libraries" (as you would see in a Rails app). Classes are about objects; modules are about functions.
@@ -364,10 +366,10 @@ What is the difference between a unit test and a functional/integration test?
 Testing one isolated part versus the whole code.
 
 What is the purpose of a code style linting tool?
-Lints analyze code for errors like misspellings - useful for Javascript to make sure your code looks as good as possible.
+Lints analyze code for stylistic errors - like misspellings -  useful for Javascript to make sure your code looks as good as possible.
 
 What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
-Checking if every part of the code works from the user end as expected from beginning to final part of the page. Can vary between seeded data and using a real server.
+Checking if every part of the code works from the user end as expected from beginning to final part of the page. Can vary between seeded data and using a real server. Angular provides its own E2E testing
 https://medium.com/how-we-build-fedora/e2e-testing-with-angular-protractor-and-rails-725fbefb8149#.kfonznidd
 
 ## Coding Questions:
