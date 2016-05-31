@@ -128,16 +128,32 @@ CSS is better for smaller animations, JS is gives more control over animations
 ## JS Questions
 
 * Explain event delegation
-
+Event delegation allows you to avoid adding event listeners to specific nodes;  instead, the event listener is added to one parent.  That event listener analyzes bubbled events to find a match on child elements.
 
 * Explain how `this` works in JavaScript
+It's used to refer to an object
+
 * Explain how prototypal inheritance works
+An object inherits from another object instead of a class
+
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+JS operator used as a shortcut for the if statement
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+Undefined is a variable that hasn't been declared, null is a special object, undefined is a variable with no value
+
   * How would you go about checking for any of these states?
+Call it
+
 * What is a closure, and how/why would you use one?
+It's a self-invoking function & it allows a function to have private variables
+
 * What's a typical use case for anonymous functions?
+
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+
+
 * What's the difference between `.call` and `.apply`?
 * Explain `Function.prototype.bind`.
 * What's the difference between feature detection, feature inference, and using the User Agent string?
@@ -154,3 +170,138 @@ CSS is better for smaller animations, JS is gives more control over animations
 * What are the pros and cons of using Promises instead of callbacks?
 * What tools and techniques do you use debugging Javascript code?
 * What language constructions do you use for iterating over object properties and array items?
+
+=============================
+
+Database Questions
+
+Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
+
+============================
+
+Ruby/Rails
+
+What are ruby gems?
+A module you can add in for additional functionality
+
+What is the difference between a symbol and a string?
+We use symbols in hash maps. Symbols all reference one single value, but there may be many instances of strings
+
+What is the difference between a class method and an instance method?
+Class method exists once for all instances of the class. Instance methods acts only for individual instances
+
+What is the difference between local variables, instance variables, and class variables?
+Local variables aren't associated with any classes. Instances variables are attached to instances of classes. 
+Class variables exist once per class
+
+What is a range?
+A specific set of numbers or values
+
+In ruby, what does attr_accessor do?
+Allows a method to access an attribute
+
+What is the purpose of environment files under the config folder in Rails? (development, test, production)
+What is the purpose of the application.rb file in Rails?
+How can you define a constant?
+
+What is the purpose of yield?
+Used when we create layout template, fills in the rest of the site
+
+How do you store API keys when creating an app?
+Put them in a .env file then add it to gitignore
+
+How do I send parameters through a url?
+
+Explain MVC
+Model View Controller
+Model sets up db structure
+View defines how things are displayed
+Controller controls interaction between model and the view
+
+What is a before_action? When would you use it?
+
+What do controllers do in rails?
+Allow us to configure routes & can be paired with CRUD methods
+
+What is RESTful routing?
+Standard convention that serves as a guide to create CRUD routes
+
+What is a polymorphic association?
+One db table that you want to use for many things
+
+What are params?
+How do I make a migration to add a column in Rails?
+What is CSRF? How does Rails protect an app against this?
+Cross Site Request Forgery. RoR puts CSRF tokens into forms & checks for those tokens
+
+What's the difference between User.find_by_id(1) and User.find(1)?
+find by id1 is guaranteed to return the user with id1
+find1 returns one user, but no guarantee who the user is
+
+What's are classes in Ruby? What are modules? And what's the difference?
+Modules are self-contained pieces of code that you can export/import
+
+=============================
+
+Testing Questions
+
+What are some advantages/disadvantages to testing your code?
+Writing tests sucks, trap of writing code that just passes tests but isn't functional
+Can be more certain your app works, a good test suite tests validity of incoming code
+
+What tools would you use to test your code's functionality?
+Manual testing, automated testing, unit tests,
+
+What is the difference between a unit test and a functional/integration test?
+
+What is the purpose of a code style linting tool?
+Program that checks code for stylistic errors
+
+What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
+Refers to testing things all the way from the client end to the server end. Angular has it's own E2E framework
+
+=============================
+
+Coding Questions:
+
+Question: What is the value of foo?
+
+var foo = 10 + '20';
+Question: How would you make this work?
+
+add(2, 5); // 7
+add(2)(5); // 7
+Question: What value is returned from the following statement?
+
+"i'm a lasagna hog".split("").reverse().join("");
+Question: What is the outcome of the two alerts below?
+
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+Question: What is the value of foo.length?
+
+var foo = [];
+foo.push(1);
+foo.push(2);
+Question: What is the value of foo.x?
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+Question: What does the following code print?
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');
+Fun Questions:
+
+What's a cool project that you've recently worked on?
+What are some things you like about the developer tools you use?
+Do you have any pet projects? What kind?
+How do you like your coffee?
