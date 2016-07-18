@@ -270,6 +270,8 @@ You could check for these states using typeOf() method.
 
 * What is a closure, and how/why would you use one?
 
+https://www.youtube.com/watch?v=71AtaJpJHw0
+
 A closure is an annonymous function that is called right away to keep variables out of the global scope.
 
 A closure is a function that has scope that regers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
@@ -285,13 +287,19 @@ Closures can be used to encapsulate a module of code. They wrap up the scope and
 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
-function Person(){} is a function named Person. it is not executed yet.
+function Person(){} is a function named Person. It is not executed yet.
+
 var person = Person() This is declaring a variable called person, it will be equal to the return value of the 'Person' function.
+
 var person = new Person() is a new instance of a person using a constructor.
 
 * What's the difference between `.call` and `.apply`?
 
-The difference is that apply lets you invoke the function with arguments as an array; call requires the parameters be listed explicitly.
+.call is used to call a method on an object which it is not assigned to.
+
+.apply is used to do the same thing, but the parameters for the method can be stored in a variable.
+
+https://www.youtube.com/watch?v=c0mLRpw-9rI
 
 * Explain `Function.prototype.bind`.
 
