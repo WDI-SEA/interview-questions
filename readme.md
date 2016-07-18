@@ -221,7 +221,7 @@ This is used to create abstractions of what is being built. For example, you can
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 
-Ternary implies "three."
+Ternary expressions are shorthand if / else statements.
 
 var meal = isPhilly ? 'cheesesteak' : 'burger';
 
