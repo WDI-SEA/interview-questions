@@ -65,6 +65,13 @@ Ideally you want to strike a balance between the two and make sure that if you a
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
 
+use css animations for transitions using opacity to show and hide elements.
+keep an array with all of the image urls.
+
+attach a click handler to the image so users can click on it and go to the next one. Also, we can set up an interval with JavaScript to automatically transition through the pictures.
+
+make some divs with prev and next text
+
 
 * If you could master one technology this year, what would it be?
 
@@ -208,7 +215,9 @@ When we create a point object, we can refer to this.x, this.y and different inst
 
 * Explain how prototypal inheritance works
 
-Prototypal inheritance is a way of creating objects that contain abstractions of what they are building. For example, if you make a human object - it can have a name, age, location, and family members as properties.
+Prototypal inheritance is when an object inherits from another object.
+
+This is used to create abstractions of what is being built. For example, you can create an animal object which you can use to build a dog object, which you can use to build a specific instance of a dog.
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 
@@ -375,16 +384,26 @@ posts
 * What are ruby gems?
 A ruby file designed to easily manage the installation.
 
+Its a module you can add in the can be used for additional functionality. For example you can have a gem that provides a library with functions for OAuth.
+
+SASS is a css preprocessor gem. There are many OAuth gems, voting gems, etc.
+
+Carrierwave is good for uploading files.
+
 * What is the difference between a symbol and a string?
+
+We use symbols in hash maps. Symbols all reference one single value, there may be many instances of strings.
 A symbol cannot be changed vs strings which can be changed at any time.
 
 * What is the difference between a class method and an instance method?
+A class method exists once for all instances of a class. An instance methods acts on instances individually.
 A class is a description of a thing. An instance is an actual thing.
 
 * What is the difference between local variables, instance variables, and class variables?
 instance variable: a variable that has an idependant value that pertains to this instance of a class.
-local variable: typically used in a method, and has only local scope.
-class variable: Class variables are shared among all instances of a class.
+local variable: typically used in a method, and has only local scope, not associated with any classes.
+
+class variable: Class variables are shared among all instances of a class. Each instance of the class can read the same value.
 
 * What is a range?
 Range is the all of the numbers between two numbers. You can also use these for letters.
@@ -405,6 +424,16 @@ in the application module
 
 * What is the purpose of `yield`?
 
+  We use the yield keyword when we create our layout template.
+  The rest of our site will dill in wherever we put the yield keyword.
+
+  <body>
+    <% yield :nav %>
+    <% yield %>
+  </body>
+
+
+
 * How do you store API keys when creating an app?
 In an .env file to hide it from view
 
@@ -412,16 +441,32 @@ In an .env file to hide it from view
 
 * Explain MVC
 
-MVC stands for Model View Controller. Model handles the data, View is what is shown to the user, and controller handles the interaction of the data to the view or model.
+MVC stands for Model View Controller. Model handles the data, View is what is shown to the user, and controller handles the interaction and flow of the data to the view or model.
 
 * What is a `before_action`? When would you use it?
 before_action is a hook that you can use to run some code before you do another block of code.
 
 * What do controllers do in rails?
+In rails we have views that define pages in our app, we have models that define how our data exists in the database and in the app.
+
+We can pair controllers with CRUD methods to control how our models are Created, read, updated, and destroyed.
+
 In rails, controllers store your methods.
 
 * What is RESTful routing?
+
+Representational
+State
+Transer
+
 Using GET,PUT, POST, DELETE to serve pages rather than relying only on different URLs.
+
+Restful routing is a standard convention that serves as a guide for us to create our CRUD routes.
+
+GET - Gets info about something
+POST - creates info about something
+PUTS - Updates info about something
+DELETE - Deletes something
 
 * What is a polymorphic association?
 An association that can change between being a 1 to 1 and many to one association.
@@ -439,15 +484,32 @@ In order to prevent such things from happening Rails uses authenticity_token.
 * What's the difference between `User.find_by_id(1)` and `User.find(1)`?
 User.find_by_id grabs a specific user and User.find grabs the first of a description.
 
+If the id of the user doesn't matter, then the database can return us any old match much more quickly.
+
 * What's are classes in Ruby? What are modules? And what's the difference?
+Modules are self contained pieces of code that you're able to export and import into other places.
 
 ## Testing Questions
 
 * What are some advantages/disadvantages to testing your code?
 Advantage - catching bugs right away before they become an issue.
-Disadvantage - The tests are only as good as the programmer writing them.
+Disadvantage - Tedious, not fun, might fall into the trap of writing code that just passes the test but doesn't have the correct functionality. The tests are only as good as the programmer writing them. Sometimes its hard to write a test when the code youre trying to test has many dependencies and is tightly coupled to other parts of the application. For example, how to test someone scrolling down a site and clicking a delete button in the middle of a long list?
 
 * What tools would you use to test your code's functionality?
+
+You can assign someone to manually test the site. Manual testing is expensive and tedious but its necessary.
+
+in QA, testing testers create test plans to test different portions of an app. Someone is given a very loose set of instructions to follow.
+
+Eventually, manual tests are converted into automated tests.
+
+
+Unit tests test small parts of code like calling a method and checking a return value.
+
+There are also great tools that allow us to script user interactions like typing things into a form, clicking buttons, navigating to pages.
+
+PhantomJs, Selenium, Angular has built in libraries.
+Mocha / Chai, Jasmine
 
 * What is the difference between a unit test and a functional/integration test?
 Functional Testing - Is carried out without any knowledge of the internal working of the system.The tester will try to use the system by just following requirements, by providing different inputs and testing the generated outputs.
@@ -455,9 +517,21 @@ Functional Testing - Is carried out without any knowledge of the internal workin
 Unit Testing - As the name suggests, this method tests at the object level. Individual software components are tested for any errors. Knowledge of the program is needed for this test and the test codes are created to check if the software behaves as it is intended to.
 
 * What is the purpose of a code style linting tool?
-Linting is the process of running a program that will analyse code for potential errors.
+Linting is the process of running a program that will analyse code for potential stylistic errors. A linter is a nice tool to have to enforce consistent coding patterns througout an app.
+
+- improper indentation
+- inconsisten snake_case vs camelCase
+- consistent single or double quote usage
+- non-matching brackets, quotes, curly braces
+- long lines past 80 or 100 characters
+
+teams can config linters to detect any stylistic conventions they care about.
+
+code repos can prevent code from being commited until they pass a linter.
 
 * What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
+
+End to end testing refers to testing everything from the client end to the server end. Angular provides its own end to end framework.
 
 ## Coding Questions:
 
