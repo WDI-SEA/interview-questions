@@ -236,19 +236,41 @@ if(isPhilly) {
 
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
 
-Null is an empty value that we can set.
-Undefined is something that the language sets.
+- undeclared variables don’t even exist
+- undefined variables exist, but don’t have anything assigned to them
+- null variables exist and have null assigned to them
 
+---- Undeclared ----
+if a variable has not been assigned by using 'var.'
+
+example:
+x = 1
+return x;
+x === undeclared.
+
+---- Undefined ----
+
+Something is undefined when it hasn’t been defined yet. If you call a variable or function without having actually created it yet the parser will give you an not defined error.
+
+example:
 var x;
 x = undefined
 
-If we just write 'var x,' the value is undefined.
+If we just write 'var x,' the value is undefined since it is not holding anything.
+
+---- Null ----
+
+null is a variable that is defined to have a null value.
+
+ example:
+var x = null;
 
 * How would you go about checking for any of these states?
+You could check for these states using typeOf() method.
 
 * What is a closure, and how/why would you use one?
 
-Annonymousfunction that is called right away to keep variables out of the global scope.
+A closure is an annonymous function that is called right away to keep variables out of the global scope.
 
 A closure is a function that has scope that regers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
 
