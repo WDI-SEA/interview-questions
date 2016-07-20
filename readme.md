@@ -202,22 +202,38 @@ JS can be quicker than CSS IF you aren't using jQuery.
 Some animations that you are able to make in JS are impossible in CSS.
 JS annimations is also more widely supported.
 
+---------------------------------------------------------------------
+
+
+
 ## JS Questions
+
+---------------------------------------------
 
 * Explain event delegation
 
 Event delegation is assigning a parent element a event handler rather than assigning event handlers to each child element.
+
+
+---------------------------------------------
+
 
 * Explain how `this` works in JavaScript
 
 'This' is used in classes and functions. Each instance of an object or class will have a this property where its own data and properties are stored.
 When we create a point object, we can refer to this.x, this.y and different instances can have their own values. In this case 'this' refers to the instance of the point.
 
+
+------------------------------------------
+
+
 * Explain how prototypal inheritance works
 
 Prototypal inheritance is when an object inherits from another object.
 
 This is used to create abstractions of what is being built. For example, you can create an animal object which you can use to build a dog object, which you can use to build a specific instance of a dog.
+
+-------------------------------------------
 
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 
@@ -234,6 +250,9 @@ if(isPhilly) {
   meal = 'burger';
 }
 
+-------------------------------------------
+
+
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
 
 - undeclared variables don’t even exist
@@ -241,12 +260,14 @@ if(isPhilly) {
 - null variables exist and have null assigned to them
 
 ---- Undeclared ----
+
 if a variable has not been assigned by using 'var.'
 
 example:
 x = 1
 return x;
 x === undeclared.
+
 
 ---- Undefined ----
 
@@ -268,16 +289,19 @@ var x = null;
 * How would you go about checking for any of these states?
 You could check for these states using typeOf() method.
 
+---------------------------------------
+
 * What is a closure, and how/why would you use one?
 
 https://www.youtube.com/watch?v=71AtaJpJHw0
 
 A closure is an annonymous function that is called right away to keep variables out of the global scope.
 
-A closure is a function that has scope that regers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
+A closure is a function that has scope that refers to variables. We can use closures to save the scope of variables and their values at a certain point in time.
 
 Closures can be used to encapsulate a module of code. They wrap up the scope and make it unavailable to code that exists outside the closure.
 
+-----------------------------------------
 
 * What's a typical use case for anonymous functions?
 
@@ -285,43 +309,86 @@ Closures can be used to encapsulate a module of code. They wrap up the scope and
 - for creating closures
 - keep your variables out of the gloabal scope.
 
+------------------------------------------
+
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
 function Person(){} is a function named Person. It is not executed yet.
 
+------------------
+
 var person = Person() This is declaring a variable called person, it will be equal to the return value of the 'Person' function.
 
+------------------
+
 var person = new Person() is a new instance of a person using a constructor.
+
+-----------------------------------------
 
 * What's the difference between `.call` and `.apply`?
 
 .call is used to call a method on an object which it is not assigned to.
 
+--------------------
+
 .apply is used to do the same thing, but the parameters for the method can be stored in a variable.
 
 https://www.youtube.com/watch?v=c0mLRpw-9rI
+
+---------------------------------------------
 
 * Explain `Function.prototype.bind`.
 
 Bind creates a new function that will have this set to the first parameter passed to bind()
 
+--------------------------------------------
+
 * What's the difference between feature detection, feature inference, and using the User Agent string?
 
-Feature Detection is to verify if a feature works in a particular browser or not. The feature can be either a CSS property or a Java Script Method.
+Feature Detection checks if a feature exists
 
-Feature Inference is to assume that a CSS property/ JS method is available in all the browsers, by verifying it in a single browser. The fact is it can or it cannot be available. For ex. the text( ) function is implemented in Chrome , but it is not implemented in Firefox which will give out an error eventually when used. So we have to be careful.
+ex:
+if (window.XMLHttpRequest) {
+    new XMLHttpRequest();
+}
+
+---------------
+
+
+Feature inference checks for a feature just like feature detection, but uses another function because it assumes it will also exist,
+
+ex:
+if (document.getElementsByTagName) {
+    element = document.getElementById(id);
+}
+
+----------------
 
 The User Agent is a software which identifies your operating system, browser and its version. When you a visit a particular webpage, the browser sends a user-agent string to the host, implying that only the content/data related to that particular browser should be displayed.
+
+Checking the UA string is an old practice and should not be used anymore.
+
+ex:
+if (navigator.userAgent.indexOf("MSIE 7") > -1){
+    //do something
+}
+
+--------------------------------------------
+
 
 * Explain AJAX in as much detail as possible.
 
 Ajax is a method of exchanging data with a server, and updating the web page without having to reloading the page.
+
+---------------------------------------------
 
 * Have you ever used JavaScript templating?
 Yes
 
 * If so, what libraries have you used?
 EJS and ERB
+
+---------------------------------------------
 
 * Explain "hoisting".
 
@@ -330,14 +397,19 @@ Hoisting is the act of declaring a variable and then assigning it a value later 
 
 Javascript hoists variables declared with var to the top of the function. Variables will be undefined until their value is actually set. Variables with the same name of a var outside a function as inside can interfere with each other surprisingly.
 
+---------------------------------------------
+
 * Describe event bubbling.
 
-Event bubbling is firing an event to a nested element and the having it fire to the parent elements which it is nested.
+Event bubbling is firing an event to a nested element and the having it fire up to the parent elements which it is nested.
+
+---------------------------------------------
 
 * What's the difference between an "attribute" and a "property"?
 
 Attributes are in your HTML text document/file, whereas properties are in HTML DOM tree.
 
+---------------------------------------------
 
 * Why is extending built-in JavaScript objects not a good idea?
 Lack of specification
@@ -345,6 +417,7 @@ Host objects have no rules
 Chance of collisions
 Performance overhead
 
+---------------------------------------------
 
 * What is the difference between `==` and `===`?
   == is less strict than ===, === compares what type of value it is.
@@ -352,18 +425,31 @@ Performance overhead
   0 === '0' returns false
   0 == '0' returns true
 
+----------------------------------------------
+
 * Explain the same-origin policy with regards to JavaScript.
 This is a security policy that  prevents JS from accessing sites outside the current domain.
 
+----------------------------------------------
+
 * What is the extent of your experience with Promises and/or their polyfills?
 
+----------------------------------------------
+
 * What are the pros and cons of using Promises instead of callbacks?
+
 Promises prevent callbacks being nested in other callbacks, and can make the code more readable.
 
+
+-----------------------------------------------
+
 * What tools and techniques do you use debugging Javascript code?
+
 I console.log my console.log's with more console.log's. Also setting breakpoints in your code and stepping through it via Chrome dev tools.
 
 Debugger keyword.
+
+-------------------------------------------------
 
 * What language constructions do you use for iterating over object properties and array items?
 
@@ -377,6 +463,8 @@ loops!
 For in loops are good for iterating over the properties in an object and accessing their key.
 
 for loops are good for arrays. For in loops with arrays include the length property and cause problems.
+
+-------------------------------------------------------------------------------------
 
 ## Database Questions
 
