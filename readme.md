@@ -30,7 +30,7 @@ Go through all of the following questions and think about how you would respond 
 ** I define customer or personal goals, (user stories). I ask myself what tools would be appropriate for the proposed project. I sketch outlines and wireframe everything. I write some pseudo code, then jump in to programming.
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-** I would keep them all in one folder but organize them based on speceficity.
+** I would keep them all in one folder but organize them based on speceficity. I'd link to them in my index.html in order of speceficity as well.
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
 ** Graceful degradation starts from the status quo of complexity and tries to fix for the lesser experience whereas progressive enhancement starts from a very basic, working example and allows for constant extension for future environments. Degrading gracefully means looking back whereas enhancing progressively means looking forward whilst keeping your feet on firm ground. (Taken from some article)
@@ -39,7 +39,7 @@ Go through all of the following questions and think about how you would respond 
 ** I would create an array of image links. I'd write a function with set interval to loop through the array and display the image element in a div. Instead of appending image elements in the div I'd replace them.
 
 * If you could master one technology this year, what would it be?
-** I would master D3.
+** I would master D3 or some kind of Geo location service.
 
 * Explain the importance of standards and standards bodies.
 ** The importance of standards is to maintain organization and clarity. Standards bodies do the same thing on a wider scale. (Over simplified answer). Web development would be like the Wild West if people didn't adhere to some set of standards when building things.
