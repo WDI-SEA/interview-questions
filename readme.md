@@ -9,55 +9,55 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
-** This week I was working on _ _ _ . (I will be doing personal programming projects following my completion of GA, so I'll have plenty to talk about)
+  * This week I was working on _ _ _ . (I will be doing personal programming projects following my completion of GA, so I'll have plenty to talk about)
 
 * What excites or interests you about coding?
-** Programming allows one to build almost anything. You get to use creativity and technical problem solving skills to bring ideas in to the world.
+  * Programming allows one to build almost anything. You get to use creativity and technical problem solving skills to bring ideas in to the world.
 
 * What is a recent technical challenge you experienced and how did you solve it?
-** We recently competed in a hackathon during class where we were tasked with building a MEAN stack app. Aside from the challenges of working together with version control system, we encountered problems getting some angular dependencies to work. The two of us working on this issue studied two different sets of docs and came together later to share what we learned. We ended up moving a directive to a different div to get our dependency to behave correctly...
+  * We recently competed in a hackathon during class where we were tasked with building a MEAN stack app. Aside from the challenges of working together with version control system, we encountered problems getting some angular dependencies to work. The two of us working on this issue studied two different sets of docs and came together later to share what we learned. We ended up moving a directive to a different div to get our dependency to behave correctly...
 
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
-** When it comes to UI, I prefer to make things as simple as possible. I find that when I am presented with too many choices or too much information that it becomes harder for me to make a decision. When presented with a clustered or unorganized UI, I am less likely to use the site or app. 
-** Maintainability requires forethought. You should constantly be thinking about your future self and how other devs might see your work if they were to pick it up at some later point. I try to separate concerns in to appropriately named folders. I also try to write descriptive commit messages and meaningful comments throughout my code. Along with these things, I try write helpful README's in my repos.
+  * When it comes to UI, I prefer to make things as simple as possible. I find that when I am presented with too many choices or too much information that it becomes harder for me to make a decision. When presented with a clustered or unorganized UI, I am less likely to use the site or app. 
+  * Maintainability requires forethought. You should constantly be thinking about your future self and how other devs might see your work if they were to pick it up at some later point. I try to separate concerns in to appropriately named folders. I also try to write descriptive commit messages and meaningful comments throughout my code. Along with these things, I try write helpful README's in my repos.
 
 * Talk about your preferred development environment.
-** I like to work in a quiet cool place. I use Sublime text editor with minimal packages and/or default settings. I like using aliases to speed up my command line movement.
+  * I like to work in a quiet cool place. I use Sublime text editor with minimal packages and/or default settings. I like using aliases to speed up my command line movement.
 * Which version control systems are you familiar with?
-** Git
+  * Git
 
 * Can you describe your workflow when you create a web page?
-** I define customer or personal goals, (user stories). I ask myself what tools would be appropriate for the proposed project. I sketch outlines and wireframe everything. I write some pseudo code, then jump in to programming.
+  * I define customer or personal goals, (user stories). I ask myself what tools would be appropriate for the proposed project. I sketch outlines and wireframe everything. I write some pseudo code, then jump in to programming.
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-** I would keep them all in one folder but organize them based on speceficity. I'd link to them in my index.html in order of speceficity as well.
+  * I would keep them all in one folder but organize them based on speceficity. I'd linki to them in my index.html in order of speceficity as well.
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
-** Graceful degradation starts from the status quo of complexity and tries to fix for the lesser experience whereas progressive enhancement starts from a very basic, working example and allows for constant extension for future environments. Degrading gracefully means looking back whereas enhancing progressively means looking forward whilst keeping your feet on firm ground. (Taken from some article)
+  * Graceful degradation starts from the status quo of complexity and tries to fix for the lesser experience whereas progressive enhancement starts from a very basic, working example and allows for constant extension for future environments. Degrading gracefully means looking back whereas enhancing progressively means looking forward whilst keeping your feet on firm ground. (Taken from some article)
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
-** I would create an array of image links. I'd write a function with set interval to loop through the array and display the image element in a div. Instead of appending image elements in the div I'd replace them.
+  * I would create an array of image links. I'd write a function with set interval to loop through the array and display the image element in a div. Instead of appending image elements in the div I'd replace them.
 
 * If you could master one technology this year, what would it be?
-** I would master D3 or some kind of Geo location service.
+  * I would master D3 or some kind of Geo location service.
 
 * Explain the importance of standards and standards bodies.
-** The importance of standards is to maintain organization and clarity. Standards bodies do the same thing on a wider scale. (Over simplified answer). Web development would be like the Wild West if people didn't adhere to some set of standards when building things.
+  * The importance of standards is to maintain organization and clarity. Standards bodies do the same thing on a wider scale. (Over simplified answer). Web development would be like the Wild West if people didn't adhere to some set of standards when building things.
 
 ## HTML Questions
 
 * What does a `doctype` do?
-** It tells the browser what kind of document to expect.
+  * It tells the browser what kind of document to expect.
 
 * What's the difference between HTML and XHTML?
-** http://stackoverflow.com/questions/4153403/what-is-difference-between-xhtml-and-html
-** XHTML document must have a DOCTYPE declaration at the top of the document.
-** All XHTML tag and attribute names must be written in lower case.
-** All the tags must be nested properly.
-** End tags are required for non-empty elements.
-** The start tag of an empty element must end with />.
-** All the attribute values must be quoted.
-** Attribute minimization is forbidden.
+  * http://stackoverflow.com/questions/4153403/what-is-difference-between-xhtml-and-html
+  * XHTML document must have a DOCTYPE declaration at the top of the document.
+  * All XHTML tag and attribute names must be written in lower case.
+  * All the tags must be nested properly.
+  * End tags are required for non-empty elements.
+  * The start tag of an empty element must end with />.
+  * All the attribute values must be quoted.
+  * Attribute minimization is forbidden.
 
 * What are `data-` attributes good for?
 ** Data attributes are good for adding additional selection parameters on elements.
