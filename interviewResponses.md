@@ -4,18 +4,30 @@
 
 Go through all of the following questions and think about how you would respond to each. You should be able to answer many of the questions from memory, but you may have to research a few of them.
 
-**Copy this md file to your homework folder and add a short answer under each item.** You should try to be as concise as possible, and list any handy resources you used to answer the question. This will be useful for studying for interviews after class.
 
 ## General Questions
 
 * What did you learn yesterday/this week?
+  * This week as all about Angular. I learned how to use Angular to bind data to front-end controllers that allow updates to be reflected immediately and without making another call to the server to refresh the page. 
+---
 * What excites or interests you about coding?
+  * I am excited to be a builder. 
+---
 * What is a recent technical challenge you experienced and how did you solve it?
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+---
 * Talk about your preferred development environment.
+  * I would prefer a collaborative environment where creativity and input in the products is encouraged.
+---
 * Which version control systems are you familiar with?
+  * Github is the version control system I use, I have experience working in teams and using githug to manage our project code. 
+---
 * Can you describe your workflow when you create a web page?
+  * After mapping the idea out mentally, I use either paper, OneNote, or the prototype software Axure to start mapping out what the pages would look like, how they would connect, and why kind of data I would need on each page. I then think about if I need a database and the structure of tables I would need. I frequently draw a few test tables with rows of data and their relationships to test my ideas. After I think I have a solid plan, I go to my app directory and start mapping out my folders in an MVC format that makes sense for the tools I am going to use. 
+---
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+  * If i were using 5 different style sheets I would consider upgrading to SCSS and compiling all the stylesheets together when the app is run. SCSS would also allow me create and use variables that might be useful when you have to make changes across 5 stylesheets. 
+---
 * Can you describe the difference between progressive enhancement and graceful degradation?
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
 * If you could master one technology this year, what would it be?
@@ -119,7 +131,11 @@ Model 4: Friends
   * Answer: *Local variables* cannot be used outside the method in which they are defined. *Instance variables* start with the @ symbol and are available outside the method in the class and available in associated view pages. *Class Variables* start with two @@ symbols are are availale in all methods of the class and can be called by all instances of the class.
 ---
 * What is a range?
+  * Answer: There are 2 types of ranges in Ruby, an inclusive range and an exclusive range. The inclusive range is written as 0..5 and will include number 5. en exclusive range is written as 0...5 and will not include number 5.
+---
 * In ruby, what does attr_accessor do?  
+  * Answer: attr_accessor allows variables in a method to be overwritten and read. If you want your variables to only be read you use attr_reader, if you want your variables to only be written you use attr_writer. 
+---
 * What is the purpose of environment files under the config folder in Rails? (development, test, production)
 * What is the purpose of the application.rb file in Rails?
 * How can you define a constant?
