@@ -30,9 +30,11 @@ Go through all of the following questions and think about how you would respond 
   * I define customer or personal goals, (user stories). I ask myself what tools would be appropriate for the proposed project. I sketch outlines and wireframe everything. I write some pseudo code, then jump in to programming.
 
 * If you have 5 different stylesheets, how would you best integrate them into the site?
-  * I would keep them all in one folder but organize them based on specificity. I'd linki to them in my index.html in order of specificity as well.
+  * I would keep them all in one folder but organize them based on specificity. I'd link to them in my index.html in order of specificity as well.
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
+  * Graceful degradation says build something for the newest technologies and try to work backwards to accomodate
+  older browsers
   * Graceful degradation starts from the status quo of complexity and tries to fix for the lesser experience whereas progressive enhancement starts from a very basic, working example and allows for constant extension for future environments. Degrading gracefully means looking back whereas enhancing progressively means looking forward whilst keeping your feet on firm ground. (Taken from some article)
 
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
@@ -43,6 +45,9 @@ Go through all of the following questions and think about how you would respond 
 
 * Explain the importance of standards and standards bodies.
   * The importance of standards is to maintain organization and clarity. Standards bodies do the same thing on a wider scale. (Over simplified answer). Web development would be like the Wild West if people didn't adhere to some set of standards when building things.
+  * Some examples of web standards are to include alt tags on images so blind people can understand what an image shows
+  * Think about cross browser compatability, IE support
+
 
 ## HTML Questions
 
@@ -50,6 +55,7 @@ Go through all of the following questions and think about how you would respond 
   * It tells the browser what kind of document to expect.
 
 * What's the difference between HTML and XHTML?
+  * Uses XMl, a stricter lang
   * http://stackoverflow.com/questions/4153403/what-is-difference-between-xhtml-and-html
   * XHTML document must have a DOCTYPE declaration at the top of the document.
   * All XHTML tag and attribute names must be written in lower case.
@@ -60,7 +66,7 @@ Go through all of the following questions and think about how you would respond 
   * Attribute minimization is forbidden.
 
 * What are `data-` attributes good for?
-  * Data attributes are good for adding additional selection parameters on elements.
+  * Data attributes are good for adding additional selection parameters on elements. Stores extra data. 
 
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
   * Cookies are objects containing information on the client side with a size limit under 5000 bytes.
@@ -69,7 +75,7 @@ Go through all of the following questions and think about how you would respond 
 
   * sessionStorage: Data stored in sessionStorage gets deleted when the page session ends. It will persist while you navigate to different pages on a site but will end when you open a new tab.
 
-  * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
  
   * http://stackoverflow.com/questions/436411/where-is-the-best-place-to-put-script-tags-in-html-markup
  
@@ -84,9 +90,9 @@ Go through all of the following questions and think about how you would respond 
 
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
   * http://stackoverflow.com/questions/6887336/what-is-the-difference-between-normalize-css-and-reset-css
-  * Normalize preserves useful defaults while reset unstyles everything, has better documentation, and is more modular.
+  * Normalize preserves useful defaults while reset unstyles everything
 
-* Describe Floats and how they work.
+* Describe floats and how they work
   * https://developer.mozilla.org/en-US/docs/Web/CSS/float
   * The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
 
@@ -98,7 +104,7 @@ Go through all of the following questions and think about how you would respond 
   * Each stacking context is self-contained: after the element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context.
 
 * Have you ever used a grid system, and if so, what do you prefer?
-  * I've only used Bootstrap Flexbox. I like Flexbox more for no specific reason.
+  * I've only used Bootstrap and Flexbox. I dislike Bootstrap because so much of the web looks Bootstrappy.
 
 * Have you used or implemented media queries or mobile specific layouts/CSS?
   * Hell yeah, they're awesome.
@@ -438,7 +444,7 @@ then alert bar is undefined
 var foo = [];
 foo.push(1);
 foo.push(2);
-```
+```   
 2
 
 *Question: What is the value of `foo.x`?*
