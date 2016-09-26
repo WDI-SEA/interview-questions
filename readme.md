@@ -48,9 +48,9 @@ XHTML includes the Ruby module
 
 3. data-- attributes
 
-4. Cookie
-SessionStorage
-localStorage
+4. Cookie- stored client side to re-open 
+SessionStorage - client side, removed when session closes
+localStorage - server side, saved not expiring
 
 5. Link/Script positions depend on the dependencies (JS for Jquery, Angular for Angular Attachement scripts). After that, the other pages or modules may often depend on those being loaded before any body calls, and the connecting pages go above the body. Scripts can go at the bottom if they exempt from a lot of these cases, but it really shouldn't happen if there's good attention to test cases. 
 
@@ -61,7 +61,7 @@ CSS
 
 1. Classes vs IDs - it's better for classes to apply to multiple instances, IDs for singles. 
 
-2. Reset vs Normalize ?????
+2. Reset vs Normalize - reset wipes all the default browser styles, normalize provides a starting point for them. 
 
 3. Floats - decimal numbers that take much more space than an int. Doublefloats. 
 
