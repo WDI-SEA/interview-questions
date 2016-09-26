@@ -31,7 +31,8 @@ OK, make a slides folder to fill, your "projector" is the script that goes throu
 
 11. Master a tech? Not sure.
 
-12. Standards/Standard Bodies? 
+12. Standards/Standard Bodies? Standards are stylistic tendencies - simple. modularized. 
+Standards bodies are the organizations that oversee this??? 
 
 
 
@@ -41,7 +42,9 @@ HTML
 
 1. Doctype gets 
 
-2. HTML/XHTML
+2. HTML/XHTML (SEARCH)
+XML syntax is more strict
+XHTML includes the Ruby module
 
 3. data-- attributes
 
