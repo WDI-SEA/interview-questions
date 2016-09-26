@@ -59,7 +59,7 @@ localStorage
 
 CSS
 
-1. Classes vs IDs - it's better for --- to apply to multiple instances, --- for singles. 
+1. Classes vs IDs - it's better for classes to apply to multiple instances, IDs for singles. 
 
 2. Reset vs Normalize ?????
 
