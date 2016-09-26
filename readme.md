@@ -129,7 +129,26 @@ Property
 
 18. == vs === , it's about truthiness, the Stephen Colbert political meter. 
 
-19. 
+19. Same-origin policy in JS?
+
+20. Promises and their polyfills? 
+
+21. Promises - stuff.get(function() {
+  
+})
+Multiple callback functions need to be nested. 
+
+
+Promises - stuff.get().then(function() {
+  
+})
+
+This is more prominent as a standard, and gets cleaner code with the .then
+and chain on multiple promises instead of nesting them. 
+
+22. Tools for debugging JS code? 
+
+23. 
 
 
 
@@ -214,12 +233,12 @@ DISADS - not much, time,
 2. Tools for testing - this depends on the program. We used some in class
 
 
-3. unit test 
-function/integration test
+3. Unit test is for small pieces or modules of code. 
+Function/integration test if for multiple scripts or holistic testing of links.  
 
 4. Code style linting tool 
 
-5. End-to-end testing
+5. End-to-end testing applies to the whole app working. 
 
 
 
