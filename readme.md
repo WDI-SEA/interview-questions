@@ -138,7 +138,12 @@ Property
 
 DATABASE
 
-1. Faceboook, 4 models, attributes, 1:M, M:M
+1. Facebook, 4 models, attributes, 1:M, M:M
+
+User
+Post
+Comment
+Messages
 
 
 
