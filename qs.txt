@@ -1,0 +1,326 @@
+What did you learn this week
+I learned about angular development and mongodb. 
+The front end frameworkr was very modular and easy to use.
+
+What interests you about coding.
+Elegance in coding is what makes me really excited.
+I also enjoy the modular aspect of it. 
+I like being able to break projects into smaller easily tested portions
+
+Technical challenge
+I was creating a express nodejs app, and I had some very complicated 
+database relations. I was doing exclusion join tables, and express
+didn't have enough functionality, so I had to merge custom SQL queries 
+with the express app
+
+Technology considerations
+I consider scalability as well as adaptability.
+I like code that is as general as possible and can be reused.
+
+Development enviornment
+When working on a personal project, I prefer a rails 
+enviornment because there is very little overhead.
+However in group settings, I prefer the flexibility of nodejs
+
+version control
+I am familiar with github
+
+workflow
+I prefer to gain a solid understanding of database relations if 
+they are necessary. After that, I like to modularize the work 
+based on controllers and routes.
+From there I work on the route and the front end page in conjunction
+before moving onto the next controller/page.
+
+5 different stylesheets
+If I had that many stylesheets the easiest way would be to 
+use SASS if it was an option. SASS makes it easy to combine stylesheets
+and will ensure you don't have any conflicts
+
+degreadation vs enhancement
+The difference lies in how the product is produced.
+Graceful degradation points out the flaws from the ideal product
+Progressive enhancement creates a useable minimum product and 
+adds functionality as it goes.
+
+Slideshow
+
+One technology
+I would master mongo because big data is where IoT is, and developing
+for IoT would be amazing.
+
+standards
+
+doctype
+Defines what version of HTML the website is using.
+
+XHTML
+Xhtml is an extension of the XML markup language
+and is a stricter version of HTML
+
+data-
+the data tags are good for accociating data 
+with html DOM elements
+
+cookie
+cookies are scripts saved by the browser
+
+session storage 
+session storage is information stored server side about
+a users's session on the website
+
+localstorage
+memory the browser saves about a specific website
+
+CSS <link>/<script>
+Putting the links in the head ensures the resources are loaded before the page 
+is, and putting the scripts at the end ensures the elements
+are loaded before the scripts try to manipulate them.
+
+ID's and classes
+ID's refer to a single element
+classes can refer to multiple elements
+
+resetting/normalizing
+
+Floats
+Floating an HTML element is removing it from the normal flow 
+of the page and aligning it in a particular way seperate from the 
+rest of the document flow
+
+z-index
+z-index is the order in which elements stack on top of each other
+
+grid system
+I have used the bootstrap grid system
+
+Media queries
+I have done several exercises involving media queries, but
+never for an actual project.
+
+optimize for print
+
+css preprocessors
+
+non-standard fonts
+I would use google fonts and their CDNs to implement
+
+finding elemnets
+The browser looks for the class or element specified in css
+and applies the style to those specific elements
+
+box model
+box model is similar borders that all elements have 
+namely margin, padding and border
+
+<box-sizing: border-box}
+
+Display
+inline, flex, float, block
+
+inline vs inline-block
+inline is when the elemtnts are shown in a line (usually of text)
+inline-block includes margins and padding ect
+
+relative, fixed ect
+This is how elemetns relate to the page
+relative is to where its suppposed to be in the flow.
+fixed is from the ege of the page
+absolute is by the number of pixels
+
+cascading
+The most specific elements are styled with the highest priority
+namely ID's, to classes, to regular elements
+You can take advantage by styling all elements in a class, 
+and then assigning an id to the single exception you want
+
+frameworks
+I have used angular frameworks. as well as SASS. I would 
+
+flexbox
+Yes I have used flexbox and grid specs on several occasions
+
+retina graphics
+no
+
+css vs javascript animations
+Css animations are much more polished
+javascript animations give you more flexibility
+
+event delegation
+
+this
+this refers to the current object. You use it in OOP
+
+inheritence
+An object will inherit data elements and methods from a parent class. You can
+overide them or use them as they are.
+
+ternary
+Ternary is an inline conditional. It is basically an if statement
+
+null/undefined
+null means that there is no data element in the memory slot
+undefined means that there is no data type in the memory slot
+use typeOf 
+
+clsure
+
+anonymous functions 
+they are used in methods that require a function to be passed in, and 
+you only need to run the code in that one case.
+
+person
+the first case is defining a function.
+the second case is running a function
+the third case is creating a new object.
+
+.call
+
+prototype.bind
+You are defining a prototype function for an object
+
+feature detection
+
+AJAX
+AJAX is a asycronous method of querying other websites from yours. This allows
+you to recieve data.
+
+templating
+no
+
+hoisting
+
+event bubbling
+
+attribute vs property
+attributes are something an element can have.
+a property is a piece of data an element can have.
+
+== ====
+a double equals allows for type coercison.
+A triple equals is strict about type.
+
+same-origin
+
+Promises
+I have used promises when using AJAX to ensure script flow
+
+pros and cons of promieses
+promises are easy to use when asynchronous scripts sare in use
+callbacks are used in conjuction with those.
+
+debugging
+I use the chrome developer console and many console logs
+
+interating
+I am more inclined to make my own iterators with my background in C
+however I frequently use for each loops
+
+Gems
+Gems are libraries that the app requires to run
+
+symbol vs string
+symbol is a specific element while a string can be many
+
+class vs instance method
+class can be used by all instances of the class
+instance methods can only be used by that instance
+
+local vs instance vs class variables
+local variables can only be used in the scope of the function
+instance variables are accessable by the instance
+classs variables are accessable by all instances of the class
+
+attr_accessor 
+allows you access to read/write to an instance variable
+
+env
+they allow you to hide encryption codes or api codes from consumers
+application.rb
+
+constants
+
+yield
+
+API keys
+use the .env folder
+
+url parameters
+you can call them with contoller_params
+
+MVC
+Model view controller
+you have a model for your database
+a conroller to make your routes
+and a view to define your HTML/CSS
+
+before_action
+is a hook that you would use when you want to run code before
+the invocation of an action
+
+controllers
+they make routes and control the server 
+
+RESTful routing
+routing based on the URL and a verb allowing you do do multiple things on each
+URL
+
+
+polymorphic
+polymorphic association is when a database relation can be related
+to mutiple types of other tables
+
+
+params
+parameters send by the web page either through the body or the url'
+
+migrations for adding columns
+You make a new migration with the add column function and run
+the migrate again
+
+CSRF
+
+user.find_by_id vs User.find(1)
+one finds the object, the other returns an array with the object
+
+classes vs modules
+
+testing code
+It allows you a more concrete measure of your progress
+it limits you in your development cycle
+
+testing functionality
+Rspec
+
+unit testvs func test
+
+unit test tests a small portion
+integration test tests units interacting with eachotehr
+
+linting tool
+standardize coding practices
+
+E2E
+
+foo
+1020
+
+add (x,y){
+return x+y;
+}
+
+Hello world
+Hello
+
+foo.length = 2
+
+{n: 2}
+
+one 
+three 
+two
+
+
+
+
