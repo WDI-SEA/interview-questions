@@ -9,59 +9,137 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+Yesterday we learned oAuth (authorization through a third party like Facebook). This week we covered M to M relationships between tables in Rails.
+
 * What excites or interests you about coding?
+I love being able to create any type of website and knowing how certain websites work. I spend all my time on the internet, so it's fun to make the switch from being a passive consumer, to actively create stuff for the internet.
+
 * What is a recent technical challenge you experienced and how did you solve it?
+For my last project, I was using webRTC to set up video chats online. webRTC required an https connection to operate, while the process of obtaining a caller id from PeerJS was through a http connection. In order to get the video up and running, I had to find a way to set up by own PeerJS server that served keys through https. 
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+My approach to building with a web application is to first make sure that everything works. I would do this by first deciding what the application is and what I want it to do. Then I would add the bare miminum to the site just to make sure it has a basic, working functionality. For performance, I would do my best to make sure that nothing in my code is redundant. Setting up easily understood variables and commenting every line of code to explain my thought process would also help with maintainability. Depending on the time and resources available for the project, I would be able to decide which technologies to incorporate. Node.js would take longer to set up than Ruby, but Node.js is much more efficient for large scale applications.
+
 * Talk about your preferred development environment.
+My preferred development environment is where I am sitting next to other devs that I would be able to talk to and bounce ideas off of while I'm working. Having someone immediately available to offer a second opinion or a new perspective is extremely valuable to my growth as a programmer.
+
 * Which version control systems are you familiar with?
+Git/github.
+
 * Can you describe your workflow when you create a web page?
+First decide what the web page is supposed to do, be it collect information or display images. Then I would set up the basic divs and important elements in the html. Then I would add the javascript functions that are necessary to get the page running. Then I would work on the styling and any other small features for the page.
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+I would add a different folder labeled either static for a node.js app, or create more scss style pages under the assets folder for a ruby on rails app. I would call the appropriate stylesheets within the appropriate pages for the site.
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
+Progressive enchancement means starting with designing for a basic user experience for the most basic web browsers, then adding advanced functionality that will be available automatically to browsers that can hande it. Graceful degradation is the opposite where the application is designed for the most common advanced browsers, then scales the site down for the most basic browsers.
+
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+Assuming that all of the images are url links, I could simply put them in an object and label each element with a key. Then I would create a function in the Javascript that would change the html depending on a button that would be clicked. The button would call a function that would change the url of the html element every few seconds or so, giving the effect of a slideshow.
+
 * If you could master one technology this year, what would it be?
+I would love to be able to master webRTC or anything to do with videos/streaming.
+
 * Explain the importance of standards and standards bodies.
+Standards are important as it ensures that code will looks the same and have similar formats no matter where you are. It allows people to expect the same set of standards when working in a new environment and subsequently allows programs and applications to scale.
 
 ## HTML Questions
 
 * What does a `doctype` do?
+Doctype determines the type of document used.
+
 * What's the difference between HTML and XHTML?
+XHTML is much more standardized and allows pages to be viewed the same across different browsers, while HTML pages often looked different depending on the user's browser.
+
 * What are `data-` attributes good for?
+They allow you to store data on html documents.
+
 * Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
+A cookie is sent to the server, while sessionStorage and localStorage are client side. A session storage is the memory stored in a session, while local storage is where that memory is stored.
+
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+This to ensure that the page is styled before anything else is processed on the page. If ther JS takes too long to process and the style tage is after it, then the page would appear plain until the JS is finished computing.
+
 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+A class can cover many different elements, while ID's only have one element.
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+Reset removes default styling, while normalizing just makes the styling the same. Normalizing CSS would be my choice.
+
 * Describe Floats and how they work.
+Floats allow elements to be pulled left and right. Floating elements don't have a height. Use the CSS 'clear: both' property to get things to appear below floated elements properly.
+
 * Describe z-index and how stacking context is formed.
+Z-index determines the order of overlap for different elements. Elements with higher z-indices will appear on top of elements with lower z-indices.
+
 * Have you ever used a grid system, and if so, what do you prefer?
+Grid systems are useful for organizing content.
+
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+I have implemented media queries before when using webRTC.
+
 * How do you optimize your webpages for print?
+Determining the most important content for the website and stlying the print pages as such. Use high resolution pictures, at least 300 dpi.
+
 * What are the advantages/disadvantages of using CSS preprocessors?
+Preprocessors allow us to write fancier syntax and add logi to our CSS.
+Things we gain: 
+-variables
+-nested query syntax allows us to write less code
+
+Things we hate:
+-harder to debug, the compiled code can be hard to read
+-the complied code isn't the code we wrote
+-preprocessors add an extra step in our workflow
+-adds a learning overhead to the project
   * Describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
+You might have to import the fonts first before using it.
+
 * Explain how a browser determines what elements match a CSS selector.
+It would depend on the the linked stylesheet and the html tags. If the tags also have classes or ids that are present in the stylesheet, they would be modified as such.
+
 * Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+The box model gives each element margins, padding, content, and borders. They determine how the element is spaced out and separated on the page.
+
 * What does ```* { box-sizing: border-box; }``` do? What are its advantages?
 * List as many values for the display property that you can remember.
+inline, inline-block
 * What's the difference between inline and inline-block?
+"An inline element has no line break before or after it, and it tolerates HTML elements next to it.
+A block element has some whitespace above and below it and does not tolerate any HTML elements next to it.
+An inline-block element is placed as an inline element (on the same line as adjacent content), but it behaves as a block element.
+" - W3Schools
+
 * What's the difference between a relative, fixed, absolute and statically positioned element?
+Relative changes depending on the positions of the other elements, fixed keeps the element from moving regardless of the browser size.
 * The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
+specificity. an id would be more important than a class.
 * What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+bootstrap
 * Have you played around with the new CSS Flexbox or Grid specs?
 * Have you ever worked with retina graphics? If so, when and what techniques did you use?
+Retina refers to displays with an extremely high pixel density. THe problem with high density displays is that images built for low resolution screens will show up super tiny. One way to deal with this is to have two sets of images. One set is used for low-desnity displays, and another is used for high density displays.
 * Explain some of the pros and cons for CSS animations versus JavaScript animations.
 
 ## JS Questions
 
 * Explain event delegation
 * Explain how `this` works in JavaScript
+references the most immediately called element
 * Explain how prototypal inheritance works
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
+null is when a variable has an empty value
+undefined is when a variable has no value
+undeclated is when a variable does not exist
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
+A function that has scope that refers to variables. We can use closures to save the scope of variables and values at a certain point in time. Saves the global namespace.
 * What's a typical use case for anonymous functions?
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between `.call` and `.apply`?
