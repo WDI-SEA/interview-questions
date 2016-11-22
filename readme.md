@@ -9,17 +9,42 @@ Go through all of the following questions and think about how you would respond 
 ## General Questions
 
 * What did you learn yesterday/this week?
+  I learned about how to incorporate an angular app in express.
+
 * What excites or interests you about coding?
+  I am excited by the opportunity to improve the lives of people using technolgy,
+  by offering visually appealing, effective solutions to daily problems or inconveniences.
+
 * What is a recent technical challenge you experienced and how did you solve it?
+
 * What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+
 * Talk about your preferred development environment.
+  I prefer to work in on Apple systems in OS X. For code writing, I prefer to use Sublime Text. As for programming languages, I feel most comfortable working with Javascript and jQuery.
+
 * Which version control systems are you familiar with?
+  I am proficient working with Git and Github. I have used both these local and remote tools for version control in both individual and collaborative projects.
+
 * Can you describe your workflow when you create a web page?
+  I first define the purpose of the web page or the problem that I am attempting to solve. I then develop user stories that help guide the outline of the core functionality of the site. From there, I wireframe how the site will visually look. After those steps, I decide which technologies I will need to accomplish the completion of the project (i.e. Is this a front-end application or full-stack? Is there an API avilable that could be helpful to populate data for site)
+
+
 * If you have 5 different stylesheets, how would you best integrate them into the site?
+
+
 * Can you describe the difference between progressive enhancement and graceful degradation?
+
+
 * Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
+  I would first create a bare bones HTML site in which I would create a div element with a particular class or ID. Then I would use CSS to style the div to meet the alignment and size specifications that I desired. Then, I would write a javascript applicaiton to manipulate this DOM element to cycle through images.
+
+
 * If you could master one technology this year, what would it be?
+  Ruby
+
 * Explain the importance of standards and standards bodies.
+  Standards and the bodies that create them, are imprortant to the advancement of the web development. Without standards, it would be difficult to develop applications that were supported by all commonly used web browsers. Standards ensure that code will work for the user, regardless of OS or browser selection.
+
 
 ## HTML Questions
 
@@ -32,6 +57,8 @@ Go through all of the following questions and think about how you would respond 
 ## CSS Questions
 
 * What is the difference between classes and IDs in CSS?
+  IDs are unique to one element and are defined in css with the # symbol. Classes apply to any elements to which they are assigned and are prefixed with a "." in css files.
+
 * What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
 * Describe Floats and how they work.
 * Describe z-index and how stacking context is formed.
