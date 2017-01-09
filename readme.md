@@ -1,176 +1,322 @@
-#Interview Prep
 
-(Partially from https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+Chris Kenyon
+Interview questions
+WDI-09
 
-Go through all of the following questions and think about how you would respond to each. You should be able to answer many of the questions from memory, but you may have to research a few of them.
 
-**Copy this md file to your homework folder and add a short answer under each item.** You should try to be as concise as possible, and list any handy resources you used to answer the question. This will be useful for studying for interviews after class.
+GENERAL
 
-## General Questions
+1. Last week, the 24-hour hackathon was a tough time with 2 sick members and the 3rd not responding at night or showing up for the presentation. I scrambled to put together the functional pieces and offer some explanations in class, without accusing anyone else of being absent. I think the "judges" were happy with seeing something on the screen that worked. I focused on a distraction - the funny jobs that could result from searches. Coding isn't all about the code, sometimes the presentation matters. 
 
-* What did you learn yesterday/this week?
-* What excites or interests you about coding?
-* What is a recent technical challenge you experienced and how did you solve it?
-* What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
-* Talk about your preferred development environment.
-* Which version control systems are you familiar with?
-* Can you describe your workflow when you create a web page?
-* If you have 5 different stylesheets, how would you best integrate them into the site?
-* Can you describe the difference between progressive enhancement and graceful degradation?
-* Describe how you would create a simple slideshow page, without any frameworks (HTML/CSS/JS only).
-* If you could master one technology this year, what would it be?
-* Explain the importance of standards and standards bodies.
+2. I enjoy coding because I'm creating something. Taxes were not about doing anything outside the guidelines, but there's naturally a lot of different ways to code a simple project. I also like the teamwork with everyone accepting each other taking some time to learn things or pass off tasks that are suited for someone else. Accounting work was rarely about teamwork, since WIP time was supposed to be shorter. 
 
-## HTML Questions
+3. During the hackathon, we struggled with a few problems. Early on, the database was not connecting with our program. It existed, it had info, but now it wasn't working. Sean looked and found the node_modules just needed an update. Later, the url wouldn't link up in a Href anchor tag, so I looked at some examples in Stack Overflow. I keep the working class copies active to quickly see examples. 
 
-* What does a `doctype` do?
-* What's the difference between HTML and XHTML?
-* What are `data-` attributes good for?
-* Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
-* Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
+4. Considerations? Too many to write. 
 
-## CSS Questions
+5. Preferred dev environment? I'm not sure yet, beyond wanting to get away from coworker avoidance like accounting. I want real reviews, which are limited in accounting for many reasons. 
 
-* What is the difference between classes and IDs in CSS?
-* What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-* Describe Floats and how they work.
-* Describe z-index and how stacking context is formed.
-* Have you ever used a grid system, and if so, what do you prefer?
-* Have you used or implemented media queries or mobile specific layouts/CSS?
-* How do you optimize your webpages for print?
-* What are the advantages/disadvantages of using CSS preprocessors?
-  * Describe what you like and dislike about the CSS preprocessors you have used.
-* How would you implement a web design comp that uses non-standard fonts?
-* Explain how a browser determines what elements match a CSS selector.
-* Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
-* What does ```* { box-sizing: border-box; }``` do? What are its advantages?
-* List as many values for the display property that you can remember.
-* What's the difference between inline and inline-block?
-* What's the difference between a relative, fixed, absolute and statically positioned element?
-* The 'C' in CSS stands for Cascading.  How is priority determined in assigning styles (a few examples)?  How can you use this system to your advantage?
-* What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
-* Have you played around with the new CSS Flexbox or Grid specs?
-* Have you ever worked with retina graphics? If so, when and what techniques did you use?
-* Explain some of the pros and cons for CSS animations versus JavaScript animations.
+6. Version controls? (SEARCH)
 
-## JS Questions
+7. Workflow - I like the quick wireframe and chart start that we learned but didn't use in class much. We used it in projects, and we did much more brainstorming early with tech needs & questions to make sure we didn't dive too far into the project to get away from a bad decision that couldn't be fixed within the 1 week deadline (or wherever we were on the timeline). We used trello boards to keep track of all tasks abd avoid conflicts. 
 
-* Explain event delegation
-* Explain how `this` works in JavaScript
-* Explain how prototypal inheritance works
-* Why is it called a Ternary expression, what does the word "Ternary" indicate?
-* What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
-  * How would you go about checking for any of these states?
-* What is a closure, and how/why would you use one?
-* What's a typical use case for anonymous functions?
-* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-* What's the difference between `.call` and `.apply`?
-* Explain `Function.prototype.bind`.
-* What's the difference between feature detection, feature inference, and using the User Agent string?
-* Explain AJAX in as much detail as possible.
-* Have you ever used JavaScript templating?
-  * If so, what libraries have you used?
-* Explain "hoisting".
-* Describe event bubbling.
-* What's the difference between an "attribute" and a "property"?
-* Why is extending built-in JavaScript objects not a good idea?
-* What is the difference between `==` and `===`?
-* Explain the same-origin policy with regards to JavaScript.
-* What is the extent of your experience with Promises and/or their polyfills?
-* What are the pros and cons of using Promises instead of callbacks?
-* What tools and techniques do you use debugging Javascript code?
-* What language constructions do you use for iterating over object properties and array items?
+Order of tasks usually went by: function needs, then style. 
 
-## Database Questions
+8. 5 Css partial stylesheets in a folder, if it gets larger then it's safest to keep them separate with a comparison top-level document (comments? control file with order of load priority?)
 
-* Design a database schema for Facebook, with at least 4 models, a complete set of attributes for each model, a 1:M association, and a M:M association.
+9. Progressive Enhancement is building a website with functionality on a low level to make sure that all or most browsers can handle it, and then building up from there. 
 
-## Ruby/Rails
-* What are ruby gems?
-* What is the difference between a symbol and a string?
-* What is the difference between a class method and an instance method?
-* What is the difference between local variables, instance variables, and class variables?
-* What is a range?
-* In ruby, what does attr_accessor do?  
-* What is the purpose of environment files under the config folder in Rails? (development, test, production)
-* What is the purpose of the application.rb file in Rails?
-* How can you define a constant?
-* What is the purpose of `yield`?
-* How do you store API keys when creating an app?
-* How do I send parameters through a url?
-* Explain MVC
-* What is a `before_action`? When would you use it?
-* What do controllers do in rails?
-* What is RESTful routing?
-* What is a polymorphic association?
-* What are params?
-* How do I make a migration to add a column in Rails?
-* What is CSRF? How does Rails protect an app against this?
-* What's the difference between `User.find_by_id(1)` and `User.find(1)`?
-* What's are classes in Ruby? What are modules? And what's the difference?
+Graceful degredation is when a computer keeps limited functionality when something breaks down. One example is with operating systems "safe mode" - when the full OS has a problem, the safemode allows the user to take a look at basic functions to see what broke if it wasn't clear. 
 
-## Testing Questions
+10. Slideshow - caravel? That was an early bootstrap project. No frameworks? 
+OK, make a slides folder to fill, your "projector" is the script that goes through those and controls timing, and the style (size, background) is also separate. 
 
-* What are some advantages/disadvantages to testing your code?
-* What tools would you use to test your code's functionality?
-* What is the difference between a unit test and a functional/integration test?
-* What is the purpose of a code style linting tool?
-* What is End-to-end (E2E) testing? How can it be implemented in frameworks like Angular and Rails?
+11. Master a tech? Not sure.
 
-## Coding Questions:
+12. Standards/Standard Bodies? Standards are stylistic tendencies - simple. modularized. 
+Standards bodies are the organizations that oversee this??? 
 
-*Question: What is the value of `foo`?*
-```javascript
-var foo = 10 + '20';
-```
 
-*Question: How would you make this work?*
-```javascript
-add(2, 5); // 7
-add(2)(5); // 7
-```
 
-*Question: What value is returned from the following statement?*
-```javascript
+
+
+HTML
+
+1. Doctype gets 
+
+2. HTML/XHTML (SEARCH)
+XML syntax is more strict
+XHTML includes the Ruby module
+
+3. data-- attributes
+
+4. Cookie- stored client side to re-open 
+SessionStorage - client side, removed when session closes
+localStorage - server side, saved not expiring
+
+5. Link/Script positions depend on the dependencies (JS for Jquery, Angular for Angular Attachement scripts). After that, the other pages or modules may often depend on those being loaded before any body calls, and the connecting pages go above the body. Scripts can go at the bottom if they exempt from a lot of these cases, but it really shouldn't happen if there's good attention to test cases. 
+
+
+
+
+CSS
+
+1. Classes vs IDs - it's better for classes to apply to multiple instances, IDs for singles. 
+
+2. Reset vs Normalize - reset wipes all the default browser styles, normalize provides a starting point for them. 
+
+3. Floats - decimal numbers that take much more space than an int. Doublefloats. 
+
+
+4. z-content
+
+5. grid system? like bootstrap? 
+
+6. Yes, media queries. 
+Mobile-1st is often pushed as better in our class, but a lot of my current sites are made out of expediency. I'm always working on this, but styling is less than functionality at this point in my work. 
+
+7. 
+
+
+
+
+
+
+
+JS
+
+1. Event delegation
+
+2. "this" works by "$scope", IT ALLOWS CHANGES TO variables within an environment, with child layers going down. "this.number" can be passed along in the object that made it, or a parent object. 
+
+3. Prototype inheritance - the constructor, not the objects, pass along info that is passed into the constructor (param differences)
+
+4. Ternary expression - three parts
+
+5. Null
+Undef
+Undeclared
+How to tell/check? 
+
+6. A closure is
+
+7. Typical use case for anonymous functions? 
+
+8. function Person(){} - this function creates Person-functions that probably create person objects. 
+var person = Person() - this makes a person
+var person = new Person()
+
+9. .call
+.apply
+
+10. Function.protoype.bind ??
+
+11. feature detection, 
+feature inference
+User Agent string
+
+12. AJAX - database changing calls(sends - delete, post)
+DETAIL
+
+13. Templates - 
+
+14. Hoisting ??
+
+15. Event bubbling?
+
+16. Attribute
+Property
+
+17. Why not extend built-in js objects? 
+
+18. == vs === , it's about truthiness, the Stephen Colbert political meter. 
+
+19. Same-origin policy in JS?
+
+20. Promises and their polyfills? 
+
+21. Promises - stuff.get(function() {
+  
+})
+Multiple callback functions need to be nested. 
+
+
+Promises - stuff.get().then(function() {
+  
+})
+
+This is more prominent as a standard, and gets cleaner code with the .then
+and chain on multiple promises instead of nesting them. 
+
+22. Tools for debugging JS code? 
+
+23. 
+
+
+
+
+
+
+
+
+
+DATABASE
+
+1. Facebook, 4 models, attributes, 1:M, M:M
+
+User
+Post
+Comment
+Messages
+
+
+
+
+
+Ruby/Rails
+
+1. Gems are installation dependencies
+
+2. Symbol
+String
+
+3. Class method
+Instance Method
+
+4. Local
+class
+instance variables
+
+5. Range
+
+6. att_accessor
+
+7. env files in config folder
+
+8. application.rb file
+
+9. define a constant
+
+10. yield
+
+11. storing API keys
+
+12. send params through a url
+
+13. MVC
+
+14. before_action
+
+15. controllers in rails? 
+
+16. RESTful routing
+
+17. polymorphic association
+
+18. params
+
+19. make a migration to add a column
+
+20. CSRF, protect against? 
+
+21. 
+
+
+
+
+
+
+
+TESTING: 
+
+1. Testing ADVANTAGES - lots. 
+DISADS - not much, time, 
+
+2. Tools for testing - this depends on the program. We used some in class
+
+
+3. Unit test is for small pieces or modules of code. 
+Function/integration test if for multiple scripts or holistic testing of links.  
+
+4. Code style linting tool 
+
+5. End-to-end testing applies to the whole app working. 
+
+
+
+
+
+
+
+
+
+INDIVIDUAL CODE TECHNICAL
+
+Var foo = 10 + '20';       // what is the value of foo
+
+
+
+            //both return 7
+add(2, 5)
+add(2)(5)
+          
+
+
 "i'm a lasagna hog".split("").reverse().join("");
-```
 
-*Question: What is the outcome of the two alerts below?*
-```javascript
+
+
 var foo = "Hello";
 (function() {
   var bar = " World";
   alert(foo + bar);
 })();
 alert(foo + bar);
-```
 
-*Question: What is the value of `foo.length`?*
-```javascript
+
+
+
+
 var foo = [];
 foo.push(1);
-foo.push(2);
-```
+foo.push(2);      //what is foo.length
 
-*Question: What is the value of `foo.x`?*
-```javascript
+
+
+
 var foo = {n: 1};
 var bar = foo;
-foo.x = foo = {n: 2};
-```
+foo.x = foo = {n: 2};         ///what is foo.x
 
-*Question: What does the following code print?*
-```javascript
+
+
 console.log('one');
 setTimeout(function() {
   console.log('two');
 }, 0);
-console.log('three');
-```
+console.log('three');       //what does this print
 
-## Fun Questions:
 
-* What's a cool project that you've recently worked on?
-* What are some things you like about the developer tools you use?
-* Do you have any pet projects? What kind?
-* How do you like your coffee?
+
+
+
+FUN QUESTIONS: 
+
+1. Cool project - the stolen bike app - useful, teamwork, inspiring
+
+2. 
+
+3. Pet projects - phazermole, bike steal app connections, 
+
+4. 
+
+
+
+
+
+
+
+
+
+
+
