@@ -24,7 +24,9 @@ Order of tasks usually went by: function needs, then style.
 
 8. 5 Css partial stylesheets in a folder, if it gets larger then it's safest to keep them separate with a comparison top-level document (comments? control file with order of load priority?)
 
-9. Progressive Enhancement? Graceful degredation? (SEARCH)
+9. Progressive Enhancement is building a website with functionality on a low level to make sure that all or most browsers can handle it, and then building up from there. 
+
+Graceful degredation is when a computer keeps limited functionality when something breaks down. One example is with operating systems "safe mode" - when the full OS has a problem, the safemode allows the user to take a look at basic functions to see what broke if it wasn't clear. 
 
 10. Slideshow - caravel? That was an early bootstrap project. No frameworks? 
 OK, make a slides folder to fill, your "projector" is the script that goes through those and controls timing, and the style (size, background) is also separate. 
